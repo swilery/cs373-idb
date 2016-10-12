@@ -1,0 +1,2 @@
+[Vendor]1-*>[Product],
+[Product]*-*[Vulnerability]
