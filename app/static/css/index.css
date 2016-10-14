@@ -1,0 +1,31 @@
+.rainbow {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+html,body{
+   height:100%;
+}
+.carousel,.carousel-item,.active{
+   height:100%;
+ }
+.carousel-inner{
+    height:100%;
+}
+
+.carousel .one {
+  background: url(http://www.tayloredge.com/museum/processor/2000_Pentium4.jpg);
+  background-size: cover;
+}
+
+.carousel .two {
+  background: url(https://traxnet.files.wordpress.com/2011/07/nvidia-fermi-gf100-graphics-processor-high-resolution.jpeg);
+  background-size: cover;
+}
+
+.carousel .three {
+  background: url(https://i.redd.it/lqppyhxcpdnx.jpg);
+  background-size: cover;
+}

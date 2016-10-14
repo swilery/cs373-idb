@@ -1,0 +1,27 @@
+/*!
+ * Start Bootstrap - Round About (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+.container {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.img-center {
+	display: block;
+	margin: auto;
+}
+
+.text-center {
+	/*margin: 0 auto;*/
+}
+
+body {
+	background-size: 10%;
+	background-image: url('../img/said.gif');
+}
+
+footer {
+    margin: 50px 0;
+}

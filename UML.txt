@@ -1,2 +1,2 @@
-[Vendor]1-*>[Product],
-[Product]*-*[Vulnerability]
+[Venue]1-*[Event], 
+[Event]*-1 *[Performer]
