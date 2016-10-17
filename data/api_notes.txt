@@ -1,0 +1,115 @@
+-----------
+API Sources
+-----------
+https://newsapi.org/
+https://restcountries.eu/
+https://newslookup.com/api_docs.html
+
+
+--------
+News API
+--------
+
+Articles
+--------
+Request:
+   GET - https://newsapi.org/v1/articles
+   
+Parameters:
+   source (required) - news source/blog identifier
+   apiKey (required) - Your account's API key
+   sortBy (optional) - top, latest, popular (default=top)
+   
+Example:
+   https://newsapi.org/v1/articles?source=the-next-
+   web&sortBy=latest&apiKey=836d24a3cd7c43bd9450a4496c2dbf41
+   
+Response:
+   * Returns a dictionary with keys status, source, sortBy, and articles
+   * Articles' value is a list of dictionaries where each dictionary contains 
+     the keys author, title, description, url, urlToImage, and publishedAt
+   
+   {status:"", 
+    source:"", 
+    sortBy:"", 
+    articles:[{author:"", 
+               title:"", 
+               description:"", 
+               url:"", 
+               urlToImage:"", 
+               publishedAt:""}]}
+   
+Sources
+-------
+Request:
+   GET - https://newsapi.org/v1/sources
+   
+Parameters:
+   category (optional) - business, entertainment, etc. (default=all)
+   language (optional) - 2 letter ISO-639-1 language code (default=all)
+   country (optional) - 2 letter ISO 3166-1 country code (default=all)
+   
+Example:
+   https://newsapi.org/v1/sources?language=en
+   
+Response:
+   * Returns a dictionary with keys status and sources
+   * Sources' value is a list of dictionaries where each dictionary contains 
+     the keys id, name, description, url, category, language, country, 
+     urlsToLogos, and sortBysAvailable
+   
+   {status:"", 
+    sources:[{id:"", 
+              name:"", 
+              description:"", 
+              url:"", 
+              category:"", 
+              language:"", 
+              country:"", 
+              urlsToLogos:{small:"", 
+                           medium:"", 
+                           large:""}, 
+              sortBysAvailable:[""]}]}
+   
+   
+------------------
+REST Countries API
+------------------
+Site contains various URLs to access various data about countries
+Currrently storing all data
+
+Response:
+   * Returns a list of dictionaries [{country_dicts}]
+   
+   {name:"", 
+    topLevelDomain:[""], 
+    alpha2Code:"", 
+    alpha3Code:"", 
+    callingCodes:[""], 
+    capital:"", 
+    altSpellings:[""], 
+    relevance:"", 
+    region:"", 
+    subregion:"", 
+    translations:{de:"", 
+                  es:"", 
+                  fr:"", 
+                  ja:"", 
+                  it:""}, 
+    population:int, 
+    latlng:[int], 
+    demonym:"", 
+    area:int, 
+    gini:float, 
+    timezones:[""], 
+    borders:[""], 
+    nativeName:"", 
+    numericCode:"", 
+    currencies:[""], 
+    languages:[""]}
+    
+
+--------------
+Newslookup API
+--------------
+

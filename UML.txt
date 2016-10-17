@@ -1,2 +1,3 @@
-[Venue]1-*[Event], 
-[Event]*-1 *[Performer]
+[Source]1-1..*\n[Article] , 
+[Article]\n\n*-0..1[Location], 
+[Location]1\n\n\n-*[Source]
