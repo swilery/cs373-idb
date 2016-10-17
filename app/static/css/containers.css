@@ -1,0 +1,24 @@
+
+h2 {
+	/* H2 is the style for any container headlines */
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+	font-family: 'Abhaya Libre', serif;
+	font-weight: 600;
+	font-size:   2.5rem;
+}
+
+
+h3, h4 {
+	/* H2 is the style for any container headlines */
+	font-family: 'Abhaya Libre', serif;
+	font-weight: 600;
+	font-size:   1.5rem;
+}
+
+p {
+	font-family: 'Abhaya Libre', serif;
+	font-weight: 400;
+	font-size:   1rem;
+}
+

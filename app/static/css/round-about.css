@@ -5,12 +5,16 @@
  */
 
 .container {
-    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    padding-top: 0px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
 .img-center {
 	display: block;
 	margin: auto;
+}
+
+img {
+	padding-bottom: 1rem;
 }
 
 .text-center {
@@ -24,4 +28,8 @@
 
 footer {
     margin: 50px 0;
+}
+
+.about-text {
+	text-align: center;
 }
