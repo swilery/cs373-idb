@@ -171,11 +171,38 @@ Response:
            id:""}]}
 
 
-----------------------
-Main Data File Formats
-----------------------
-news_api_all_articles.json:
-  {source_id:[article_list]}
+-----------------
+Data File Formats
+-----------------
+*** news_api_all_articles.json:
+    {source_id:[article_list]}
 
-newslookup_api_data/all_articles.json:
-  {region_name:[article_list]}
+    news_api_sources.json:
+    {status:"", sources:[source_list]}
+
+    news_api_sources_id_map.json:
+    {source_id:source_name}
+
+*** newslookup_api_data/all_articles.json:
+    {region_name:[article_list]}
+
+    newslookup_countries_region_map.json:
+    {country_code:region_name}
+
+    newslookup_regions_id_map.json:
+    {region_code:region_name}
+
+    rest_countries_all.json:
+    [{country_dicts}]
+
+    rest_countries_code_map.json:
+    {country_code:country_name}
+
+    sample_articles.json:
+    [article1_dict, article2_dict, article3_dict]
+
+    sample_countries.json:
+    [country1_dict, country2_dict, country3_dict]
+
+    sample_sources.json:
+    [source1_dict, source2_dict, source3_dict]
