@@ -8,8 +8,8 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>News Tracker 9000</title>
 
-    <!-- Round About Style -->
-    <link rel="stylesheet" href="../css/pillar.css">
+    <!-- Index styles -->
+    <!-- <link rel="stylesheet" href="static/css/index.css"> -->
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
 
@@ -27,19 +27,19 @@
       <a class="navbar-brand" href="#"></a>
       <ul class="nav navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="../../index.html">Home</a>
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="static/templates/about.html">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="articles.html">Articles</a>
+          <a class="nav-link" href="static/templates/articles.html">Articles</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="locations.html">Locations</a>
+          <a class="nav-link" href="static/templates/locations.html">Locations</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="sources.html">Sources<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="static/templates/sources.html">Sources</a>
         </li>
       </ul>
       <form class="form-inline pull-xs-right">
@@ -48,37 +48,18 @@
       </form>
     </nav>
 
-    <div class="table-container">
-      <table class="table table-hover table-inverse">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Username</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+    <script language="JavaScript" type="text/javascript">
+      $(document).ready(function(){
+        $('.carousel').carousel({
+          interval: 2000
+        })
+      });    
+    </script>
+
   </body>
 </html>
