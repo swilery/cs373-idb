@@ -1,7 +1,9 @@
 h1{
+	/* H1 is the style for the BestBytes title */
 	text-align: center;
 	font-family: 'Abhaya Libre', serif;
 	font-size: 4.0em;
-	padding-top: 10px;
+	padding-top: 0.5rem;
 }
+
 
