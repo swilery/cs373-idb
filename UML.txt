@@ -1,2 +1,2 @@
-[Venue]1-*[Event], 
-[Event]*-1 *[Performer]
+[Source]1-1 *[Article], 
+[Article]*-1 *[Location]
