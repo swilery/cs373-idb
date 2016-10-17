@@ -112,4 +112,70 @@ Response:
 --------------
 Newslookup API
 --------------
+Make API requests through websites feed manager
+Limited to 30 responses per request with free account
 
+client_id = 17122
+secret = <see feed manager>
+
+Regions to Request:
+  - Africa (1r10)
+      - South Africa (gr22707)
+      - Kenya (gp13274)
+  - Asia (1r30)
+  - Asia: East (gp32)
+      - China (gp5813)
+      - China: Taiwan (gi23982)
+      - Japan (gi12701)
+      - South Korea (gi13545)
+  - Asia: South (gp33)
+      - India (gi11618)
+  - Asia: South East (gp34)
+      - Philippines (gi19459)
+      - Singapore (gi21983)
+  - Canada (gp5122)
+  - Europe (1r40)
+      - United Kingdom (3r25950)
+  - Middle East (gp35)
+      - Iran (gi11884)
+      - Israel (gi12314)
+      - Saudi Arabia (gi21481)
+  - Oceania (1r50)
+      - Australia (gp2156)
+      - New Zealand (gp17913)
+  - North America (1r20)
+  - United States (gi100)
+
+Response:
+  * Returns a dictionary with keys language, status, code, package, 
+    timestamp, count, message, ttl, and items
+  * Items' value is a list of dictionaries where each dictionary contains the 
+    keys title, link, description, referrer, source_url, source_title, 
+    pubdate, and id
+
+  {language:"",
+   status:"",
+   code:"",
+   package:"",
+   timestamp:"",
+   count:"",
+   message:"",
+   ttl:"",
+   items:[{title:"",
+           link:"",
+           description:"",
+           referrer:"",
+           source_url:"",
+           source_title:"",
+           pubdate:"",
+           id:""}]}
+
+
+----------------------
+Main Data File Formats
+----------------------
+news_api_all_articles.json:
+  {source_id:[article_list]}
+
+newslookup_api_data/all_articles.json:
+  {region_name:[article_list]}
