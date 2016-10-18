@@ -17,6 +17,9 @@
 
     <!-- Navbar styles -->
     <link rel="stylesheet" href="../css/navbar.css">
+    <!-- Single-Page styles -->
+	<link rel="stylesheet" href="../css/containers.css">
+    <link rel="stylesheet" href="../css/single_page.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -53,49 +56,24 @@
       </form>
     </nav>
 
-    <div class="table-container">
-      <table class="table table-hover table-inverse">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Country</th>
-            <th>Region</th>
-	    <th>Currency</th>
-            <th>Lat/Long</th>
-	    <th>Capital</th>
-	    <th>Population</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-	    <td><a href="location_page.html">Great Britain</a></td>
-            <td>Europe</td>
-            <td>GBP</td>
-	    <td>54, -2</td>
-	    <td>London</td>
-	    <td>64800000</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Italy</td>
-            <td>Europe</td>
-            <td>EUR</td>
-	    <td>42.83, 12.83</td>
-	    <td>Rome</td>
-	    <td>60753794</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-	    <td>United States</td>
-            <td>Americas</td>
-            <td>USD</td>
-	    <td>38, -97</td>
-	    <td>Washington, D.C.</td>
-	    <td>321645000</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 offset-lg-2">
+				<div class="google-maps">
+					<iframe width="600" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Austin%2C%20Texas&key=AIzaSyDr7OP343FI-sez_S9hS4K2iL7Ii5l9_cs" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="col-lg-8 offset-lg-2">
+				<h2>Country Name</h2>
+				<p><span class="data-type">Region</span> : Country Region</p>
+				<p><span class="data-type">Capital</span> : Country Capital</p>
+				<p><span class="data-type">Currency</span> : Country Currency</p>
+				<p><span class="data-type">Population</span> : Country Population</p>
+				<p><span class="data-type">Historical Summary</span> :Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie id dolor eu bibendum. Nunc pellentesque diam neque, eu tempus neque suscipit ac. Nam congue elit ut ligula consectetur, eget congue nisi iaculis. Morbi sollicitudin orci eu dignissim laoreet. Nullam ac urna faucibus, pellentesque lorem sed, fermentum tortor. Suspendisse odio tortor, lobortis in cursus et, varius sit amet turpis. Ut bibendum feugiat sem sit amet consequat. Morbi vulputate lectus non orci pharetra, eget sollicitudin quam pellentesque. Vivamus vestibulum est ut leo dictum, at fringilla lectus tempus. Duis congue massa eget bibendum iaculis. Donec auctor, felis in placerat sagittis, tortor nunc ullamcorper mi, eu finibus ante augue non orci. Vivamus id erat tempus, vehicula ligula hendrerit, pellentesque dolor. Fusce mollis leo tincidunt, volutpat magna at, faucibus nisi. Quisque euismod diam libero, sed aliquam lectus maximus non. In hac habitasse platea dictumst. Etiam id libero bibendum, sagittis ex vel, vehicula lacus.</p>
+
+		</div>
+	</div>
+
   </body>
 </html>
+
