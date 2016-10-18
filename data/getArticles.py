@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import json
 import requests
 
@@ -104,5 +106,5 @@ def getSampleData():
 		json.dump(sample_countries, f)
 
 if __name__ == '__main__':
-   getAllArticles()
-   #getSampleData()
+   # getAllArticles()
+   getSampleData()
