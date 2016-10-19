@@ -67,8 +67,11 @@ def getSampleData():
 		countries = json.load(f)
 
 	article1 = articles['bbc-news'][0]
+	article1['source'] = 'BBC News'
 	article2 = articles['usa-today'][0]
+	article2['source'] = 'USA Today'
 	article3 = articles['football-italia'][0]
+	article3['source'] = 'Football Italia'
 
 	source1 = { }
 	source2 = { }

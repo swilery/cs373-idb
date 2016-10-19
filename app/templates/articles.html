@@ -61,38 +61,22 @@
             <th>Title</th>
             <th>Excerpt</th>
             <th>Source</th>
-            <th>Publication date</th>
+            <th>Published At</th>
             <th>Author</th>
           </tr>
         </thead>
         <tbody>
+        {% for article in articles %}
           <tr>
             <th scope="row">1</th>
             <td><a href={{ url_for('single') }}>
-              Call of Duty Created as 'A Little Bit' of an F-You to Medal of Honor</a></td>
-            <td>Following the success of Medal of Honor: Allied Assault, EA wanted to...</td>
-            <td>ign</td>
-            <td>2016-10-17</td>
-            <td>Alex Osborn</td>
+              {{ article.title }}</a></td>
+            <td>{{ article.description }}</td>
+            <td>{{ article.source }}</td>
+            <td>{{ article.publishedAt }}</td>
+            <td>{{ article.author }}</td>
           </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td><a href={{ url_for('single') }}>
-              Pjanic backs under-fire Buffon to 'prove he's number one'</a></th>
-            <td>Gianluigi Buffon has made two high-profile errors in recent games,...</th>
-            <td>four-four-two</th>
-            <td>2016-10-17</th>
-            <td>FourFourTwo</th>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td><a href={{ url_for('single') }}>
-              Nobel panel gives up knockin on Dylan door</a></td>
-            <td>Days after being awarded the literature prize, Bob Dylan has yet to...</td>
-            <td>the-guardian-uk</th>
-            <td>2016-10-17</th>
-            <td>Unknown</th>
-          </tr>
+        {% endfor %}
         </tbody>
       </table>
     </div>

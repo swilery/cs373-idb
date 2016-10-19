@@ -1,3 +1,4 @@
+import json
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -13,15 +14,15 @@ def about():
 
 @app.route('/articles')
 def articles():
-    return render_template('articles.html')
+	return render_template('articles.html', articles=articles)
 
 @app.route('/sources')
 def sources():
-    return render_template('sources.html')
+    return render_template('sources.html', sources=sources)
 
 @app.route('/locations')
 def locations():
-    return render_template('locations.html')
+    return render_template('locations.html', countries=countries)
 
 @app.route('/single')
 def single():
@@ -36,4 +37,11 @@ def source_page():
     return render_template('source_page.html')
 
 if __name__ == "__main__":
-    app.run("162.243.14.196", 80)
+	with open('../data/api_data/sample_articles.json', 'r') as f:
+		articles = json.load(f)
+	with open('../data/api_data/sample_sources.json', 'r') as f:
+		sources = json.load(f)
+	with open('../data/api_data/sample_countries.json', 'r') as f:
+		countries = json.load(f)
+
+	app.run()

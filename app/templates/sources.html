@@ -61,31 +61,19 @@
             <th>Name</th>
             <th>country</th>
             <th>Language</th>
-            <th>description</th>
+            <th>Description</th>
           </tr>
         </thead>
         <tbody>
+        {% for source in sources %}
           <tr>
-            <th scope="row"><a href="http://www.bbc.co.uk/news"><img src="http://i.newsapi.org/bbc-news-s.png" style="max-width:300px; max-height:80px"></a></th>
-			<td><a href={{ url_for('source_page') }}>BBC News</a></td>
-            <td>Great Britain</td>
-            <td>English</td>
-            <td>Use BBC News for up-to-the-minute news, breaking news, video, audio and feature stories. BBC News provides trusted World and UK news as well as local and regional perspectives. Also entertainment, business, science, technology and health news.</td>
+            <th scope="row"><a href={{ source.url }}><img src={{ source.urlsToLogos.small }} style="max-width:300px; max-height:80px"></a></th>
+			<td><a href={{ url_for('source_page') }}>{{ source.name }}</a></td>
+            <td>{{ source.country }}</td>
+            <td>{{ source.language }}</td>
+            <td>{{ source.description }}</td>
           </tr>
-          <tr>
-            <th scope="row"><a href="http://www.usatoday.com/news"><img src="http://i.newsapi.org/usa-today-s.png" style="max-width:300px; max-height:80px"></a></th>
-			<td><a href={{ url_for('source_page') }}>USA-Today</a></td>
-            <td>United States</td>
-            <td>English</td>
-            <td>Get the latest national, international, and political news at USATODAY.com.</td>
-          </tr>
-          <tr>
-            <th scope="row"><a href="http://www.football-italia.net"><img src="http://i.newsapi.org/football-italia-s.png" style="max-width:300px; max-height:80px"></a></th>
-			<td><a href={{ url_for('source_page') }}>Football-Italia</a></td>
-            <td>Italy</td>
-            <td>English</td>
-            <td>Italian football news, analysis, fixtures and results for the latest from Serie A, Serie B and the Azzurri.</td>
-          </tr>
+        {% endfor %}
         </tbody>
       </table>
     </div>

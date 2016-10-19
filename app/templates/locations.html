@@ -67,33 +67,17 @@
           </tr>
         </thead>
         <tbody>
+        {% for country in countries %}
           <tr>
             <th scope="row">1</th>
-	    <td><a href={{ url_for('location_page') }}>Great Britain</a></td>
-            <td>Europe</td>
-            <td>GBP</td>
-	    <td>54, -2</td>
-	    <td>London</td>
-	    <td>64800000</td>
+	    <td><a href={{ url_for('location_page') }}>{{ country.name }}</a></td>
+            <td>{{ country.region }}</td>
+            <td>{{ country.currencies.0 }}</td>
+	    <td>{{ country.latlng.0 }}, {{ country.latlng.1 }}</td>
+	    <td>{{ country.capital }}</td>
+	    <td>{{ country.population }}</td>
           </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td><a href={{ url_for('location_page') }}>Italy</td>
-            <td>Europe</td>
-            <td>EUR</td>
-	    <td>42.83, 12.83</td>
-	    <td>Rome</td>
-	    <td>60753794</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-	    <td><a href={{ url_for('location_page') }}>United States</td>
-            <td>Americas</td>
-            <td>USD</td>
-	    <td>38, -97</td>
-	    <td>Washington, D.C.</td>
-	    <td>321645000</td>
-          </tr>
+        {% endfor %}
         </tbody>
       </table>
     </div>
