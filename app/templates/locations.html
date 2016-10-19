@@ -70,7 +70,7 @@
         {% for country in countries %}
           <tr>
             <th scope="row">1</th>
-	    <td><a href={{ url_for('location_page') }}>{{ country.name }}</a></td>
+	    <td><a href="/location_page">{{ country.name }}</a></td>
             <td>{{ country.region }}</td>
             <td>{{ country.currencies.0 }}</td>
 	    <td>{{ country.latlng.0 }}, {{ country.latlng.1 }}</td>
