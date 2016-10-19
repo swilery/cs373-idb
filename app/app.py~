@@ -31,9 +31,5 @@ def single():
 def location_page():
     return render_template('location_page.html')
 
-@app.route('/source_page')
-def source_page():
-    return render_template('source_page.html')
-
 if __name__ == "__main__":
     app.run()

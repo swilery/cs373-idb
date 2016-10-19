@@ -9,14 +9,14 @@
     <title>News Tracker 9000</title>
 
     <!-- Round About Style -->
-    <link rel="stylesheet" href="static/css/pillar.css">
+    <link rel="stylesheet" href="../css/pillar.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre:600" rel="stylesheet">
 
     <!-- Navbar styles -->
-    <link rel="stylesheet" href="static/css/navbar.css">
+    <link rel="stylesheet" href="../css/navbar.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -32,19 +32,19 @@
       <a class="navbar-brand" href="#"></a>
       <ul class="nav navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href={{ url_for('index') }}>Home</a>
+          <a class="nav-link" href="../../index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href={{ url_for('about') }}>About</a>
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="articles.html">Articles</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="locations.html">Locations</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href={{ url_for('articles') }}>Articles <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href={{ url_for('locations') }}>Locations</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href={{ url_for('sources') }}>Sources</a>
+          <a class="nav-link" href="sources.html">Sources<span class="sr-only">(current)</span></a>
         </li>
       </ul>
       <form class="form-inline pull-xs-right">
@@ -57,41 +57,34 @@
       <table class="table table-hover table-inverse">
         <thead>
           <tr>
-            <th>#</th>
-            <th>Title</th>
-            <th>Excerpt</th>
-            <th>Source</th>
-            <th>Publication date</th>
-            <th>Author</th>
+            <th>Logo</th>
+            <th>Name</th>
+            <th>country</th>
+            <th>Language</th>
+            <th>description</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th scope="row">1</th>
-            <td><a href={{ url_for('single') }}>
-              Call of Duty Created as 'A Little Bit' of an F-You to Medal of Honor</a></td>
-            <td>Following the success of Medal of Honor: Allied Assault, EA wanted to...</td>
-            <td>ign</td>
-            <td>2016-10-17</td>
-            <td>Alex Osborn</td>
+            <th scope="row"><a href="http://www.bbc.co.uk/news"><img src="http://i.newsapi.org/bbc-news-s.png" style="max-width:300px; max-height:80px"></a></th>
+			<td><a href="source_page.html">BBC News</a></td>
+            <td>Great Britain</td>
+            <td>English</td>
+            <td>Use BBC News for up-to-the-minute news, breaking news, video, audio and feature stories. BBC News provides trusted World and UK news as well as local and regional perspectives. Also entertainment, business, science, technology and health news.</td>
           </tr>
           <tr>
-            <th scope="row">2</th>
-            <td><a href={{ url_for('single') }}>
-              Pjanic backs under-fire Buffon to 'prove he's number one'</a></th>
-            <td>Gianluigi Buffon has made two high-profile errors in recent games,...</th>
-            <td>four-four-two</th>
-            <td>2016-10-17</th>
-            <td>FourFourTwo</th>
+            <th scope="row"><a href="http://www.usatoday.com/news"><img src="http://i.newsapi.org/usa-today-s.png" style="max-width:300px; max-height:80px"></a></th>
+			<td><a href="source_page.html">USA-Today</a></td>
+            <td>United States</td>
+            <td>English</td>
+            <td>Get the latest national, international, and political news at USATODAY.com.</td>
           </tr>
           <tr>
-            <th scope="row">3</th>
-            <td><a href={{ url_for('single') }}>
-              Nobel panel gives up knockin on Dylan door</a></td>
-            <td>Days after being awarded the literature prize, Bob Dylan has yet to...</td>
-            <td>the-guardian-uk</th>
-            <td>2016-10-17</th>
-            <td>Unknown</th>
+            <th scope="row"><a href="http://www.football-italia.net"><img src="http://i.newsapi.org/football-italia-s.png" style="max-width:300px; max-height:80px"></a></th>
+			<td><a href="source_page.html">Football-Italia</a></td>
+            <td>Italy</td>
+            <td>English</td>
+            <td>Italian football news, analysis, fixtures and results for the latest from Serie A, Serie B and the Azzurri.</td>
           </tr>
         </tbody>
       </table>

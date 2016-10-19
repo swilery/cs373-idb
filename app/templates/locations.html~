@@ -8,8 +8,8 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>News Tracker 9000</title>
 
-    <!-- Index styles -->
-    <!-- <link rel="stylesheet" href="static/css/index.css"> -->
+    <!-- Round About Style -->
+    <link rel="stylesheet" href="static/css/pillar.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
     <!-- Google Font -->
@@ -17,8 +17,6 @@
 
     <!-- Navbar styles -->
     <link rel="stylesheet" href="static/css/navbar.css">
-    <link rel="stylesheet" href="static/css/containers.css">
-    <link rel="stylesheet" href="static/css/single_page.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -42,8 +40,8 @@
         <li class="nav-item">
           <a class="nav-link" href={{ url_for('articles') }}>Articles</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href={{ url_for('locations') }}>Locations</a>
+        <li class="nav-item active">
+          <a class="nav-link" href={{ url_for('locations') }}>Locations<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href={{ url_for('sources') }}>Sources</a>
@@ -55,24 +53,49 @@
       </form>
     </nav>
 
-	<div class="container">
-		
-		<div class="row">
-			<div class="col-lg-8 offset-lg-2">
-				<img src="http://cdn.warontherocks.com/wp-content/uploads/2016/03/Russia-Syria-Soldiers.jpg">
-			</div>
-			<div class="col-lg-8 offset-lg-2">
-				<h2>Syria war: Russia announces Aleppo humanitarian pause</h2>
-				<p>Russia has announced a "humanitarian pause" in its bombing of the Syrian city of Aleppo. Moscow said it would halt operations in Aleppo on Thursday for an eight-hour span between 08:00 (05:00 GMT) and 16:00. The Russian defence ministry said the pause was agreed so that civilians and rebels could leave the city. But UN agencies say at least 12 hours will be needed for that to happen. "We would welcome any pause in the fighting, but there is a need for a longer pause in order to get the aid in," said UN spokesman Stephane Dujarric.</p>
-		</div>
-
-	</div>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- Latest compiled and minified JavaScript -->
-
-
+    <div class="table-container">
+      <table class="table table-hover table-inverse">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Country</th>
+            <th>Region</th>
+	    <th>Currency</th>
+            <th>Lat/Long</th>
+	    <th>Capital</th>
+	    <th>Population</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+	    <td><a href={{ url_for('location_page') }}>Great Britain</a></td>
+            <td>Europe</td>
+            <td>GBP</td>
+	    <td>54, -2</td>
+	    <td>London</td>
+	    <td>64800000</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Italy</td>
+            <td>Europe</td>
+            <td>EUR</td>
+	    <td>42.83, 12.83</td>
+	    <td>Rome</td>
+	    <td>60753794</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+	    <td>United States</td>
+            <td>Americas</td>
+            <td>USD</td>
+	    <td>38, -97</td>
+	    <td>Washington, D.C.</td>
+	    <td>321645000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </body>
 </html>
