@@ -1,84 +1,153 @@
 FORMAT: 1A
-HOST: http://polls.apiblueprint.org/
+HOST: http://www.bestbytes.me
 
-# CS373-IDB
+# BestBytes
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+Bestbytes API is a simple API that gives a variety of articles, their sources and locations.
 
-## Questions Collection [/questions]
+## Article Collection [/articles]
 
-### List All Questions [GET]
+### List All Articles [GET]
 
 + Response 200 (application/json)
 
         [
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
+                "title": "Ben Needham 'killed in accident'",
+                "excerpt": "Toddler Ben Needham died as a result of an accident near where he was last seen on the Greek island of Kos in 1991, police believe.",
+                "source": "BBC News",
+                "published at": "2016-10-17T12:35:12Z"
+                "author": "BBC News"
+            },
+            {
+                "title": "Ben Needham 'killed in accident'",
+                "excerpt": "Toddler Ben Needham died as a result of an accident near where he was last seen on the Greek island of Kos in 1991, police believe.",
+                "source": "BBC News",
+                "published at": "2016-10-17T12:35:12Z"
+                "author": "BBC News"
+            },
+            {
+                "title": "Ben Needham 'killed in accident'",
+                "excerpt": "Toddler Ben Needham died as a result of an accident near where he was last seen on the Greek island of Kos in 1991, police believe.",
+                "source": "BBC News",
+                "published at": "2016-10-17T12:35:12Z"
+                "author": "BBC News"
+            }
+            
+        ]
+
+## Article [/articles/{article_id}]
+
++ Parameters
+    + article_id (number) - ID of the Article in the form of an integer
+
+### View an Article detail [GET]
+
++ Response 200 (application/json)
+
+            {
+                "title": "Ben Needham 'killed in accident'",
+                "excerpt": "Toddler Ben Needham died as a result of an accident near where he was last seen on the Greek island of Kos in 1991, police believe.",
+                "source": "BBC News",
+                "published at": "2016-10-17T12:35:12Z"
+                "author": "BBC News"
+            }
+
+
+## Source Collection [/sources]
+
+### List All Sources [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "name": "BBC News",
+                "logo": "http://i.newsapi.org/bbc-news-s.png",
+                "country": "Great Britain",
+                "language": "English"
+                "description": "Use BBC News for up-to-the-minute news, breaking news, video, audio and feature stories. BBC News provides trusted World and UK news as well as local and regional perspectives. Also entertainment, business, science, technology and health news."
+            },
+            {
+                "name": "BBC News",
+                "logo": "http://i.newsapi.org/bbc-news-s.png",
+                "country": "Great Britain",
+                "language": "English"
+                "description": "Use BBC News for up-to-the-minute news, breaking news, video, audio and feature stories. BBC News provides trusted World and UK news as well as local and regional perspectives. Also entertainment, business, science, technology and health news."
+            },
+            {
+                "name": "BBC News",
+                "logo": "http://i.newsapi.org/bbc-news-s.png",
+                "country": "Great Britain",
+                "language": "English"
+                "description": "Use BBC News for up-to-the-minute news, breaking news, video, audio and feature stories. BBC News provides trusted World and UK news as well as local and regional perspectives. Also entertainment, business, science, technology and health news."
+            }
+        ]
+        
+## Source [/sources/{source_id}]
+
++ Parameters
+    + source_id (number) - ID of the Source in the form of an integer
+
+### View a Source Detail [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "name": "BBC News",
+                "logo": "http://i.newsapi.org/bbc-news-s.png",
+                "country": "Great Britain",
+                "language": "English"
+                "description": "Use BBC News for up-to-the-minute news, breaking news, video, audio and feature stories. BBC News provides trusted World and UK news as well as local and regional perspectives. Also entertainment, business, science, technology and health news."
             }
         ]
 
-### Create a New Question [POST]
+## Location Collection [/locations]
 
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
+### List All Locations [GET/locations]
 
-+ Request (application/json)
++ Response 200 (application/json)
 
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
-
-+ Response 201 (application/json)
-
-    + Headers
-
-            Location: /questions/2
-
-    + Body
-
+        [
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
-
+                "country": "Europe",
+                "logo": "GBP",
+                "lat/long": "54,-2",
+                "capital": "London"
+                "description": "64800000"
+            },
+            {
+                "country": "Europe",
+                "logo": "GBP",
+                "lat/long": "54,-2",
+                "capital": "London"
+                "description": "64800000"
+            },
+            {
+                "country": "Europe",
+                "logo": "GBP",
+                "lat/long": "54,-2",
+                "capital": "London"
+                "description": "64800000"
             }
+        ]
+        
+## Location [/locations/{location_id}]
 
++ Parameters
+    + location_id (number) - ID of the Location in the form of an integer
 
+### View a Location Detail [GET]
 
++ Response 200 (application/json)
+
+        [
+            {
+                "country": "Europe",
+                "logo": "GBP",
+                "lat/long": "54,-2",
+                "capital": "London"
+                "description": "64800000"
+            }
+        ]
