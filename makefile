@@ -1,5 +1,7 @@
 FILES :=                              \
+	makefile							\
 	.gitignore							\
+	models.html							\
 	IDB1.log 							\
 	UML.pdf								\
 	apiary.apib							\
