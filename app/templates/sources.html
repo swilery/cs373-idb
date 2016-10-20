@@ -9,7 +9,7 @@
     <title>News Tracker 9000</title>
 
     <!-- Round About Style -->
-    <link rel="stylesheet" href=static/css/pillar.css">
+    <link rel="stylesheet" href="static/css/pillar.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
     <!-- Google Font -->
@@ -57,6 +57,7 @@
       <table class="table table-hover table-inverse">
         <thead>
           <tr>
+            <th>#</th>
             <th>Logo</th>
             <th>Name</th>
             <th>country</th>
@@ -67,6 +68,7 @@
         <tbody>
         {% for source in sources %}
           <tr>
+            <th scope="row">1</th>
             <th scope="row"><a href="/source_page"><img src={{ source.urlsToLogos.small }} style="max-width:300px; max-height:80px"></a></th>
 			<td><a href={{ url_for('source_page') }}>{{ source.name }}</a></td>
             <td>{{ source.country }}</td>
