@@ -66,17 +66,33 @@
           </tr>
         </thead>
         <tbody>
-        {% for article in articles %}
           <tr>
             <th scope="row">1</th>
-            <td><a href="/single">
-              {{ article.title }}</a></td>
-            <td>{{ article.description }}</td>
-            <td>{{ article.source }}</td>
-            <td>{{ article.publishedAt }}</td>
-            <td>{{ article.author }}</td>
+            <td><a href="/article/1">
+              {{ articles.0.title }}</a></td>
+            <td>{{ articles.0.description }}</td>
+            <td>{{ articles.0.source }}</td>
+            <td>{{ articles.0.publishedAt }}</td>
+            <td>{{ articles.0.author }}</td>
           </tr>
-        {% endfor %}
+          <tr>
+            <th scope="row">2</th>
+            <td><a href="/article/2">
+              {{ articles.1.title }}</a></td>
+            <td>{{ articles.1.description }}</td>
+            <td>{{ articles.1.source }}</td>
+            <td>{{ articles.1.publishedAt }}</td>
+            <td>{{ articles.1.author }}</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td><a href="/article/3">
+              {{ articles.2.title }}</a></td>
+            <td>{{ articles.2.description }}</td>
+            <td>{{ articles.2.source }}</td>
+            <td>{{ articles.2.publishedAt }}</td>
+            <td>{{ articles.2.author }}</td>
+          </tr>
         </tbody>
       </table>
     </div>

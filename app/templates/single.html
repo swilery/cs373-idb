@@ -16,9 +16,9 @@
     <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre:400,600" rel="stylesheet">
 
     <!-- Navbar styles -->
-    <link rel="stylesheet" href="static/css/navbar.css">
-    <link rel="stylesheet" href="static/css/containers.css">
-    <link rel="stylesheet" href="static/css/single_page.css">
+    <link rel="stylesheet" href="../static/css/navbar.css">
+    <link rel="stylesheet" href="../static/css/containers.css">
+    <link rel="stylesheet" href="../static/css/single_page.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -59,11 +59,14 @@
 		
 		<div class="row">
 			<div class="col-lg-8 offset-lg-2">
-				<img src="http://cdn.warontherocks.com/wp-content/uploads/2016/03/Russia-Syria-Soldiers.jpg">
+				<img src={{ article.urlToImage }} onerror="this.src='../static/img/abstract_world.jpg'">
 			</div>
 			<div class="col-lg-8 offset-lg-2">
-				<h2>Syria war: Russia announces Aleppo humanitarian pause</h2>
-				<p>Russia has announced a "humanitarian pause" in its bombing of the Syrian city of Aleppo. Moscow said it would halt operations in Aleppo on Thursday for an eight-hour span between 08:00 (05:00 GMT) and 16:00. The Russian defence ministry said the pause was agreed so that civilians and rebels could leave the city. But UN agencies say at least 12 hours will be needed for that to happen. "We would welcome any pause in the fighting, but there is a need for a longer pause in order to get the aid in," said UN spokesman Stephane Dujarric.</p>
+				<h2>{{ article.title }}</h2>
+				<p>{{ article.description }}</p>
+				<p>Source : <a class="nav-link" href={{ article.url }}>{{ article.source }}</a></p>
+				<p>Author : {{ article.author }}</p>
+				<p>Published At : {{ article.publishedAt }}</p>
 		</div>
 
 	</div>

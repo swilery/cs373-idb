@@ -9,17 +9,17 @@
     <title>News Tracker 9000</title>
 
     <!-- Round About Style -->
-    <link rel="stylesheet" href="static/css/pillar.css">
+    <link rel="stylesheet" href="../static/css/pillar.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre:400,600" rel="stylesheet">
 
     <!-- Navbar styles -->
-    <link rel="stylesheet" href="static/css/navbar.css">
+    <link rel="stylesheet" href="../static/css/navbar.css">
     <!-- Single-Page styles -->
-	<link rel="stylesheet" href="static/css/containers.css">
-    <link rel="stylesheet" href="static/css/single_page.css">
+	<link rel="stylesheet" href="../static/css/containers.css">
+    <link rel="stylesheet" href="../static/css/single_page.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -60,16 +60,17 @@
 		<div class="row">
 			<div class="col-lg-8 offset-lg-2">
 				<div class="google-maps">
-					<iframe width="600" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Austin%2C%20Texas&key=AIzaSyDr7OP343FI-sez_S9hS4K2iL7Ii5l9_cs" allowfullscreen></iframe>
+					<iframe width="600" height="300" frameborder="0" style="border:0" src={{ mapRequest }} allowfullscreen></iframe>
 				</div>
 			</div>
 			<div class="col-lg-8 offset-lg-2">
-				<h2>Country Name</h2>
-				<p><span class="data-type">Region</span> : Country Region</p>
-				<p><span class="data-type">Capital</span> : Country Capital</p>
-				<p><span class="data-type">Currency</span> : Country Currency</p>
-				<p><span class="data-type">Population</span> : Country Population</p>
-				<p><span class="data-type">Historical Summary</span> :Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie id dolor eu bibendum. Nunc pellentesque diam neque, eu tempus neque suscipit ac. Nam congue elit ut ligula consectetur, eget congue nisi iaculis. Morbi sollicitudin orci eu dignissim laoreet. Nullam ac urna faucibus, pellentesque lorem sed, fermentum tortor. Suspendisse odio tortor, lobortis in cursus et, varius sit amet turpis. Ut bibendum feugiat sem sit amet consequat. Morbi vulputate lectus non orci pharetra, eget sollicitudin quam pellentesque. Vivamus vestibulum est ut leo dictum, at fringilla lectus tempus. Duis congue massa eget bibendum iaculis. Donec auctor, felis in placerat sagittis, tortor nunc ullamcorper mi, eu finibus ante augue non orci. Vivamus id erat tempus, vehicula ligula hendrerit, pellentesque dolor. Fusce mollis leo tincidunt, volutpat magna at, faucibus nisi. Quisque euismod diam libero, sed aliquam lectus maximus non. In hac habitasse platea dictumst. Etiam id libero bibendum, sagittis ex vel, vehicula lacus.</p>
+				<h2>{{ country.name }}</h2>
+				<p><span class="data-type">Region</span> : {{ country.region }}</p>
+				<p><span class="data-type">Capital</span> : {{ country.capital }}</p>
+				<p><span class="data-type">Currency</span> : {{country.currencies.0 }}</p>
+				<p><span class="data-type">Population</span> : {{ country.population }}</p>
+				<p><span class="data-type">News Sources</span> : </p>
+				<p><span class="data-type">Articles</span> : </p>
 
 		</div>
 	</div>

@@ -9,17 +9,17 @@
     <title>News Tracker 9000</title>
 
     <!-- Round About Style -->
-    <link rel="stylesheet" href="static/css/pillar.css">
+    <link rel="stylesheet" href="../static/css/pillar.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre:400,600" rel="stylesheet">
 
     <!-- Navbar styles -->
-    <link rel="stylesheet" href="static/css/navbar.css">
+    <link rel="stylesheet" href="../static/css/navbar.css">
     <!-- Single-Page styles -->
-	<link rel="stylesheet" href="static/css/containers.css">
-    <link rel="stylesheet" href="static/css/single_page.css">
+	<link rel="stylesheet" href="../static/css/containers.css">
+    <link rel="stylesheet" href="../static/css/single_page.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -59,15 +59,14 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-2 col-md-2 offset-lg-1 offset-md-1">
-				<img src="http://i.newsapi.org/bbc-news-s.png">
+				<img src={{ source.urlsToLogos.small }}>
 			</div>
 			<div class="col-lg-8 col-md-8">
-				<h2>BBC</h2>
-				<p><span class="data-type">Country</span> : Great Britain</p>
-				<p><span class="data-type">Language</span> : English</p>
-				<p><span class="data-type">Description</span> : Use BBC News for up-to-the-minute news, breaking news, video, audio and feature stories. BBC News provides trusted World and UK news as well as local and regional perspectives. Also entertainment, business, science, technology and health news.</p>
-
-
+				<h2>{{ source.name }}</h2>
+				<p><span class="data-type">Country</span> : {{ source.country }}</p>
+				<p><span class="data-type">Language</span> : {{ source.language }}</p>
+				<p><span class="data-type">Description</span> : {{ source.description }}</p>
+            <p><span class="data-type">Articles</span> :</p>
 			</div>
 		</div>
 	</div>

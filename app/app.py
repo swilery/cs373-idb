@@ -24,17 +24,24 @@ def sources():
 def locations():
     return render_template('locations.html', countries=countries)
 
-@app.route('/single')
-def single():
-    return render_template('single.html')
+@app.route('/article/<articleNum>')
+def single(articleNum):
+    articleNum = int(articleNum)-1
+    return render_template('single.html', article=articles[articleNum])
 
-@app.route('/location_page')
-def location_page():
-    return render_template('location_page.html')
+@app.route('/location/<locationNum>')
+def location_page(locationNum):
+    locationNum = int(locationNum)-1
+    mapRequest1 = "https://www.google.com/maps/embed/v1/place?q="
+    mapRequest2 = "&key=AIzaSyDr7OP343FI-sez_S9hS4K2iL7Ii5l9_cs"
+    name = countries[locationNum]["name"].replace(" ", "+")
+    mapRequestFinal = mapRequest1 + name + mapRequest2
+    return render_template('location_page.html', country=countries[locationNum], mapRequest=mapRequestFinal)
 
-@app.route('/source_page')
-def source_page():
-    return render_template('source_page.html')
+@app.route('/source/<sourceNum>')
+def source_page(sourceNum):
+    sourceNum = int(sourceNum)-1
+    return render_template('source_page.html', source=sources[sourceNum], country=countries[sourceNum])
 
 if __name__ == "__main__":
 	with open('../data/api_data/sample_articles.json', 'r') as f:
