@@ -1,147 +1,116 @@
-# from loader import db
-# from sqlalchemy_searchable import SearchQueryMixin
-# from sqlalchemy_utils.types import TSVectorType
-# from sqlalchemy_searchable import make_searchable
-# from flask.ext.sqlalchemy import BaseQuery
+from loader import db
+from sqlalchemy_searchable import SearchQueryMixin
+from sqlalchemy_utils.types import TSVectorType
+from sqlalchemy_searchable import make_searchable
+from flask.ext.sqlalchemy import BaseQuery
 
-# make_searchable()
+make_searchable()
 
-# # !!!! Our current UML model has no many to many relationships !!!!
+class ArticleQuery(BaseQuery, SearchQueryMixin):
+    pass
 
-# # source_article = db.Table('source_article',
-# #     db.Column('source_id', db.Integer, db.ForeignKey('sources_id')),
-# #     db.Column('article_id')
-# # )
+class SourceQuery(BaseQuery, SearchQueryMixin):
+    pass
 
-# # source_location = db.Table('source_location',
+class LocationQuery(BaseQuery, SearchQueryMixin):
+    pass
 
-# # )
+class Article(db.Model):
+    __tablename__ = 'articles'
+    id_num = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.Text)
+    description = db.Column(db.Text)
+    pubDate = db.Column(db.String(25))
+    image_link = db.Column(db.Text)
+    category = db.Column(db.String(25))
+    external_article_link = db.Column(db.Text)
+    external_source_link = db.Column(db.Text)
+    source_name = db.Column(db.String(25))
+   	region = db.Column(db.String(25))
 
-# # article_location = db.Table('article_location', 
+    search_vector = db.Column(TSVectorType('title'))
 
-# # )
+    def to_json(self, list_view=False):
+        json_article = {
+            'id_num': self.id_num,
+            'title': self.title,
+            'description': self.description,
+            'pubDate': self.pubDate
+            'image_link': self.image_link
+            'category': self.category
+            'external_article_link': self.external_article_link
+            'external_source_link': self.external_source_link
+            'source_name': self.source_name
+            'region': self.region
+        }
 
+        return json_article
 
-# class ArticleQuery(BaseQuery, SearchQueryMixin):
-#     pass
+    def __repr__(self):
+        return '<Article %s>' % self.id_num
 
-# class SourceQuery(BaseQuery, SearchQueryMixin):
-#     pass
+class Source(db.Model):
+    __tablename__ = 'sources'
+    id_num = db.Column(db.Integer, primary_key=True)
+    id_name = db.Column(db.Text)
+    language = db.Column(db.String(25))
+    description = db.Column(db.Text)
+    urlsToLogos = db.Column(db.Text)
+    category = db.Column(db.String(25))
+    external_link = db.Column(db.Text)
+    name = db.Column(db.String(25))
+    region = db.Column(db.String(25))
+    country = db.Column(db.String(25))
 
-# class LocationQuery(BaseQuery, SearchQueryMixin):
-#     pass
+    search_vector = db.Column(TSVectorType('name'))
 
-# # articles - source (many to one)
-# class Article(db.Model):
-#     __tablename__ = 'articles'
-#     '''
-#     id = db.Column(db.Integer, primary_key=True)
-#     name = db.Column(db.String(255))
-#     short = db.Column(db.String(10))
-#     '''
-#     id = db.Column(db.Integer, primary_key=True)
-#     title = db.Column(db.Text)
-#     excerpt = db.Column(db.String(50))
-#     source_id = db.Column(db.Integer, ForeignKey('sources.id'))
-#     source = relationship("Source", back_populates="articles")
-#     # not all articles are given a location -> nullable true
-#     location_id = db.Column(db.Integer, ForeignKey('locations.id'), nullable=True)
-#     pubDate = db.Column(db.String(25))
-#     author = db.Column(db.String(50))
+    def to_json(self, list_view=False):
+        json_location = {
+            'id_num': self.id_num
+            'id_name': self.id_name
+            'language': self.language
+            'description': self.description
+            'urlsToLogos': self.urlsToLogos
+            'category': self.category
+            'external_link': self.external_link
+            'name': self.name
+            'region': self.region
+            'country': self.country
+        }
 
-#     search_vector = db.Column(TSVectorType('name'))
+        return json_location
 
-#     def to_json(self, list_view=False):
-#         json_article = {
-#             'id': self.id,
-#             'name': self.title,
-#             'excerpt': self.excerpt,
-#             'source': self.source,
-#             'publishedAt': self.pubDate,
-#             'author': self.author,
-#         }
+    def __repr__(self):
+        return '<Source %r>' % self.id_num
 
-#         return json_location
+class Location(db.Model):
+    __tablename__ = 'locations'
+    id_num = db.Column(db.Integery, primary_key=True)
+    currencies = db.Column(db.Text)
+    latlng = db.Column(db.String(25))
+    capital = db.Column(db.String(25))
+    population = db.Column(db.String(25))
+    topLevelDomain = db.Column(db.String(25))
+    languages = db.Column(db.Text)
+    name = db.Column(db.String(25))
+    region = db.Column(db.String(25))
 
-#     def __repr__(self):
-#         return '<Article %s>' % self.short
+    search_vector = db.Column(TSVectorType('name'))
 
-# # template enum for languages
-# import enum
-# class langEnum(enum.Enum):
-#     en = "English"
+    def to_json(self, list_view=False):
+        json_location = {
+            'id_num': self.id_num
+            'currencies': self.currencies
+            'latlng': self.latlng
+            'capital': self.capital
+            'population': self.population
+            'topLevelDomain': self.topLevelDomain
+            'languages': self.languages
+            'name': self.name
+            'region': self.region
+        }
 
-# # source - articles (one to many)
-# class Source(db.Model):
-#     __tablename__ = 'sources'
-#     id = db.Column(db.Integer, primary_key=True)
-#     logo = db.Column(db.String(255)) # URL
-#     name = db.Column(db.String(50))
-#     cnty = db.Column(db.String(50))
-#     lang = db.Column(db.String(25))
-#     desc = db.Column(db.Text)
-#     articles = relationship("Article", back_populates="sources")
-#     location_id = db.Column(db.Integer, ForeignKey('location.id'))
-#     location = relationship("Location", back_populates="sources")
+        return json_location
 
-#     search_vector = db.Column(TSVectorType('name'))
-
-#     def to_json(self, list_view=False):
-#         json_location = {
-#             'id': self.id,
-#             'name': self.name,
-#             'logo': self.logo,
-#             'country': self.cnty,
-#             'lang': self.lang,
-#             'description': self.desc
-#         }
-#         if list_view:
-#             art_list = []
-#             for art in self.articles:
-#                 details = {'id': src.id, 'name': src.name}
-#                 art_list.append(details)
-
-#         json_location['sources'] = src_list
-
-#         return json_location
-
-#     def __repr__(self):
-#         return '<Source %r>' % self.name
-
-# # source - location (one to many) -> sources all have a location/region, locations may have many sources
-# # article - location (zero/one to many) -> some articles do not have a location
-# class Location(db.Model):
-#     __tablename__ = 'locations'
-
-#     id = db.Column(db.Integer, primary_key=True)
-#     name = db.Column(db.String(255))
-#     region = db.Column(db.String(50))
-#     currency = db.Column(db.String(10))
-#     lat_long = db.Column(db.String(25))
-#     capital = db.Column(db.String(50))
-#     pop = db.Column(db.BigINT)
-#     sources = relationship("Source", back_populates="locations")
-
-#     search_vector = db.Column(TSVectorType('name'))
-
-#     def to_json(self, list_view=False):
-#         json_location = {
-#             'id': self.id,
-#             'name': self.name,
-#             'region': self.region,
-#             'currency': self.currency,
-#             'lat_long': self.lat_long,
-#             'capital': self.capital,
-#             'pop': self.pop
-#         }
-#         if list_view:
-#             src_list = []
-#             for src in self.sources:
-#                 details = {'id': src.id, 'name': src.name}
-#                 src_list.append(details)
-#         json_location['sources'] = src_list
-
-#         return json_person
-
-#     def __repr__(self):
-#         return '<Location %s>' % self.name
+    def __repr__(self):
+        return '<Location %s>' % self.id_num
