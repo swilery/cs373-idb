@@ -1,0 +1,43 @@
+final_articles.json
+-------------------
+[{'id_num' : 'string',
+  'title' : 'string',
+  'description' : 'string',
+  'source_name' : 'string',
+  'category' : 'string',
+  'pubDate' : 'string',
+  'image_link' : 'string',
+  'external_article_link' : 'string',
+  'external_source_link' : 'string'
+  'region' : 'string'}]
+
+final_sources.json
+------------------
+[{'id_num' : 'string',
+  'id_name' : 'string'
+  'name' : 'string',
+  'country' : 'string',
+  'language' : 'string',
+  'description' : 'string',
+  'urlsToLogos' : {'small': 'string',
+                   'medium': 'string',
+                   'large' : 'string'},
+  'category' : 'string',
+  'external_link' : 'string',
+  'region' : 'string'}]
+  
+final_locations.json
+--------------------
+[{'id_num' : 'string',
+  'name' : 'string',
+  'currencies' : ['string'],
+  'region' : 'string',
+  'latlng' : ['string', 'string'],
+  'capital' : 'string',
+  'population' : 'string',
+  'topLevelDomain' : ['string'],
+  'languages' : ['string']}]
+  
+*** final_articles['source_name'] == final_sources['name'] (for articles whose source was in the API)
+*** final_sources['country'] == final_locations['name']
+*** final_articles['region'] == final_locations['region']
