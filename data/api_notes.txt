@@ -1,0 +1,210 @@
+-----------
+API Sources
+-----------
+https://newsapi.org/
+https://restcountries.eu/
+https://newslookup.com/api_docs.html
+
+
+--------
+News API
+--------
+
+Articles
+--------
+Request:
+   GET - https://newsapi.org/v1/articles
+   
+Parameters:
+   source (required) - news source/blog identifier
+   apiKey (required) - Your account's API key
+   sortBy (optional) - top, latest, popular (default=top)
+   
+Example:
+   https://newsapi.org/v1/articles?source=the-next-
+   web&sortBy=latest&apiKey=836d24a3cd7c43bd9450a4496c2dbf41
+   
+Response:
+   * Returns a dictionary with keys status, source, sortBy, and articles
+   * Articles' value is a list of dictionaries where each dictionary contains 
+     the keys author, title, description, url, urlToImage, and publishedAt
+   
+   {status:"", 
+    source:"", 
+    sortBy:"", 
+    articles:[{author:"", 
+               title:"", 
+               description:"", 
+               url:"", 
+               urlToImage:"", 
+               publishedAt:""}]}
+   
+Sources
+-------
+Request:
+   GET - https://newsapi.org/v1/sources
+   
+Parameters:
+   category (optional) - business, entertainment, etc. (default=all)
+   language (optional) - 2 letter ISO-639-1 language code (default=all)
+   country (optional) - 2 letter ISO 3166-1 country code (default=all)
+   
+Example:
+   https://newsapi.org/v1/sources?language=en
+   
+Response:
+   * Returns a dictionary with keys status and sources
+   * Sources' value is a list of dictionaries where each dictionary contains 
+     the keys id, name, description, url, category, language, country, 
+     urlsToLogos, and sortBysAvailable
+   
+   {status:"", 
+    sources:[{id:"", 
+              name:"", 
+              description:"", 
+              url:"", 
+              category:"", 
+              language:"", 
+              country:"", 
+              urlsToLogos:{small:"", 
+                           medium:"", 
+                           large:""}, 
+              sortBysAvailable:[""]}]}
+   
+   
+------------------
+REST Countries API
+------------------
+Site contains various URLs to access various data about countries
+Currrently storing all data
+
+Response:
+   * Returns a list of dictionaries [{country_dicts}]
+   
+   {name:"", 
+    topLevelDomain:[""], 
+    alpha2Code:"", 
+    alpha3Code:"", 
+    callingCodes:[""], 
+    capital:"", 
+    altSpellings:[""], 
+    relevance:"", 
+    region:"", 
+    subregion:"", 
+    translations:{de:"", 
+                  es:"", 
+                  fr:"", 
+                  ja:"", 
+                  it:""}, 
+    population:int, 
+    latlng:[int], 
+    demonym:"", 
+    area:int, 
+    gini:float, 
+    timezones:[""], 
+    borders:[""], 
+    nativeName:"", 
+    numericCode:"", 
+    currencies:[""], 
+    languages:[""]}
+    
+
+--------------
+Newslookup API
+--------------
+Make API requests through websites feed manager
+Limited to 30 responses per request with free account
+
+client_id = 17122
+secret = <see feed manager>
+
+Regions to Request:
+  - Africa (1r10)
+      - South Africa (gr22707)
+      - Kenya (gp13274)
+  - Asia (1r30)
+  - Asia: East (gp32)
+      - China (gp5813)
+      - China: Taiwan (gi23982)
+      - Japan (gi12701)
+      - South Korea (gi13545)
+  - Asia: South (gp33)
+      - India (gi11618)
+  - Asia: South East (gp34)
+      - Philippines (gi19459)
+      - Singapore (gi21983)
+  - Canada (gp5122)
+  - Europe (1r40)
+      - United Kingdom (3r25950)
+  - Middle East (gp35)
+      - Iran (gi11884)
+      - Israel (gi12314)
+      - Saudi Arabia (gi21481)
+  - Oceania (1r50)
+      - Australia (gp2156)
+      - New Zealand (gp17913)
+  - North America (1r20)
+  - United States (gi100)
+
+Response:
+  * Returns a dictionary with keys language, status, code, package, 
+    timestamp, count, message, ttl, and items
+  * Items' value is a list of dictionaries where each dictionary contains the 
+    keys title, link, description, referrer, source_url, source_title, 
+    pubdate, and id
+
+  {language:"",
+   status:"",
+   code:"",
+   package:"",
+   timestamp:"",
+   count:"",
+   message:"",
+   ttl:"",
+   items:[{title:"",
+           link:"",
+           description:"",
+           category:"",
+           referrer:"",
+           source_url:"",
+           source_title:"",
+           pubdate:"",
+           image_link:"",
+           id:""}]}
+
+
+-----------------
+Data File Formats
+-----------------
+*** news_api_all_articles.json:
+    {source_id:[article_list]}
+
+    news_api_sources.json:
+    {status:"", sources:[source_list]}
+
+    news_api_sources_id_map.json:
+    {source_id:source_name}
+
+*** newslookup_api_data/all_articles.json:
+    {region_name:[article_list]}
+
+    newslookup_countries_region_map.json:
+    {country_code:region_name}
+
+    newslookup_regions_id_map.json:
+    {region_code:region_name}
+
+    rest_countries_all.json:
+    [{country_dicts}]
+
+    rest_countries_code_map.json:
+    {country_code:country_name}
+
+    sample_articles.json:
+    [article1_dict, article2_dict, article3_dict]
+
+    sample_countries.json:
+    [country1_dict, country2_dict, country3_dict]
+
+    sample_sources.json:
+    [source1_dict, source2_dict, source3_dict]

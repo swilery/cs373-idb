@@ -1,0 +1,141 @@
+-----------
+Flask Links
+-----------
+https://github.com/brpowell/flask-example/wiki
+https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+http://www.tutorialspoint.com/flask/
+
+
+-------------
+General Flask
+-------------
+- Run Flask apps in a virtual Python environment (see CS373 Flask Tutorial)
+- Save virtual environment using 'pip freeze > requirements.txt' & reinstall
+  using 'pip install -r requirements.txt' (see CS373 Flask Tutorial)
+
+-----------------------
+The Flask Mega-Tutorial
+-----------------------
+
+Part I: Hello, World (Basic Flask)
+----------------------------------
+Basic Directory Structure
+- app: application package
+- app/static: images, javascripts, cascading style sheets (CSS)
+- app/templates: templates
+- tmp
+
+Init Script for App Package:
+- Creates the application object (of class Flask)
+- Imports the views module
+
+app/__init.py
+   from flask import Flask
+   app = Flask(__name__)
+   from app import views
+
+Views:
+- Views are the handlers that respond to requests from web browsers
+- In Flask handlers are written as Python functions
+- Each view function is mapped to one or more request URLs
+- Example below returns a string to be displayed, the two route decorators
+  create the mappings from URLs / and /index to this function
+
+app/views.py
+   from app import app
+   @app.route('/')
+   @app.route('/index')
+   def index():
+      return "Hello, World!"
+
+Startup Script:
+- Script that starts up the development web server with the application
+- Run with ./run.py & view in web browser at http://localhost:5000
+
+run.py (in root folder)
+   #!venv/bin/python
+   from app import app
+   app.run(debug=True)
+
+
+Part II: Templates (Rendering HTML w/Flask)
+-------------------------------------------
+- Store html files in the templates/ directory
+- Use {{ ... }} as placeholders for dynamic content in html files
+
+Directory Structure from Part I:
+root/
+   venv/
+      <virtual environment files>
+   app/
+      static/
+      templates/
+      __init__.py
+      views.py
+   tmp/
+   run.py
+
+Running the Application:
+- Execute run.py script
+- Open http://localhost:5000 in web browser
+
+Using Template in View Function:
+- Add import of render_template from flask
+- render_template invokes the Jinja2 templating engine (part of the Flask
+  framework) which substitutes {{ ... }} blocks with the corresponding
+  values provided as template arguments
+
+app/views.py
+   from flask import render_template
+   from app import app
+   @app.route('/')
+   @app.route('/index')
+   def index():
+      return render_template('index.html'[,<template args list>])
+
+Additional Template Features (HTML Pages:
+- Control statements inside {%...%}
+- For Loops
+     {% for i in list %}
+     HTML Content
+     {% endfor %}
+- Template Inheritance
+     - Define a base.html file with a block control statement to define
+       where derived templates can insert themselves
+       {% block content %}{% endblock %}
+     - Blocks are given a unique name ("content" in this section's example)
+     - Modify other html files to inherit from base.html
+       {% extends "base.html" %}
+       {% block content %}
+          HTML Content
+       {% endblock %}
+     - base.html takes care of general page structure, only need content
+       parts for each distinct page
+     - Useful to implement navigation bar and basic page structure in base.html
+       file and use inheritance to copy navigation bar to all pages
+
+
+--------------------
+Flask Tutorialspoint
+--------------------
+
+Basic Flask Application
+-----------------------
+- Flask constructor takes the name of the current module (__name__) as argument
+- The route() function of the Flask class is a decorator which tells the
+  application which URL should call the associated function
+  app.route(rule, options)
+  - The rule parameter represents URL binding with the function
+  - The options is a list of parameters to be forwareded to the underlying rule
+    object
+- The run() method of Flask class runs the app on the local development server
+  app.run(hosts, port, debug, options)
+
+Hello.py
+   from flask import Flask
+   app = Flask(__name__)
+   @app.route('/')
+   def hello_world():
+      return "Hello World"
+   if __name__ == "__main__":
+      app.run()

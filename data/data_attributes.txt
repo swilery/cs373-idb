@@ -1,0 +1,63 @@
+* List of information available from all data source APIs
+* Not every specific instance of an article, source, or country has a value for all fields
+* Data from various sources can always be reformatted to fit our needs (make things easier to 
+  find, interconnectedness between three pillars)
+
+News API: Articles
+-------------------
+author
+title
+description
+url
+urlToImage
+publishedAt
+
+News API: Sources
+-----------------
+id
+name
+description
+url
+category
+language
+country
+urlsToLogo
+sortBysAvailable
+
+Newslookup API: Articles
+------------------------
+title
+link
+description
+category
+referrer
+source_url
+source_title
+pubdate
+image_link
+id
+
+REST Countries API: Locations
+-----------------------------
+name
+topLevelDomain
+alpha2Code
+alpha3Code
+callingCodes
+capital
+altSpellings
+relevance
+region
+subregion
+translations
+population
+latlng
+demonym
+area
+gini
+timezones
+borders
+nativeName
+numericCode
+currencies
+languages
