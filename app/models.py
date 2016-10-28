@@ -2,7 +2,7 @@ from loader import db
 from sqlalchemy_searchable import SearchQueryMixin
 from sqlalchemy_utils.types import TSVectorType
 from sqlalchemy_searchable import make_searchable
-from flask.ext.sqlalchemy import BaseQuery
+from flask_sqlalchemy import BaseQuery
 
 make_searchable()
 
@@ -41,7 +41,7 @@ class Article(db.Model):
             'external_article_link': self.external_article_link,
             'external_source_link': self.external_source_link,
             'source_name': self.source_name,
-            'region': self.region
+            'region': self.regio
         }
 
         return json_article
