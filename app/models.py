@@ -26,7 +26,7 @@ class Article(db.Model):
     external_article_link = db.Column(db.Text)
     external_source_link = db.Column(db.Text)
     source_name = db.Column(db.String(25))
-   	region = db.Column(db.String(25))
+    region = db.Column(db.String(25))
 
     search_vector = db.Column(TSVectorType('title'))
 
@@ -35,12 +35,12 @@ class Article(db.Model):
             'id_num': self.id_num,
             'title': self.title,
             'description': self.description,
-            'pubDate': self.pubDate
-            'image_link': self.image_link
-            'category': self.category
-            'external_article_link': self.external_article_link
-            'external_source_link': self.external_source_link
-            'source_name': self.source_name
+            'pubDate': self.pubDate,
+            'image_link': self.image_link,
+            'category': self.category,
+            'external_article_link': self.external_article_link,
+            'external_source_link': self.external_source_link,
+            'source_name': self.source_name,
             'region': self.region
         }
 
@@ -66,15 +66,15 @@ class Source(db.Model):
 
     def to_json(self, list_view=False):
         json_location = {
-            'id_num': self.id_num
-            'id_name': self.id_name
-            'language': self.language
-            'description': self.description
-            'urlsToLogos': self.urlsToLogos
-            'category': self.category
-            'external_link': self.external_link
-            'name': self.name
-            'region': self.region
+            'id_num': self.id_num,
+            'id_name': self.id_name,
+            'language': self.language,
+            'description': self.description,
+            'urlsToLogos': self.urlsToLogos,
+            'category': self.category,
+            'external_link': self.external_link,
+            'name': self.name,
+            'region': self.region,
             'country': self.country
         }
 
@@ -99,14 +99,14 @@ class Location(db.Model):
 
     def to_json(self, list_view=False):
         json_location = {
-            'id_num': self.id_num
-            'currencies': self.currencies
-            'latlng': self.latlng
-            'capital': self.capital
-            'population': self.population
-            'topLevelDomain': self.topLevelDomain
-            'languages': self.languages
-            'name': self.name
+            'id_num': self.id_num,
+            'currencies': self.currencies,
+            'latlng': self.latlng,
+            'capital': self.capital,
+            'population': self.population,
+            'topLevelDomain': self.topLevelDomain,
+            'languages': self.languages,
+            'name': self.name,
             'region': self.region
         }
 
