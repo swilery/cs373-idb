@@ -33,10 +33,9 @@ check:
 
 models.html: app/models.py
 	# rm models.html
-	#cp app/models.py ./ && cp app/loader.py ./
-	#pydoc3 -w models
-	#rm models.py && rm loader.py
-	pydoc3 -w app/models.py
+	cp app/models.py ./ && cp app/loader.py ./
+	pydoc3 -w models
+	rm models.py && rm loader.py
 
 IDB1.log:
 	git log > IDB1.log
