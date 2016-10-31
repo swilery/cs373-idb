@@ -15,6 +15,19 @@ class SourceQuery(BaseQuery, SearchQueryMixin):
 class LocationQuery(BaseQuery, SearchQueryMixin):
     pass
 
+"""
+__tablename__ = 'articles'
+id_num = unique string identifier, db.String(25)
+title = string, db.Text
+description = string, db.Text
+pubDate = string, db.String(25)
+image_link = string, db.Text
+category = string, db.String(25)
+external_article_link = string, db.Text
+external_source_link = string, db.Text
+source_name = string, db.String(25)
+region = string, db.String(25)
+"""
 class Article(db.Model):
     __tablename__ = 'articles'
     id_num = db.Column(db.String(25), primary_key=True)
@@ -49,6 +62,19 @@ class Article(db.Model):
     def __repr__(self):
         return '<Article %s>' % self.id_num
 
+"""
+__tablename__ = 'sources'
+id_num = unique string identifier, db.String(25)
+id_name = string, db.Text
+language = string, db.String(25)
+description = string, db.Text
+urlsToLogos = string (actually dictionary), db.Text
+category = string, db.String(25)
+external_link = string, db.Text
+name = string, db.String(25)
+region = string, db.String(25)
+country = string, db.String(25)
+"""
 class Source(db.Model):
     __tablename__ = 'sources'
     id_num = db.Column(db.String(25), primary_key=True)
@@ -83,16 +109,28 @@ class Source(db.Model):
     def __repr__(self):
         return '<Source %r>' % self.id_num
 
+"""
+__tablename__ = 'locations'
+id_num = string, db.String(25)
+currencies = string, db.Text
+latlng = string, db.String(25)
+capital = string, db.String(25)
+population = string, db.String(25)
+topLevelDomain = string, db.String(25)
+languages = string, db.Text
+name = string, db.String(25)
+region = string, db.String(25)
+"""
 class Location(db.Model):
     __tablename__ = 'locations'
     id_num = db.Column(db.String(25), primary_key=True)
     currencies = db.Column(db.Text)
-    latlng = db.Column(db.String(25))
-    capital = db.Column(db.String(25))
-    population = db.Column(db.String(25))
-    topLevelDomain = db.Column(db.String(25))
+    latlng = db.Column(db.Text)
+    capital = db.Column(db.String(50))
+    population = db.Column(db.String(50))
+    topLevelDomain = db.Column(db.Text)
     languages = db.Column(db.Text)
-    name = db.Column(db.String(25))
+    name = db.Column(db.String(50))
     region = db.Column(db.String(25))
 
     search_vector = db.Column(TSVectorType('name'))
