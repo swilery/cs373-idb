@@ -1,6 +1,8 @@
 import json
 from loader import app_instance, db
 from flask import render_template
+from models import Article, Source, Location
+from random import randint
 #from flask import Flask, render_template 
 #from flask_sqlalchemy import SQLAlchemy
 
@@ -16,7 +18,14 @@ from flask import render_template
 @app_instance.route('/')
 @app_instance.route('/index')
 def index():
-    return render_template('index.html', articles=articles)
+    numArticles = db.session.query(Article).count()
+    num1 = randint(1, numArticles//3)
+    num2 = randint(numArticles//3, numArticles//3*2)
+    num3 = randint(numArticles//3*2, numArticles)
+    article1 = Article.query.filter_by(id_num=str(num1)).first()
+    article2 = Article.query.filter_by(id_num=str(num2)).first()
+    article3 = Article.query.filter_by(id_num=str(num3)).first()
+    return render_template('index.html', article1=article1, article2=article2, article3=article3)
 
 @app_instance.route('/about')
 def about():

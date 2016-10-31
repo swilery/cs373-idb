@@ -94,7 +94,7 @@ def formatArticles():
    final_articles = [ ]
    
    newsAPI_articles, id_num = pull_newsAPI()
-   newslookup_articles = pull_newslookup(1)
+   newslookup_articles = pull_newslookup(id_num)
    
    final_articles += newsAPI_articles
    final_articles += newslookup_articles

@@ -1,6 +1,6 @@
 import json
 from app import db, app_instance
-from app import Article, Source, Location
+from models import Article, Source, Location
 from pprint import pprint
 
 def parse_sources():
@@ -13,28 +13,46 @@ def parse_sources():
 			category=src['category'], external_link=src['external_link'],name=src['name'],\
 			region=src['region'], country=src['country'])
 		db.session.add(s)
-		print(s.id_name + " added to db")
+		print("Source " + s.id_num + " added to db")
 
 	db.session.commit()
 	print("Sources Committed")
 
-	r = db.session.query(Source).filter(Source.id_name == "usa-today").first()
-	print(r.name)
-	print(r.region)
-	print(r.category)
-	print(r.description)
-	# pprint(src_json)
 
 def parse_locations():
 	with open("../data/api_data/final_data/final_locations.json") as f:
 		loc_json = json.load(f);
 
-	pprint(loc_json)
+	for loc in loc_json:
+		l = Location(id_num=loc['id_num'], currencies=str(loc['currencies']), \
+			latlng=str(loc['latlng']), capital=loc['capital'], population=loc['population'], \
+			topLevelDomain=str(loc['topLevelDomain']), languages=str(loc['languages']), \
+			name=loc['name'], region=loc['region'])
+		db.session.add(l)
+		print("Location " + l.id_num + " added to db")
+
+	db.session.commit()
+	print("Locations Committed")	
+
 
 def parse_articles():
 	with open('../data/api_data/final_data/final_articles.json', 'r') as f:
 		art_json = json.load(f);
 
-	pprint(art_json)
+	for art in art_json:
+		a = Article(id_num=art['id_num'], title=art['title'], description=art['description'], \
+			pubDate=art['pubDate'], image_link=art['image_link'], category=art['category'], \
+			external_article_link=art['external_article_link'], external_source_link=art['external_source_link'], \
+			source_name=['source_name'], region=['region'])
+		db.session.add(a)
+		print("Article " + a.id_num + " added to db")
 
+	db.session.commit()
+	print("Articles Committed")
+
+
+db.session.commit()
 parse_sources()
+parse_articles()
+parse_locations()
+db.session.close()
