@@ -3,6 +3,7 @@ from loader import app_instance, db
 from flask import render_template
 from models import Article, Source, Location
 from random import randint
+
 #from flask import Flask, render_template 
 #from flask_sqlalchemy import SQLAlchemy
 
