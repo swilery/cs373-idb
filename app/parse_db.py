@@ -1,5 +1,6 @@
 import json
-from models import Article, Source, Location
+from app import db, app_instance
+from app import Article, Source, Location
 from pprint import pprint
 
 def parse_sources():
@@ -8,12 +9,20 @@ def parse_sources():
 	
 	for src in src_json:
 		s = Source(id_num=src['id_num'], id_name=src['id_name'], language=src['language'], \
-			description=src['description'],urlsToLogos=src['urlsToLogos'], \
+			description=src['description'],urlsToLogos=str(src['urlsToLogos']), \
 			category=src['category'], external_link=src['external_link'],name=src['name'],\
 			region=src['region'], country=src['country'])
-		pprint(s)
+		db.session.add(s)
+		print(s.id_name + " added to db")
 
-	print("Sources done.")
+	db.session.commit()
+	print("Sources Committed")
+
+	r = db.session.query(Source).filter(Source.id_name == "usa-today").first()
+	print(r.name)
+	print(r.region)
+	print(r.category)
+	print(r.description)
 	# pprint(src_json)
 
 def parse_locations():

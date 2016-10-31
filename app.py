@@ -1,45 +1,43 @@
 import json
-from loader import app_instance, db
-from flask import render_template
-#from flask import Flask, render_template 
-#from flask_sqlalchemy import SQLAlchemy
+from flask import Flask 
+from flask_sqlalchemy import SQLAlchemy
 
-# app_instance = Flask(__name__)
-# app_instance.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
-# app_instance.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-# app_instance.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://162.243.14.196/postgresql'
+app = Flask(__name__)
+app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://idb:Xx99582774@host162.243.14.196.idb'
 
-# db = SQLAlchemy(app_instance)
+db = SQLAlchemy(app)
 
-#from models import Article, Source, Location
+from models import Article, Source, Location
 
-@app_instance.route('/')
-@app_instance.route('/index')
+@app.route('/')
+@app.route('/index')
 def index():
     return render_template('index.html', articles=articles)
 
-@app_instance.route('/about')
+@app.route('/about')
 def about():
     return render_template('about.html')
 
-@app_instance.route('/articles')
+@app.route('/articles')
 def articles():
 	return render_template('articles.html', articles=articles)
 
-@app_instance.route('/sources')
+@app.route('/sources')
 def sources():
     return render_template('sources.html', sources=sources)
 
-@app_instance.route('/locations')
+@app.route('/locations')
 def locations():
     return render_template('locations.html', countries=countries)
 
-@app_instance.route('/article/<articleNum>')
+@app.route('/article/<articleNum>')
 def single(articleNum):
     articleNum = int(articleNum)-1
     return render_template('single.html', article=articles[articleNum])
 
-@app_instance.route('/location/<locationNum>')
+@app.route('/location/<locationNum>')
 def location_page(locationNum):
     locationNum = int(locationNum)-1
     mapRequest1 = "https://www.google.com/maps/embed/v1/place?q="
@@ -48,7 +46,7 @@ def location_page(locationNum):
     mapRequestFinal = mapRequest1 + name + mapRequest2
     return render_template('location_page.html', country=countries[locationNum], mapRequest=mapRequestFinal)
 
-@app_instance.route('/source/<sourceNum>')
+@app.route('/source/<sourceNum>')
 def source_page(sourceNum):
     sourceNum = int(sourceNum)-1
     return render_template('source_page.html', source=sources[sourceNum], country=countries[sourceNum])
@@ -61,4 +59,4 @@ if __name__ == "__main__":
 	with open('../data/api_data/sample_countries.json', 'r') as f:
 		countries = json.load(f)
 
-	app_instance.run()
+	app.run()

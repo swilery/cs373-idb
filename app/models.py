@@ -1,4 +1,4 @@
-from loader import db
+from app import db
 from sqlalchemy_searchable import SearchQueryMixin
 from sqlalchemy_utils.types import TSVectorType
 from sqlalchemy_searchable import make_searchable
@@ -17,7 +17,7 @@ class LocationQuery(BaseQuery, SearchQueryMixin):
 
 class Article(db.Model):
     __tablename__ = 'articles'
-    id_num = db.Column(db.Integer, primary_key=True)
+    id_num = db.Column(db.String(25), primary_key=True)
     title = db.Column(db.Text)
     description = db.Column(db.Text)
     pubDate = db.Column(db.String(25))
@@ -51,7 +51,7 @@ class Article(db.Model):
 
 class Source(db.Model):
     __tablename__ = 'sources'
-    id_num = db.Column(db.Integer, primary_key=True)
+    id_num = db.Column(db.String(25), primary_key=True)
     id_name = db.Column(db.Text)
     language = db.Column(db.String(25))
     description = db.Column(db.Text)
@@ -85,7 +85,7 @@ class Source(db.Model):
 
 class Location(db.Model):
     __tablename__ = 'locations'
-    id_num = db.Column(db.Integery, primary_key=True)
+    id_num = db.Column(db.String(25), primary_key=True)
     currencies = db.Column(db.Text)
     latlng = db.Column(db.String(25))
     capital = db.Column(db.String(25))
