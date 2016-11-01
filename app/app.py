@@ -64,7 +64,8 @@ def location_page(locationNum):
 @app_instance.route('/source/<sourceNum>')
 def source_page(sourceNum):
     source = Source.query.filter_by(id_num=sourceNum).first()
-    return render_template('source_page.html', source=source)
+    articles = Article.query.filter_by(source_name=source.name).all()
+    return render_template('source_page.html', source=source, articles=articles)
 
 if __name__ == "__main__":
 	with open('../data/api_data/sample_articles.json', 'r') as f:

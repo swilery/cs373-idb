@@ -66,11 +66,28 @@
 				<p><span class="data-type">Country</span> : {{ source.country }}</p>
 				<p><span class="data-type">Language</span> : {{ source.language }}</p>
 				<p><span class="data-type">Description</span> : {{ source.description }}</p>
-            <p><span class="data-type">Articles</span> :</p>
 			</div>
 		</div>
+	   <div class="table-container">
+        <h class="page-header" style="margin-top:10px;">Articles from {{ source.name }}</h>
+        <table class="table table-hover table-inverse">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Publication Date</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for article in articles %}
+            <tr>
+              <td><a href="{{ article.external_article_link }}">{{ article.title }}</a></td>
+              <td>{{ article.pubDate }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
 	</div>
-
   </body>
 </html>
 
