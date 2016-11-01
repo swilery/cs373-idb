@@ -54,7 +54,7 @@ class Article(db.Model):
             'external_article_link': self.external_article_link,
             'external_source_link': self.external_source_link,
             'source_name': self.source_name,
-            'region': self.regio
+            'region': self.region
         }
 
         return json_article
@@ -68,7 +68,9 @@ id_num = unique string identifier, db.String(25)
 id_name = string, db.Text
 language = string, db.String(25)
 description = string, db.Text
-urlsToLogos = string (actually dictionary), db.Text
+smallLogoURL = string, db.Text
+mediumLogoURL = string, db.Text
+largeLogoURL = string, db.Text
 category = string, db.String(25)
 external_link = string, db.Text
 name = string, db.String(25)
@@ -81,7 +83,9 @@ class Source(db.Model):
     id_name = db.Column(db.Text)
     language = db.Column(db.String(25))
     description = db.Column(db.Text)
-    urlsToLogos = db.Column(db.Text)
+    smallLogoURL = db.Column(db.Text)
+    mediumLogoURL = db.Column(db.Text)
+    largeLogoURL = db.Column(db.Text)
     category = db.Column(db.String(25))
     external_link = db.Column(db.Text)
     name = db.Column(db.String(25))
@@ -96,7 +100,9 @@ class Source(db.Model):
             'id_name': self.id_name,
             'language': self.language,
             'description': self.description,
-            'urlsToLogos': self.urlsToLogos,
+            'smallLogoURL': self.smallLogoURL,
+            'mediumLogoURL': self.mediumLogoURL,
+            'largeLogoURL': self.largeLogoURL,
             'category': self.category,
             'external_link': self.external_link,
             'name': self.name,

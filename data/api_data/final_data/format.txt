@@ -19,9 +19,9 @@ final_sources.json
   'country' : 'string',
   'language' : 'string',
   'description' : 'string',
-  'urlsToLogos' : {'small': 'string',
-                   'medium': 'string',
-                   'large' : 'string'},
+  'smallLogoURL' : 'string',
+  'mediumLogoURL' : 'string',
+  'largeLogoURL' : 'string',
   'category' : 'string',
   'external_link' : 'string',
   'region' : 'string'}]
@@ -30,13 +30,13 @@ final_locations.json
 --------------------
 [{'id_num' : 'string',
   'name' : 'string',
-  'currencies' : ['string'],
+  'currencies' : 'string',
   'region' : 'string',
-  'latlng' : ['string', 'string'],
+  'latlng' : 'string',
   'capital' : 'string',
   'population' : 'string',
-  'topLevelDomain' : ['string'],
-  'languages' : ['string']}]
+  'topLevelDomain' : 'string',
+  'languages' : 'string'}]
   
 *** final_articles['source_name'] == final_sources['name'] (for articles whose source was in the API)
 *** final_sources['country'] == final_locations['name']

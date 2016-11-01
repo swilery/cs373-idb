@@ -57,7 +57,6 @@
       <table class="table table-hover table-inverse">
         <thead>
           <tr>
-            <th>#</th>
             <th>Country</th>
             <th>Region</th>
 	          <th>Currency</th>
@@ -67,33 +66,16 @@
           </tr>
         </thead>
         <tbody>
+        {% for location in locations %}
           <tr>
-            <th scope="row">1</th>
-	    <td><a href="/location/1">{{ countries.0.name }}</a></td>
-            <td>{{ countries.0.region }}</td>
-            <td>{{ countries.0.currencies.0 }}</td>
-	    <td>{{ countries.0.latlng.0 }}, {{ countries.0.latlng.1 }}</td>
-	    <td>{{ countries.0.capital }}</td>
-	    <td>{{ countries.0.population }}</td>
+            <td><a href="/location/1">{{ location.name }}</a></td>
+            <td>{{ location.region }}</td>
+            <td>{{ location.currencies }}</td>
+            <td>{{ location.latlng }}</td>
+            <td>{{ location.capital }}</td>
+            <td>{{ location.population }}</td>
           </tr>
-          <tr>
-            <th scope="row">2</th>
-	    <td><a href="/location/2">{{ countries.1.name }}</a></td>
-            <td>{{ countries.1.region }}</td>
-            <td>{{ countries.1.currencies.0 }}</td>
-	    <td>{{ countries.1.latlng.0 }}, {{ countries.1.latlng.1 }}</td>
-	    <td>{{ countries.1.capital }}</td>
-	    <td>{{ countries.1.population }}</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-	    <td><a href="/location/3">{{ countries.2.name }}</a></td>
-            <td>{{ countries.2.region }}</td>
-            <td>{{ countries.2.currencies.0 }}</td>
-	    <td>{{ countries.2.latlng.0 }}, {{ countries.2.latlng.1 }}</td>
-	    <td>{{ countries.2.capital }}</td>
-	    <td>{{ countries.2.population }}</td>
-          </tr>
+        {% endfor %}
         </tbody>
       </table>
     </div>

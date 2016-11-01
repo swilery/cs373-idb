@@ -34,7 +34,9 @@ def formatSources():
       new_source['country'] = country_code_map[source['country'].upper()]
       new_source['language'] = language_map[source['language']]
       new_source['description'] = source['description']
-      new_source['urlsToLogos'] = source['urlsToLogos']
+      new_source['smallLogoURL'] = source['urlsToLogos']['small']
+      new_source['mediumLogoURL'] = source['urlsToLogos']['medium']
+      new_source['largeLogoURL'] = source['urlsToLogos']['large']
       new_source['category'] = source['category'].capitalize()
       new_source['external_link'] = source['url']
       new_source['region'] = region_map[source['country'].upper()]
@@ -62,26 +64,26 @@ def formatLocations():
       new_location = { }
       new_location['id_num'] = str(location_id)
       new_location['name'] = location['name']
-      new_location['currencies'] = location['currencies']
+      new_location['currencies'] = ", ".join(location['currencies'])
       new_location['region'] = region_map[location['alpha2Code']]
       
       if(len(location['latlng']) != 0):
          lat = location['latlng'][0]
          lng = location['latlng'][1]
          latlng = ["{0:.2f}".format(lat), "{0:.2f}".format(lng)]
-         new_location['latlng'] = latlng
+         new_location['latlng'] = ", ".join(latlng)
       else:
          new_location['latlng'] = [ ]
       
       new_location['capital'] = location['capital']
       new_location['population'] = str(location['population'])
-      new_location['topLevelDomain'] = location['topLevelDomain']
+      new_location['topLevelDomain'] = ", ".join(location['topLevelDomain'])
       
       languages = location['languages']
       new_languages = [ ]
       for language in languages:
          new_languages.append(language_map[language])
-      new_location['languages'] = new_languages
+      new_location['languages'] = ", ".join(new_languages)
       
       final_locations.append(dict(new_location))
       location_id += 1

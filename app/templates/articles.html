@@ -57,42 +57,23 @@
       <table class="table table-hover table-inverse">
         <thead>
           <tr>
-            <th>#</th>
             <th>Title</th>
             <th>Excerpt</th>
             <th>Source</th>
             <th>Published At</th>
-            <th>Author</th>
+            <th>Category</th>
           </tr>
         </thead>
         <tbody>
+        {% for article in articles %}
           <tr>
-            <th scope="row">1</th>
-            <td><a href="/article/1">
-              {{ articles.0.title }}</a></td>
-            <td>{{ articles.0.description }}</td>
-            <td>{{ articles.0.source }}</td>
-            <td>{{ articles.0.publishedAt }}</td>
-            <td>{{ articles.0.author }}</td>
+            <td><a href="/article/1">{{ article.title }}</a></td>
+            <td>{{ article.description }}</td>
+            <td>{{ article.source_name }}</td>
+            <td>{{ article.pubDate }}</td>
+            <td>{{ article.category }}</td>
           </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td><a href="/article/2">
-              {{ articles.1.title }}</a></td>
-            <td>{{ articles.1.description }}</td>
-            <td>{{ articles.1.source }}</td>
-            <td>{{ articles.1.publishedAt }}</td>
-            <td>{{ articles.1.author }}</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td><a href="/article/3">
-              {{ articles.2.title }}</a></td>
-            <td>{{ articles.2.description }}</td>
-            <td>{{ articles.2.source }}</td>
-            <td>{{ articles.2.publishedAt }}</td>
-            <td>{{ articles.2.author }}</td>
-          </tr>
+        {% endfor %}
         </tbody>
       </table>
     </div>

@@ -34,15 +34,18 @@ def about():
 
 @app_instance.route('/articles')
 def articles():
+	articles = Article.query.paginate(1, 50, False).items
 	return render_template('articles.html', articles=articles)
 
 @app_instance.route('/sources')
 def sources():
+    sources = db.session.query(Source).all()
     return render_template('sources.html', sources=sources)
 
 @app_instance.route('/locations')
 def locations():
-    return render_template('locations.html', countries=countries)
+    locations = db.session.query(Location).all()
+    return render_template('locations.html', locations=locations)
 
 @app_instance.route('/article/<articleNum>')
 def single(articleNum):
