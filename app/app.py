@@ -34,7 +34,7 @@ def about():
 
 @app_instance.route('/articles')
 def articles():
-	articles = Article.query.paginate(1, 50, False).items
+	articles = Article.query.paginate(50, 50, False).items
 	return render_template('articles.html', articles=articles)
 
 @app_instance.route('/sources')
@@ -49,30 +49,32 @@ def locations():
 
 @app_instance.route('/article/<articleNum>')
 def single(articleNum):
-    articleNum = int(articleNum)-1
-    return render_template('single.html', article=articles[articleNum])
+    article = Article.query.filter_by(id_num=articleNum).first()
+    source = Source.query.filter_by(name=article.source_name).first()
+    locations = Location.query.filter_by(region=article.region).all()
+    return render_template('single.html', article=article, source=source, locations=locations)
 
 @app_instance.route('/location/<locationNum>')
 def location_page(locationNum):
-    locationNum = int(locationNum)-1
+    location = Location.query.filter_by(id_num=locationNum).first()
+    sources = Source.query.filter_by(country=location.name).all()
+    articles = Article.query.filter_by(region=location.region).all()
     mapRequest1 = "https://www.google.com/maps/embed/v1/place?q="
     mapRequest2 = "&key=AIzaSyDr7OP343FI-sez_S9hS4K2iL7Ii5l9_cs"
-    name = countries[locationNum]["name"].replace(" ", "+")
-    mapRequestFinal = mapRequest1 + name + mapRequest2
-    return render_template('location_page.html', country=countries[locationNum], mapRequest=mapRequestFinal)
+    wikiRequest1 = "https://en.wikipedia.org/wiki/"
+    mapName = (location.name).replace(" ", "+")
+    wikiName = (location.name).replace(" ", "_")
+    mapRequestFinal = mapRequest1 + mapName + mapRequest2
+    wikiRequestFinal = wikiRequest1 +wikiName
+    return render_template('location_page.html', location=location, sources=sources, articles=articles, \
+    mapRequest=mapRequestFinal, wikiRequest=wikiRequestFinal)
 
 @app_instance.route('/source/<sourceNum>')
 def source_page(sourceNum):
     source = Source.query.filter_by(id_num=sourceNum).first()
     articles = Article.query.filter_by(source_name=source.name).all()
-    return render_template('source_page.html', source=source, articles=articles)
+    location = Location.query.filter_by(name=source.country).first()
+    return render_template('source_page.html', source=source, articles=articles, location=location)
 
 if __name__ == "__main__":
-	with open('../data/api_data/sample_articles.json', 'r') as f:
-		articles = json.load(f)
-	with open('../data/api_data/sample_sources.json', 'r') as f:
-		sources = json.load(f)
-	with open('../data/api_data/sample_countries.json', 'r') as f:
-		countries = json.load(f)
-
 	app_instance.run()

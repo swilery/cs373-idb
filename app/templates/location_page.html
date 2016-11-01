@@ -64,15 +64,41 @@
 				</div>
 			</div>
 			<div class="col-lg-8 offset-lg-2">
-				<h2>{{ country.name }}</h2>
-				<p><span class="data-type">Region</span> : {{ country.region }}</p>
-				<p><span class="data-type">Capital</span> : {{ country.capital }}</p>
-				<p><span class="data-type">Currency</span> : {{country.currencies.0 }}</p>
-				<p><span class="data-type">Population</span> : {{ country.population }}</p>
-				<p><span class="data-type">News Sources</span> : </p>
-				<p><span class="data-type">Articles</span> : </p>
-
-		</div>
+				<h2>{{ location.name }}</h2>
+				<p><span class="data-type">Region</span> : {{ location.region }}</p>
+				<p><span class="data-type">Capital</span> : {{ location.capital }}</p>
+				<p><span class="data-type">Currency</span> : {{ location.currencies }}</p>
+				<p><span class="data-type">Population</span> : {{ location.population }}</p>
+				<p><span class="data-type">News Sources</span> : 
+				  {% if sources %}
+				    {% for source in sources %}
+				      <span class="data-type"><a href="{{ url_for('source_page', sourceNum=source.id_num) }}">{{ source.name }}</a></span>
+				    {% endfor %}
+				  {% else %}
+				    <span class="data-type">None Available</span>
+				  {% endif %}
+				</p>
+       </div>
+       <div class="table-container">
+         <h2 class="page-header" style="margin-top:8px;">{{ location.region }} Region Articles</h2>
+           <table class="table table-hover table-inverse">
+             <thead>
+               <tr>
+                 <th>Title</th>
+                 <th>Publication Date</th>
+               </tr>
+             </thead>
+             <tbody>
+               {% for article in articles %}
+                 <tr>
+                   <td><a href="{{ article.external_article_link }}">{{ article.title }}</a></td>
+                   <td>{{ article.pubDate }}</td>
+                 </tr>
+               {% endfor %}
+             </tbody>
+           </table>
+         </div>
+		  <p><span class="data-type">Find Out More at <a href={{ wikiRequest }}>Wikipedia</a></span></p>
 	</div>
 
   </body>

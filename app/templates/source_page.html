@@ -63,13 +63,14 @@
 			</div>
 			<div class="col-lg-8 col-md-8">
 				<h2>{{ source.name }}</h2>
-				<p><span class="data-type">Country</span> : {{ source.country }}</p>
+				<p><span class="data-type">Country</span> : <a href="{{ url_for('location_page', locationNum=location.id_num) }}">{{ source.country }}</a></p>
 				<p><span class="data-type">Language</span> : {{ source.language }}</p>
 				<p><span class="data-type">Description</span> : {{ source.description }}</p>
+				<p><span class="data-type"><a href="{{ source.external_link }}">External Link</a></span></p> 
 			</div>
 		</div>
 	   <div class="table-container">
-        <h class="page-header" style="margin-top:10px;">Articles from {{ source.name }}</h>
+        <h2 class="page-header" style="margin-top:8px;">Articles from {{ source.name }}</h2>
         <table class="table table-hover table-inverse">
           <thead>
             <tr>

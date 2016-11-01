@@ -59,15 +59,39 @@
 		
 		<div class="row">
 			<div class="col-lg-8 offset-lg-2">
-				<img src={{ article.urlToImage }} onerror="this.src='../static/img/abstract_world.jpg'">
+				<img src={{ article.image_link }} onerror="this.src='../static/img/abstract_world.jpg'">
 			</div>
 			<div class="col-lg-8 offset-lg-2">
 				<h2>{{ article.title }}</h2>
-				<p>{{ article.description }}</p>
-				<p>Source : <a class="nav-link" href={{ article.url }}>{{ article.source }}</a></p>
-				<p>Author : {{ article.author }}</p>
-				<p>Published At : {{ article.publishedAt }}</p>
+				<p>{{ article.description }} <a class="nav-link" href={{ article.external_article_link }}>External Link</a></p>
+				<p>Source : 
+				  {% if source %}
+				    <a class="nav-link" href="{{ url_for('source_page', sourceNum=source.id_num) }}">{{ article.source_name }}</a>
+				  {% else %}
+				    <a class="nav-link" href="{{ article.external_source_link }}">{{ article.source_name }}</a>
+				  {% endif %}
+			   </p>
+				<p>Category : {{ article.category }}</p>
+				<p>Publication Date : {{ article.pubDate }}</p>
 		</div>
+		
+		<div class="table-container">
+        <h2 class="page-header" style="margin-top:8px;">Locations of Interest</h2>
+          <table class="table table-hover table-inverse">
+            <thead>
+              <tr>
+                <th>Country</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for location in locations%}
+                <tr>
+                  <td><a href="{{ url_for('location_page', locationNum=location.id_num) }}">{{ location.name }}</a></td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
 
 	</div>
 

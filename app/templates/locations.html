@@ -68,7 +68,7 @@
         <tbody>
         {% for location in locations %}
           <tr>
-            <td><a href="/location/1">{{ location.name }}</a></td>
+            <td><a href="{{ url_for('location_page', locationNum=location.id_num) }}">{{ location.name }}</a></td>
             <td>{{ location.region }}</td>
             <td>{{ location.currencies }}</td>
             <td>{{ location.latlng }}</td>

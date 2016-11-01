@@ -67,7 +67,7 @@
         <tbody>
         {% for article in articles %}
           <tr>
-            <td><a href="/article/1">{{ article.title }}</a></td>
+            <td><a href="{{ url_for('single', articleNum=article.id_num) }}">{{ article.title }}</a></td>
             <td>{{ article.description }}</td>
             <td>{{ article.source_name }}</td>
             <td>{{ article.pubDate }}</td>
