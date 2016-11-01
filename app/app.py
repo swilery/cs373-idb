@@ -1,20 +1,13 @@
 import json
 from loader import app_instance, db
-from flask import render_template
+from flask import render_template, jsonify, make_response, abort
 from models import Article, Source, Location
 from random import randint
 
-#from flask import Flask, render_template 
-#from flask_sqlalchemy import SQLAlchemy
+# -----------------------
+# Web Application Routing
+# -----------------------
 
-# app_instance = Flask(__name__)
-# app_instance.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
-# app_instance.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-# app_instance.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://162.243.14.196/postgresql'
-
-# db = SQLAlchemy(app_instance)
-
-#from models import Article, Source, Location
 
 @app_instance.route('/')
 @app_instance.route('/index')
@@ -75,6 +68,80 @@ def source_page(sourceNum):
     articles = Article.query.filter_by(source_name=source.name).all()
     location = Location.query.filter_by(name=source.country).first()
     return render_template('source_page.html', source=source, articles=articles, location=location)
+    
+    
+# -----------
+# RESTful API
+# -----------
+
+# Returns all articles in json format
+@app_instance.route('/api/articles/all', methods=['GET'])
+def get_articles_all():
+   articles = Article.query.all()
+   return jsonify({'articles': [article.to_json() for article in articles]})
+
+# Returns 50 articles in json format, change page number at end of url to access more articles
+@app_instance.route('/api/articles', methods=['GET'])
+@app_instance.route('/api/articles/page=<int:page>', methods=['GET'])
+def get_articles(page=1):
+   articles = Article.query.paginate(page=page, per_page=50).items
+   return jsonify({'articles': [article.to_json() for article in articles]})
+   
+# Returns article with id_num in json format
+@app_instance.route('/api/articles/id=<string:id_num>', methods=['GET'])
+def get_article(id_num=1):
+   article = Article.query.filter_by(id_num=id_num).first()
+   if article is None:
+      abort(404)
+   return jsonify(article.to_json())
+   
+# Returns all sources in json format
+@app_instance.route('/api/sources/all', methods=['GET'])
+def get_sources_all():
+   sources = Source.query.all()
+   return jsonify({'sources': [source.to_json() for source in sources]})
+   
+# Returns 25 sources in json format, change page number at end of url to access more sources
+@app_instance.route('/api/sources', methods=['GET'])
+@app_instance.route('/api/sources/page=<int:page>', methods=['GET'])
+def get_sources(page=1):
+   sources = Source.query.paginate(page=page, per_page=25).items
+   return jsonify({'sources': [source.to_json() for source in sources]})
+   
+# Returns source with id_num in json format
+@app_instance.route('/api/sources/id=<string:id_num>', methods=['GET'])
+def get_source(id_num=1):
+   source = Source.query.filter_by(id_num=id_num).first()
+   if source is None:
+      abort(404)
+   return jsonify(source.to_json())
+   
+# Returns all locations in json format
+@app_instance.route('/api/locations/all', methods=['GET'])
+def get_locations_all():
+   locations = Location.query.all()
+   return jsonify({'locations': [location.to_json() for location in locations]})
+   
+# Returns 25 locations in json format, change page number at end of url to access more sources
+@app_instance.route('/api/locations', methods=['GET'])
+@app_instance.route('/api/locations/page=<int:page>', methods=['GET'])
+def get_locations(page=1):
+   locations = Location.query.paginate(page=page, per_page=25).items
+   return jsonify({'locations': [location.to_json() for location in locations]})
+   
+# Returns location with id_num in json format
+@app_instance.route('/api/locations/id=<string:id_num>', methods=['GET'])
+def get_location(id_num=1):
+   location = Location.query.filter_by(id_num=id_num).first()
+   if location is None:
+      abort(404)
+   return jsonify(location.to_json())
+
+# Returns error json 
+@app_instance.errorhandler(404)
+def not_found(error):
+   return make_response(jsonify({'error': 'Not found'}), 404)
+
 
 if __name__ == "__main__":
 	app_instance.run()
