@@ -35,7 +35,9 @@ models.html:
 	#app/models.py
 	#rm models.html
 	cp app/models.py ./ && cp app/loader.py ./
-	pydoc3 -w app/models.py
+	cd app
+	pydoc3 -w models
+	cd ..
 	#rm models.py && rm loader.py
 
 IDB1.log:
