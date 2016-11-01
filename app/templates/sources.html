@@ -68,7 +68,7 @@
         {% for source in sources %}
           <tr>
             <th scope="row"><a href={{ source.external_link }}><img src={{ source.smallLogoURL }} style="max-width:300px; max-height:80px"></img></a></th>
-            <td><a href="/source/1">{{ source.name }}</a></td>
+            <td><a href="{{ url_for('source_page', sourceNum=source.id_num) }}">{{ source.name }}</a></td>
             <td>{{ source.country }}</td>
             <td>{{ source.language }}</td>
             <td>{{ source.description }}</td>
