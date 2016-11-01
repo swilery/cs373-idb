@@ -34,7 +34,7 @@ def about():
 
 @app_instance.route('/articles')
 def articles():
-	articles = Article.query.paginate(50, 50, False).items
+	articles = Article.query.paginate(1, 50, False).items
 	return render_template('articles.html', articles=articles)
 
 @app_instance.route('/sources')
