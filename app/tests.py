@@ -177,12 +177,4 @@ class DBTestCases(unittest.TestCase):
     #     self.assertEqual(r.author, "Football Italia Staff")
 
 if __name__ == '__main__':
-<<<<<<< HEAD
     unittest.main()
-=======
-    app_instance.config["TESTING"] = True
-    app_instance.config["SQLALCHEMY_DATABASE_URI"] = os.getenv('BESTBYTES_DB_TEST')
-    # db.create_all()
-    unittest.main()
-    # db.drop_all()
->>>>>>> e6c0cc06fc04e03b9b174712a31a056f53822d48
