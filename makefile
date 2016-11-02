@@ -40,7 +40,7 @@ models.html:
 	cd ..
 	#rm models.py && rm loader.py
 
-IDB1.log:
+log:
 	git log > IDB2.log
 
 # TestIDB.tmp: app/tests.py

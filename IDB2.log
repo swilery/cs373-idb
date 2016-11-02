@@ -1,0 +1,701 @@
+commit 43a443d7973e258d0d1e8988b72748f4d575f18c
+Merge: a10e1f7 775c11b
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Wed Nov 2 11:16:15 2016 -0500
+
+    Merge branch 'dev' of https://github.com/swilery/cs373-idb into dev
+
+commit a10e1f7cbda5bfe77e083f55b3e95d1ca4d972d6
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Wed Nov 2 11:16:02 2016 -0500
+
+    Unit Tests Complete and Working
+
+commit 775c11b89b400afead85919debfdca6ac4e9e35e
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Wed Nov 2 11:13:01 2016 -0500
+
+    Added a short description of data scraping on the about page
+
+commit f7e7a55b37a192a25072aecd672a3b07cf9c25c3
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Wed Nov 2 10:25:50 2016 -0500
+
+    Initial Tests Working; Conflict Resolved
+
+commit 3a5ca64f3d38221fecd9329fb0a18bd4755b98cc
+Merge: 031d5fa e6c0cc0
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Wed Nov 2 10:24:37 2016 -0500
+
+    Initial Tests Working
+
+commit 031d5fa4589937953df764126e832c81e8ce1f7a
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Wed Nov 2 10:23:13 2016 -0500
+
+    Initial Tests Working
+
+commit e6c0cc06fc04e03b9b174712a31a056f53822d48
+Merge: c051c5b 2eeffbe
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Wed Nov 2 09:45:05 2016 -0500
+
+    Unit tests button on about page
+
+commit c051c5ba5341cbeb0901fe30c751395b70cade75
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Wed Nov 2 09:43:55 2016 -0500
+
+    Unit test button on about page
+
+commit 2eeffbe3133fdf5a3b5c75e8d2846c850598d533
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Wed Nov 2 08:14:38 2016 -0500
+
+    Updated RESTful API
+
+commit 60f551f833cd67d36a1da9676bbb655194847dae
+Author: Santiago Munevar <santiago-munevar@wireless-10-147-85-7.public.utexas.edu>
+Date:   Tue Nov 1 18:28:54 2016 -0500
+
+    Updated about.html to highlight about as current nav element
+
+commit 0fe9cff3cbd81adba7c56fc1d2978296c3b22cef
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Tue Nov 1 13:57:08 2016 -0500
+
+    Implemented RESTful API in app.py
+
+commit cc2992807aa522e9811065a91c3cd44aadce0a40
+Author: Santiago Munevar <santiago-munevar@wireless-10-147-85-7.public.utexas.edu>
+Date:   Tue Nov 1 13:53:15 2016 -0500
+
+    Fixed pydoc issue. Needed to cd into directory
+
+commit 0bcee7a8c5d1bf1cc7cd72c2c7326b2048ce1861
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Tue Nov 1 13:15:04 2016 -0500
+
+    Updated app.py
+
+commit 6565db31f070c7c9e8ea6dfadb35c220c31393fd
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Tue Nov 1 13:09:06 2016 -0500
+
+    Basic Links and Pillar Connections Complete
+
+commit 964b59f2079e92e00873db5ec57e7a7b91bc6925
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Tue Nov 1 11:53:07 2016 -0500
+
+    Added Articles Table in Individual Source Page
+
+commit a71e04caf0b9301d880dc271d92cbe883f2e05e5
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Tue Nov 1 11:36:55 2016 -0500
+
+    Working Links to Individual Sources
+
+commit 843b915ac5359c6ef92c02c082b8244fdecf27fe
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Tue Nov 1 06:15:37 2016 -0500
+
+    Modified Data Formatting, Updated Database, Basic Queries and Data Display in 3 Main Pillar Pages Working
+
+commit 9e7b9d95decb8bd500471e02cb1f7ba9d4a00cb5
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Mon Oct 31 15:27:19 2016 -0500
+
+    Fixed Another Typo in index.html
+
+commit a1f0f8885d0374794f101e9676c646f5e5ff32ec
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Mon Oct 31 15:24:46 2016 -0500
+
+    Fixed Typo in index.html
+
+commit 3eda309f75714225be458f5d0f228e0236c08e17
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Mon Oct 31 13:13:49 2016 -0500
+
+    Updated default image
+
+commit 954f3f417068f7adf56a6441fd5fe76a8bcc7238
+Merge: 46064e6 7f783b5
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Mon Oct 31 13:04:24 2016 -0500
+
+    Merge Conflict Resolved
+
+commit 46064e6a9b0a47dc519fa575185ca940e89e20ba
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Mon Oct 31 12:38:42 2016 -0500
+
+    All Data in Database; Able to Query
+
+commit 7f783b5482dd4f4b10364fa985539bb46af038a2
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Mon Oct 31 12:38:42 2016 -0500
+
+    All Data in Database; Able to Query
+
+commit ad5adeb084cc9b54c32c1df99159216d6e351a67
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Mon Oct 31 10:10:36 2016 -0500
+
+    Fixed app_instance
+
+commit feac42d2cd2368e7dc7f72a4ea5c168d8d015c7e
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Mon Oct 31 09:43:10 2016 -0500
+
+    Database Working
+
+commit e8ac676b0d4901fae2ef29e6276b0e9b98192662
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Fri Oct 28 09:42:37 2016 -0500
+
+    models.py and loader.py updated with new flask import, still failing
+
+commit 27fbf7a717e1489d13764fdb0ca25e80723cfa9b
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Fri Oct 28 09:17:49 2016 -0500
+
+    pydoc3 import error no module named flask
+
+commit c413c82a82c2d4fc1a309dc3fdff1dabd025169f
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Wed Oct 26 09:46:53 2016 -0500
+
+    Added parse_db.py to put json data into database
+
+commit 8e70f23ca64be5434fcc5fca226f13e1f529b5ed
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Wed Oct 26 09:19:26 2016 -0500
+
+    Updated models.py
+
+commit e434ab2e99c573bb319c29ec0bad1865b9e14d8c
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Wed Oct 26 08:07:11 2016 -0500
+
+    Final Data json Formatting
+
+commit 7eb70c80ec68027cb3a06887f6599d036dd72f6c
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Wed Oct 26 08:05:25 2016 -0500
+
+    Final Data Formatting
+
+commit e3a1188af9c7207fb462971c00341785379cc68d
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Thu Oct 20 14:23:45 2016 -0500
+
+    The final final final commit, makefile now checks for itself and models.html
+
+commit 45f14444e8c6029bebfea3de9df1deb7da2f3b6a
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Thu Oct 20 14:11:12 2016 -0500
+
+    Brought the hammer down on pydoc3, models.html generated mostly
+
+commit 713e9ec32a94fa01411da503f21cc591cfe43753
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Thu Oct 20 12:57:33 2016 -0500
+
+    Reordered nav-bar, fixed links
+
+commit 7bb84f4be3875f084207f51ce8fef319730b9c76
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Thu Oct 20 12:43:41 2016 -0500
+
+    Updated Links, Routing, Site Functionality
+
+commit 8c491024900f26479285522952f6b524840f18fe
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Thu Oct 20 11:54:00 2016 -0500
+
+    Modified makefile for more file checks and for pydoc3 to run
+
+commit 028a8d2e7631d358398dab509eb550611e4c49e2
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Thu Oct 20 11:24:00 2016 -0500
+
+    Tests for the test god, Skulls for the skull throne
+
+commit 3b5605bbe69148dc965be45a6b577de8f82f3aaa
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Thu Oct 20 09:09:56 2016 -0500
+
+    Added actual models to models.py, added unit tests, added an init loader that was being called in models
+
+commit e8f80bba789bf2080a79c33f6551e5ac5bb60e25
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Wed Oct 19 21:52:37 2016 -0500
+
+    I cannot spell RESPONSIBILITIES
+
+commit c718430a0f074f61a37778e4bbb02c101d39268b
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Wed Oct 19 21:48:35 2016 -0500
+
+    Added major responsibilities, going to sleep
+
+commit 06fed9101bb6cb3198b229837105a243b8929555
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Wed Oct 19 21:38:45 2016 -0500
+
+    found a missing quotation mark that was corrupting the pillar.css from loading on sources.html, this closes #24
+
+commit f1dd1a27d03b58557649a17bc495c3cd35840205
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Wed Oct 19 21:23:38 2016 -0500
+
+    Made log of commits per requirements
+
+commit 6c074f92ab550ad1d5d6d7ff5894bcb990d0a034
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Wed Oct 19 20:34:40 2016 -0500
+
+    Transferring API Description file from Apiary.io
+
+commit 82422e7dfde8e79dac2981d6793452277a6a5277
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Wed Oct 19 20:01:12 2016 -0500
+
+    Added UML.txt to .gitignore, this closes #13
+
+commit a5fbc363175736f3afea276c5ef25e0cf4643b09
+Author: Santiago Munevar <santiago-munevar@Johns-MacBook-Pro.local>
+Date:   Wed Oct 19 15:55:55 2016 -0500
+
+    Added EID to README
+
+commit 194a910ed04981eb13218d046ed64d7e3eff812a
+Merge: f462436 99fa224
+Author: Walter Xia <swilery@cs.utexas.edu>
+Date:   Wed Oct 19 12:59:06 2016 -0500
+
+    Merge branch 'dev' of https://github.com/swilery/cs373-idb into dev
+
+commit f46243600d25cc0a0df0ca821a492a123c47ceca
+Author: Walter Xia <swilery@cs.utexas.edu>
+Date:   Wed Oct 19 12:57:33 2016 -0500
+
+    Updated about.html
+
+commit 99fa2245dbdebfc3d76f19189390cddbaeb147c8
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Wed Oct 19 12:56:25 2016 -0500
+
+    Working on Links and Routing
+
+commit 6331cce4e330d246081bda91381e9bf5233907c2
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Wed Oct 19 12:08:31 2016 -0500
+
+    Working on Routing
+
+commit fbb1cffbd1d1b5a530f1214eae11fb38db270bbe
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Wed Oct 19 10:16:30 2016 -0500
+
+    Modified about.html
+
+commit 68c7f42ecf7d92fa4e547f14a7ec7b14e40094bb
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Wed Oct 19 10:01:00 2016 -0500
+
+    Updated .gitignore
+
+commit af2eac366c433049d7f1d01b3d592b911421285c
+Author: Ryan Fuller <rfuller250@users.noreply.github.com>
+Date:   Wed Oct 19 09:59:13 2016 -0500
+
+    Delete app.py~
+
+commit 13ee3be38016be7f8bf3feae7b953ec0f933b16b
+Author: Ryan Fuller <rfuller250@users.noreply.github.com>
+Date:   Wed Oct 19 09:59:07 2016 -0500
+
+    Delete app.py
+
+commit 486f5fe84c1b901909c7ea52c0f90e66c5c00786
+Author: Walter Xia <swilery@gmail.com>
+Date:   Wed Oct 19 14:55:47 2016 +0000
+
+    updated .gitignore
+
+commit 1a70c084c58386a8b196cd0b9854e02b4e82b35f
+Author: Walter Xia <swilery@gmail.com>
+Date:   Wed Oct 19 14:53:24 2016 +0000
+
+    Website now runs on droplet at port 80
+
+commit d5a07d807e8e6b670b6037e693fa6d42f411b317
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Wed Oct 19 09:47:42 2016 -0500
+
+    Still Fixing Files
+
+commit 942d953c924e0ae30ff2fbf6744a2066d83d663b
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Wed Oct 19 09:43:29 2016 -0500
+
+    Fixing Files
+
+commit c2ac1531032fd301c01eafbd9e961786eb6aa3fe
+Merge: 02aca7d a66da9e
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Wed Oct 19 09:41:28 2016 -0500
+
+    Merge branch 'dev' of https://github.com/swilery/cs373-idb into dev
+
+commit 02aca7dae79564e982742898ad66fce6bb62fd0d
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Wed Oct 19 09:40:44 2016 -0500
+
+    Updated File Paths in HTML Files
+
+commit a66da9e4eb06187a94ad3299a869ad1c232aad13
+Author: Walter Xia <swilery@gmail.com>
+Date:   Wed Oct 19 14:04:08 2016 +0000
+
+    Save app.wsgi on Github
+
+commit d4a8bada44badab6cdbc48dc8ee6be26294b32bd
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Wed Oct 19 08:45:41 2016 -0500
+
+    Basic Flask App Working
+
+commit 6b1a0efc1d460bfffbe0bc30f8336b234089ffbb
+Author: Santiago Munevar <santiago-munevar@wireless-10-147-255-241.public.utexas.edu>
+Date:   Tue Oct 18 17:57:10 2016 -0500
+
+    Added sources single page template. Also missing RELATED section below
+
+commit 4732513ba563ade80050bc3cca7c918ef56bc820
+Author: Santiago Munevar <santiago-munevar@wireless-10-147-255-241.public.utexas.edu>
+Date:   Tue Oct 18 17:34:58 2016 -0500
+
+    Added single page for articles, still needs RELATED features at bottom
+
+commit 12292dd82be36be492cc54e39ecb6d9f32da4c3a
+Merge: ee2d09c 75746e3
+Author: Santiago Munevar <santiago-munevar@wireless-10-147-255-241.public.utexas.edu>
+Date:   Tue Oct 18 15:37:39 2016 -0500
+
+    merge
+
+commit ee2d09c80079fc1dc9d31391ddea145a6da73dde
+Author: Santiago Munevar <santiago-munevar@wireless-10-147-255-241.public.utexas.edu>
+Date:   Tue Oct 18 15:36:47 2016 -0500
+
+    Created single page template for location
+
+commit 75746e382777632023d54a1617da031780f472d3
+Author: abderrahman said-alaoui <said11@cs.utexas.edu>
+Date:   Tue Oct 18 14:58:52 2016 -0500
+
+    embedded link in image, sources.html
+
+commit 1d8235e07e8bce880eb57aa160287967c182d5d3
+Author: abderrahman said-alaoui <said11@cs.utexas.edu>
+Date:   Tue Oct 18 14:50:55 2016 -0500
+
+    updated articles.html
+
+commit bc123a6792a9cb16e814c8de86d419b68afc91d5
+Merge: 7e7af6a c376c12
+Author: abderrahman said-alaoui <said11@cs.utexas.edu>
+Date:   Tue Oct 18 14:44:41 2016 -0500
+
+    Merge branch 'dev' of github.com:swilery/cs373-idb into dev
+
+commit 7e7af6affc02b4155b967ef869dd371f118faa14
+Author: abderrahman said-alaoui <said11@cs.utexas.edu>
+Date:   Tue Oct 18 14:44:19 2016 -0500
+
+    sources page
+
+commit c376c121e4f1e1ba6d69f5e6c3adb3c1e5aa139f
+Author: Santiago Munevar <santiago-munevar@wireless-10-147-255-241.public.utexas.edu>
+Date:   Tue Oct 18 14:33:33 2016 -0500
+
+    Updated articles to have active navbar element, and populated static locations data
+
+commit 9aab44606f3b9b99991e6202aac367fa8dea87be
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Tue Oct 18 11:51:42 2016 -0500
+
+    Updated api_notes.txt, Created data_attributes.txt
+
+commit 4253b3268efbb4766748e010fd8aa32d8a234803
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Tue Oct 18 11:24:58 2016 -0500
+
+    Updated ryan.jpg
+
+commit 1dee53814d49ee734ea49b61ffafc1ef0795b4f3
+Author: abderrahman said-alaoui <said11@cs.utexas.edu>
+Date:   Tue Oct 18 09:07:55 2016 -0500
+
+    example articles page updated
+
+commit 2bdfdc53740993528f4c86ce72a814caf2bb149d
+Author: abderrahman said-alaoui <said11@cs.utexas.edu>
+Date:   Tue Oct 18 07:15:03 2016 -0500
+
+    flask py files included
+
+commit 0c47bd74d75b786daa5bdbe71ca25c63b4abf493
+Author: abderrahman said-alaoui <said11@cs.utexas.edu>
+Date:   Tue Oct 18 07:03:47 2016 -0500
+
+    updated .gitignore
+
+commit 618caf40322b71170b2689ac16f6baffff4af09b
+Author: Abderrahman SaidAlaoui <a.saidalaoui@utexas.edu>
+Date:   Tue Oct 18 06:12:08 2016 -0500
+
+    merge files
+
+commit b9fbc110dcf724940344492604bc5231769f0345
+Author: Santiago Munevar <santiago-munevar@Johns-MacBook-Pro.local>
+Date:   Mon Oct 17 18:02:27 2016 -0500
+
+    Styled about page and added css file for page container
+
+commit 06c2059e21f19780782ab6fc4ceebba4ed6d9ca6
+Author: Santiago Munevar <santiago-munevar@Johns-MacBook-Pro.local>
+Date:   Mon Oct 17 15:57:05 2016 -0500
+
+    Added header to all files and created mockup/template for front page recent/random news articles
+
+commit e1b69004542cc61441b862428fe251248b45cf27
+Author: Santiago Munevar <santiago-munevar@Johns-MacBook-Pro.local>
+Date:   Mon Oct 17 15:01:01 2016 -0500
+
+    Updated Header, removed carousel to be replaced by top 5 most recent news stories
+
+commit 2e919adc7e40d61637813d5f331f83ca97fc6905
+Merge: ea175ed 03769a0
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Mon Oct 17 14:35:53 2016 -0500
+
+    Merge branch 'dev' of github.com:swilery/cs373-idb into dev
+
+commit ea175ed8ad768e0e17ed47707df83e2b0ea46c39
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Mon Oct 17 14:35:23 2016 -0500
+
+    Added font awesome icons, and some about page upgrades
+
+commit 03769a006ee19daafb8a6d9686dacd7c895598e4
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Mon Oct 17 12:22:33 2016 -0500
+
+    Updated data/api_notes.txt
+
+commit cc14d8e2cf0e7e66e7c6c50fcc5b104007e3f746
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Mon Oct 17 12:08:12 2016 -0500
+
+    Updated data/ Directory
+
+commit c8b4b101c56e2749e10eaf79f17d51ec8f44de96
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Mon Oct 17 11:44:49 2016 -0500
+
+    Commits to master are wrong, added pictures to about page, renamed site, minimal descriptions
+
+commit a57720bdb97a3c336f1585baad5f9a05f30922c1
+Merge: 0664c9a 35d84bf
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Mon Oct 17 11:12:23 2016 -0500
+
+    Merged from dev, static pages in progress
+
+commit 35d84bfa260174fb0106f768f5fb15f6c857a3ab
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Mon Oct 17 09:40:44 2016 -0500
+
+    Testing image scaling with gimp for about page
+
+commit f1c839698a47cb54d7d102ddf38fbbc1d187d010
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Mon Oct 17 09:38:41 2016 -0500
+
+    Changed static pillar pages for news
+
+commit 5c931ebf8ea1f1ee8b748535de2c69992831e336
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Mon Oct 17 09:22:57 2016 -0500
+
+    Updated UML txt and pdf for news
+
+commit fe254582eccd788c0b444c31c177511986512720
+Author: asaidalaoui <a.saidalaoui@utexas.edu>
+Date:   Mon Oct 17 08:59:50 2016 -0500
+
+    Update UML.txt
+
+commit d757ab6300e46b6b9039d6a7e8ca5d3f07d4b02e
+Author: asaidalaoui <a.saidalaoui@utexas.edu>
+Date:   Mon Oct 17 08:41:56 2016 -0500
+
+    models' skeleton
+
+commit 12ff400c69e14bca840c07e890c556db5135b244
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Mon Oct 17 08:40:30 2016 -0500
+
+    Adding Sample Data for Phase 1
+
+commit 2def30990b01bc31e8c754716d094222b3ae4d00
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Fri Oct 14 11:35:12 2016 -0500
+
+    Set some basic margins on the pillar pages for template table
+
+commit dfb282f03090ac8d2de314021f4f8d0e6b5495fc
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Fri Oct 14 11:23:22 2016 -0500
+
+    Moved about.html to templates, removed rainbows
+
+commit 4b7a56c2de878c4b0f1a98cffdb55a70e57f4899
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Fri Oct 14 09:23:46 2016 -0500
+
+    Added initial tables and static pages, need some margins and padding still
+
+commit 194a2eeb218e4a50814ed08176dee21a2c57fde5
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Fri Oct 14 08:52:21 2016 -0500
+
+    Added apiary template
+
+commit 0664c9acd79073daf0a2612bb25b5ac08ec8e46d
+Merge: f40390a 64665d7
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Fri Oct 14 08:47:57 2016 -0500
+
+    Merge branch 'dev'
+
+commit f40390af19931c80b0d21e409349293c8bc8f5bb
+Author: swilery <swilery@gmail.com>
+Date:   Fri Oct 14 08:37:42 2016 -0500
+
+    Transferring API Description file from Apiary.io
+
+commit 64665d72ed20083d4c9dc370c4753f4685b407fd
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Thu Oct 13 18:19:53 2016 -0500
+
+    Said and Santi are bad and should feel bad, but mostly Eric
+
+commit a5e532ebee61b891104e5406f8c8cec460b33b1a
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Thu Oct 13 16:58:15 2016 -0500
+
+    Added navbar and carousel, stock images
+
+commit 84b2392c5a78793783e63a8e08cf750bc376dc83
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Wed Oct 12 13:59:55 2016 -0500
+
+    Added bootstrap minimal template to index.html
+
+commit d9f34e3bd3eb3aaf10304a90eda2be86cfc1e23e
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Wed Oct 12 13:52:38 2016 -0500
+
+    Added some required directories and bootstrap scripts
+
+commit 6252f27d1603e1d71456d9fbfe07a9ff9bb84613
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Wed Oct 12 13:24:16 2016 -0500
+
+    Updated UML for concert/live music tracking
+
+commit 246fbf9f11917f6ca776096c51362bf2e62fcbcc
+Author: Walter Xia <swilery@cs.utexas.edu>
+Date:   Wed Oct 12 11:18:30 2016 -0500
+
+    Testing RESTful API URLS
+
+commit 3fbda11b720e199a6a809ff7a9aedcaa809195f6
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Wed Oct 12 10:35:14 2016 -0500
+
+    Updated README
+
+commit 0fb0264bc1eb6e9c4df167c53e02599917013ad8
+Merge: 8d5f472 a8045aa
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Wed Oct 12 10:31:04 2016 -0500
+
+    Merging
+
+commit a8045aaa05dc4517a2258482474166bb4dd6fa2f
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Wed Oct 12 10:18:33 2016 -0500
+
+    Basic Flask App Tutorial
+
+commit 8d5f4729b49fda8b6671e516fd49bde401442b40
+Author: swilery <swilery@gmail.com>
+Date:   Wed Oct 12 09:25:47 2016 -0500
+
+    Update README
+
+commit e2c0d0af8578b39463fe3b4d041238a8fc1e6030
+Author: asaidalaoui <a.saidalaoui@utexas.edu>
+Date:   Wed Oct 12 09:18:20 2016 -0500
+
+    Update README
+
+commit 2e139264bcbedf6f1dacf437aa3dca9e655964c0
+Author: asaidalaoui <a.saidalaoui@utexas.edu>
+Date:   Wed Oct 12 09:18:08 2016 -0500
+
+    Update README
+
+commit e718f835ff13bdae967940d3cb9b483d6c020172
+Author: asaidalaoui <a.saidalaoui@utexas.edu>
+Date:   Wed Oct 12 09:17:15 2016 -0500
+
+    Update README
+
+commit 41a1838443e8c2e4f7ac910db59eded75ce97001
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Wed Oct 12 08:48:30 2016 -0500
+
+    Initial makefile engage
+
+commit fd0f5ce0ae22d8654c21a53bbb60e13117039d66
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Wed Oct 12 08:44:35 2016 -0500
+
+    Added template makefile and base py files
+
+commit dfd9780898458e23a24ee4c593719a1d04af683f
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Wed Oct 12 08:38:02 2016 -0500
+
+    Added .travis.yml
+
+commit 5d59453a797a91b7e8e6a31e6a2e0ec6ebf5a2d3
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Wed Oct 12 08:30:38 2016 -0500
+
+    dev branch push
+
+commit bc9b5eedf5932929c29c03d4a021e2773bf0d61a
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Wed Oct 12 08:28:39 2016 -0500
+
+    Initial commit, starting early because we are awesome
