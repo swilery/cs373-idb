@@ -2,7 +2,7 @@ FILES :=                              \
 	makefile							\
 	.gitignore							\
 	models.html							\
-	IDB1.log 							\
+	IDB2.log 							\
 	UML.pdf								\
 	apiary.apib							\
 	.travis.yml							\
