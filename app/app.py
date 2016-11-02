@@ -1,6 +1,6 @@
 import json
 from loader import app_instance, db
-from flask import render_template, jsonify, make_response, abort
+from flask import render_template, jsonify, make_response, abort, flash
 from models import Article, Source, Location
 from random import randint
 
@@ -27,8 +27,10 @@ def tests():
     from os import path
     p = path.join(path.dirname(path.realpath(__file__)), 'tests.py')
     output = getoutput('python3 '+p)
-    print(output)
-    return jsonify({'output': str(output)})    
+    outList = output.split('\n')
+    response = outList[2] + ', ' + outList[4]
+    flash(response)
+    return render_template('about.html')   
 
 @app_instance.route('/about')
 def about():
@@ -165,4 +167,5 @@ def not_found(error):
 
 
 if __name__ == "__main__":
-	app_instance.run()
+  app_instance.secret_key = 'some_secret'
+  app_instance.run()
