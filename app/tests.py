@@ -1,10 +1,10 @@
 import os
 import unittest
 from loader import db, app_instance
-from models import Company, Person, Game, Platform
-from sqlalchemy.orm import sessionmaker
-from datetime import datetime
-from dateutil import parser
+from models import Source, Article, Location
+# from sqlalchemy.orm import sessionmaker
+# from datetime import datetime
+# from dateutil import parser
 from flask import Flask
 
 class DBTestCases(unittest.TestCase):
@@ -152,6 +152,6 @@ class DBTestCases(unittest.TestCase):
 if __name__ == '__main__':
     app_instance.config["TESTING"] = True
     app_instance.config["SQLALCHEMY_DATABASE_URI"] = os.getenv('BESTBYTES_DB_TEST')
-    db.create_all()
+    # db.create_all()
     unittest.main()
-    db.drop_all()
+    # db.drop_all()
