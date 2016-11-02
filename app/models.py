@@ -22,10 +22,10 @@ title = string, db.Text
 description = string, db.Text
 pubDate = string, db.String(25)
 image_link = string, db.Text
-category = string, db.String(25)
+category = string, db.Text
 external_article_link = string, db.Text
 external_source_link = string, db.Text
-source_name = string, db.String(25)
+source_name = string, db.Text
 region = string, db.String(25)
 """
 class Article(db.Model):
@@ -35,10 +35,10 @@ class Article(db.Model):
     description = db.Column(db.Text)
     pubDate = db.Column(db.String(25))
     image_link = db.Column(db.Text)
-    category = db.Column(db.String(25))
+    category = db.Column(db.Text)
     external_article_link = db.Column(db.Text)
     external_source_link = db.Column(db.Text)
-    source_name = db.Column(db.String(25))
+    source_name = db.Column(db.Text)
     region = db.Column(db.String(25))
 
     search_vector = db.Column(TSVectorType('title'))
