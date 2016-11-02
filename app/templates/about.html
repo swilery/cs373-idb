@@ -206,6 +206,11 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
+                    <button ng-click="tests()" data-toggle="modal" data-target="#testOutputModal">Run Unit Tests!!!</button>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col-lg-12">
                     <p>Copyright &copy; Website 2016</p>
                 </div>
                 <!-- /.col-lg-12 -->
@@ -214,6 +219,23 @@
         </footer>
 
     </div>
+
+
+    <div id="testOutputModal" class="modal hide" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Unit Test Output</h2>
+                </div>
+                <div class="modal-body">{{ testOutput }}</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-dismiss="modal">Exit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- /.container -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

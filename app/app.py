@@ -8,7 +8,6 @@ from random import randint
 # Web Application Routing
 # -----------------------
 
-
 @app_instance.route('/')
 @app_instance.route('/index')
 def index():
@@ -20,6 +19,16 @@ def index():
     article2 = Article.query.filter_by(id_num=str(num2)).first()
     article3 = Article.query.filter_by(id_num=str(num3)).first()
     return render_template('index.html', article1=article1, article2=article2, article3=article3)
+
+
+@app_instance.route('/unittests')
+def tests():
+    from subprocess import getoutput
+    from os import path
+    p = path.join(path.dirname(path.realpath(__file__)), 'tests.py')
+    output = getoutput('python3 '+p)
+    print(output)
+    return jsonify({'output': str(output)})    
 
 @app_instance.route('/about')
 def about():
