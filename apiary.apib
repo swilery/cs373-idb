@@ -5,11 +5,63 @@ HOST: http://www.bestbytes.me
 
 Bestbytes API is a simple API that gives a variety of articles, their sources and locations.
 
-## Article Collection [/articles]
+## All Data Collection [/api/all]
+
+### List All Data
+
++ Response 200 (json)
+
+    {
+        "articles": [
+            {
+                "category": "string",
+                "description": "string",
+                "external_article_link": "string",
+                "external_source_link": "string",
+                "id_num": "string",
+                "image_link": "string",
+                "pubDate": "string",
+                "region": "string",
+                "source_name": "string",
+                "title": "string"
+            }
+        ],
+        "sources": [
+            {
+                "category": "string",
+                "country": "string",
+                "description": "string",
+                "external_link": "string",
+                "id_name": "string",
+                "id_num": "string",
+                "language": "string",
+                "largeLogoURL": "string",
+                "mediumLogoURL": "string",
+                "name": "string",
+                "region": "string",
+                "smallLogoURL": "string"
+            }
+        ],
+        "locations": [
+            {
+                "capital": "string",
+                "currencies": "string",
+                "id_num": "string",
+                "languages": "string",
+                "latlng": "string",
+                "name": "string",
+                "population": "string",
+                "region":, "string",
+                "topLevelDomain": "string"
+            }
+        ]
+    }
+
+## Article Collection [/api/articles/all]
 
 ### List All Articles [GET]
 
-+ Response 200 (application/json)
++ Response 200 (json)
 
         [
             {
