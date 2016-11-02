@@ -74,6 +74,18 @@ def source_page(sourceNum):
 # RESTful API
 # -----------
 
+# Returns all data in json format
+@app_instance.route('/api/all', methods=['GET'])
+def get_all():
+   articles = Article.query.all()
+   sources = Source.query.all()
+   locations = Location.query.all()
+   data = { }
+   data['articles'] = [article.to_json() for article in articles]
+   data['sources'] = [source.to_json() for source in sources]
+   data['locations'] = [location.to_json() for location in locations]
+   return jsonify(data)
+
 # Returns all articles in json format
 @app_instance.route('/api/articles/all', methods=['GET'])
 def get_articles_all():
