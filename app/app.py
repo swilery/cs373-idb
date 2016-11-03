@@ -37,9 +37,11 @@ def about():
     return render_template('about.html')
 
 @app_instance.route('/articles')
-@app_instance.route('/articles/<int:page>')
-def articles(page = 1):
-	articles = Article.query.paginate(page, 50, False)
+#@app_instance.route('/articles/<int:page>')
+def articles():
+	#articles = db.session.query(Article).all()
+	numArticles = db.session.query(Article).count()
+	articles = Article.query.paginate(1, numArticles, False)
 	return render_template('articles.html', articles=articles)
 
 @app_instance.route('/sources')
