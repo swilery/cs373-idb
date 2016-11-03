@@ -72,10 +72,11 @@
         <thead>
           <tr>
             <th>Title</th>
-            <th>Excerpt</th>
+            <th>Description</th>
             <th>Source</th>
             <th>Publication Date</th>
             <th>Category</th>
+            <th>Region</th>
           </tr>
         </thead>
         <tbody>
@@ -86,6 +87,7 @@
             <td>{{ article.source_name }}</td>
             <td>{{ article.pubDate }}</td>
             <td>{{ article.category }}</td>
+            <td>{{ article.region }}</td>
           </tr>
         {% endfor %}
 <!--         {%if articles.has_prev%}<a href="{{url_for('articles', page=articles.prev_num)}}">&lt;&lt; Previous page</a>{%else%}&lt;&lt; Previous page{%endif%}
