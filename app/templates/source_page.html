@@ -59,18 +59,36 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-2 col-md-2 offset-lg-1 offset-md-1">
-				<img src={{ source.urlsToLogos.small }}>
+				<img src={{ source.mediumLogoURL }}>
 			</div>
 			<div class="col-lg-8 col-md-8">
 				<h2>{{ source.name }}</h2>
-				<p><span class="data-type">Country</span> : {{ source.country }}</p>
+				<p><span class="data-type">Country</span> : <a href="{{ url_for('location_page', locationNum=location.id_num) }}">{{ source.country }}</a></p>
 				<p><span class="data-type">Language</span> : {{ source.language }}</p>
 				<p><span class="data-type">Description</span> : {{ source.description }}</p>
-            <p><span class="data-type">Articles</span> :</p>
+				<p><span class="data-type"><a href="{{ source.external_link }}">External Link</a></span></p> 
 			</div>
 		</div>
+	   <div class="table-container">
+        <h2 class="page-header" style="margin-top:8px;">Articles from {{ source.name }}</h2>
+        <table class="table table-hover table-inverse">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Publication Date</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for article in articles %}
+            <tr>
+              <td><a href="{{ article.external_article_link }}">{{ article.title }}</a></td>
+              <td>{{ article.pubDate }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
 	</div>
-
   </body>
 </html>
 

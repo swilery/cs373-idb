@@ -62,31 +62,31 @@
 
 		<div class="row article">
 			<div class="col-lg-3 offset-lg-1">
-				<img class"img-responsive img-center" src={{ articles.0.urlToImage }} alt="">
+				<img class"img-responsive img-center" src={{ article1.image_link }} onerror="this.src='static/img/abstract_world.jpg'" alt="">
 			</div>
 			<div class="col-lg-7">
-				<h3>{{ articles.0.title }}</h3>
-				<p>{{ articles.0.description }}<a href={{ articles.0.url }}> Read More >></a></p>
+				<h3>{{ article1.title }}</h3>
+				<p>{{ article1.description }}<a href={{ article1.external_article_link }}> Read More >></a></p>
 			</div>
 		</div>
 
 		<div class="row article">
 			<div class="col-lg-3 offset-lg-1">
-				<img class"img-responsive img-center" src={{ articles.1.urlToImage }} onerror="this.src='static/img/abstract_world.jpg'" alt="">
+				<img class"img-responsive img-center" src={{ article2.image_link }} onerror="this.src='static/img/abstract_world.jpg'" alt="">
 			</div>
 			<div class="col-lg-7">
-				<h3>{{ articles.1.title }}</h3>
-				<p>{{ articles.1.description }}<a href={{ articles.1.url }}> Read More >></a></p>
+				<h3>{{ article2.title }}</h3>
+				<p>{{ article2.description }}<a href={{ article2.external_article_link }}> Read More >></a></p>
 			</div>
 		</div>
 
 		<div class="row article">
 			<div class="col-lg-3 offset-lg-1">
-				<img class"img-responsive img-center" src={{ articles.2.urlToImage }} alt="">
+				<img class"img-responsive img-center" src={{ article3.image_link }} onerror="this.src='static/img/abstract_world.jpg'" alt="">
 			</div>
 			<div class="col-lg-7">
-				<h3>{{ articles.2.title }}</h3>
-				<p>{{ articles.2.description }}<a href={{ articles.2.url }}> Read More >></a></p>
+				<h3>{{ article3.title }}</h3>
+				<p>{{ article3.description }}<a href={{ article3.external_article_link }}> Read More >></a></p>
 			</div>
 		</div>
 	</div>

@@ -57,39 +57,23 @@
       <table class="table table-hover table-inverse">
         <thead>
           <tr>
-            <th>#</th>
             <th>Logo</th>
             <th>Name</th>
-            <th>country</th>
+            <th>Country</th>
             <th>Language</th>
             <th>Description</th>
           </tr>
         </thead>
         <tbody>
+        {% for source in sources %}
           <tr>
-            <th scope="row">1</th>
-            <th scope="row"><a href={{ sources.0.url }}><img src={{ sources.0.urlsToLogos.small }} style="max-width:300px; max-height:80px"></a></th>
-			<td><a href="/source/1">{{ sources.0.name }}</a></td>
-            <td>{{ sources.0.country }}</td>
-            <td>{{ sources.0.language }}</td>
-            <td>{{ sources.0.description }}</td>
+            <th scope="row"><a href={{ source.external_link }}><img src={{ source.smallLogoURL }} style="max-width:300px; max-height:80px"></img></a></th>
+            <td><a href="{{ url_for('source_page', sourceNum=source.id_num) }}">{{ source.name }}</a></td>
+            <td>{{ source.country }}</td>
+            <td>{{ source.language }}</td>
+            <td>{{ source.description }}</td>
           </tr>
-          <tr>
-            <th scope="row">2</th>
-            <th scope="row"><a href={{ sources.1.url }}><img src={{ sources.1.urlsToLogos.small }} style="max-width:300px; max-height:80px"></a></th>
-			<td><a href="/source/2">{{ sources.1.name }}</a></td>
-            <td>{{ sources.1.country }}</td>
-            <td>{{ sources.1.language }}</td>
-            <td>{{ sources.1.description }}</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <th scope="row"><a href={{ sources.2.url }}><img src={{ sources.2.urlsToLogos.small }} style="max-width:300px; max-height:80px"></a></th>
-			<td><a href="/source/3">{{ sources.2.name }}</a></td>
-            <td>{{ sources.2.country }}</td>
-            <td>{{ sources.2.language }}</td>
-            <td>{{ sources.2.description }}</td>
-          </tr>
+        {% endfor %}
         </tbody>
       </table>
     </div>

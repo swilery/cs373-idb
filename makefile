@@ -2,7 +2,7 @@ FILES :=                              \
 	makefile							\
 	.gitignore							\
 	models.html							\
-	IDB1.log 							\
+	IDB2.log 							\
 	UML.pdf								\
 	apiary.apib							\
 	.travis.yml							\
@@ -31,14 +31,17 @@ check:
 .pylintrc:
 	pylint --disable=bad-whitespace,missing-docstring,pointless-string-statement --reports=n --generate-rcfile > $@
 
-models.html: app/models.py
-	# rm models.html
+models.html: 
+	#app/models.py
+	#rm models.html
 	cp app/models.py ./ && cp app/loader.py ./
+	cd app
 	pydoc3 -w models
-	rm models.py && rm loader.py
+	cd ..
+	#rm models.py && rm loader.py
 
-IDB1.log:
-	git log > IDB1.log
+log:
+	git log > IDB2.log
 
 # TestIDB.tmp: app/tests.py
 # 	-pylint app/models.py
@@ -46,6 +49,9 @@ IDB1.log:
 # 	coverage-3.5 run    --branch app/tests.py >  app/tests.tmp 2>&1
 # 	coverage-3.5 report -m                      >> app/tests.tmp
 # 	cat tests.tmp
+
+requirements:
+	pip install -r requirements.txt
 
 clean:
 	rm -f  .coverage
