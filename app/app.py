@@ -37,8 +37,9 @@ def about():
     return render_template('about.html')
 
 @app_instance.route('/articles')
-def articles():
-	articles = Article.query.paginate(1, 50, False).items
+@app_instance.route('/articles/<int:page>')
+def articles(page = 1):
+	articles = Article.query.paginate(page, 50, False)
 	return render_template('articles.html', articles=articles)
 
 @app_instance.route('/sources')
