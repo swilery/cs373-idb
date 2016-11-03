@@ -78,7 +78,7 @@
           </tr>
         </thead>
         <tbody>
-        {% for article in articles %}
+        {% for article in articles.items %}
           <tr>
             <td><a href="{{ url_for('single', articleNum=article.id_num) }}">{{ article.title }}</a></td>
             <td>{{ article.description }}</td>
@@ -87,6 +87,8 @@
             <td>{{ article.category }}</td>
           </tr>
         {% endfor %}
+        {%if articles.has_prev%}<a href="{{url_for('articles', page=articles.prev_num)}}">&lt;&lt; Previous page</a>{%else%}&lt;&lt; Previous page{%endif%}
+        {%if articles.has_next%}<a href="{{url_for('articles', page=articles.next_num)}}">&lt;&lt; Next page</a>{%else%}&lt;&lt; Next page{%endif%}
         </tbody>
       </table>
     </div>
