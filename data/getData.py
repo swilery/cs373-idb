@@ -217,6 +217,7 @@ def printEmailSummary(numArticles1, numArticles2, elapsedTime):
    print('Runtime = ' + elapsedTime + ' sec')
    print(str(numArticles1) + ' articles pulled from News API')
    print(str(numArticles2) + ' articles pulled from Newslookup API')
+   print(str(numArticles1 + numArticles2) + ' total aricles pulled')
    print('getData Execution Success')
 
 ##########################
