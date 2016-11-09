@@ -14,16 +14,16 @@ import time
 def formatSources():
    final_sources = [ ]
    
-   with open('api_data/news_api_sources.json', 'r') as f:
+   with open('/var/www/html/cs373-idb/data/api_data/news_api_sources.json', 'r') as f:
       sources = json.load(f)['sources']
       
-   with open('api_data/rest_countries_code_map.json', 'r') as f:
+   with open('/var/www/html/cs373-idb/data/api_data/rest_countries_code_map.json', 'r') as f:
       country_code_map = json.load(f)
       
-   with open('api_data/news_api_sources_language_map.json', 'r') as f:
+   with open('/var/www/html/cs373-idb/data/api_data/news_api_sources_language_map.json', 'r') as f:
       language_map = json.load(f)
       
-   with open('api_data/newslookup_countries_region_map.json', 'r') as f:
+   with open('/var/www/html/cs373-idb/data/api_data/newslookup_countries_region_map.json', 'r') as f:
       region_map = json.load(f)
       
    source_id = 1
@@ -44,20 +44,20 @@ def formatSources():
       final_sources.append(dict(new_source))
       source_id += 1
       
-   with open('api_data/final_data/final_sources.json', 'w') as f:
+   with open('/var/www/html/cs373-idb/data/api_data/final_data/final_sources.json', 'w') as f:
       json.dump(final_sources, f)
 
 ######################      
 def formatLocations():
    final_locations = [ ]
    
-   with open('api_data/rest_countries_all.json', 'r') as f:
+   with open('/var/www/html/cs373-idb/data/api_data/rest_countries_all.json', 'r') as f:
       locations = json.load(f)
       
-   with open('api_data/newslookup_countries_region_map.json', 'r') as f:
+   with open('/var/www/html/cs373-idb/data/api_data/newslookup_countries_region_map.json', 'r') as f:
       region_map = json.load(f)
       
-   with open('api_data/news_api_sources_language_map.json', 'r') as f:
+   with open('/var/www/html/cs373-idb/data/api_data/news_api_sources_language_map.json', 'r') as f:
       language_map = json.load(f)
       
    location_id = 1
@@ -89,7 +89,7 @@ def formatLocations():
       final_locations.append(dict(new_location))
       location_id += 1
    
-   with open('api_data/final_data/final_locations.json', 'w') as f:
+   with open('/var/www/html/cs373-idb/data/api_data/final_data/final_locations.json', 'w') as f:
       json.dump(final_locations, f)
       
 ###################
@@ -104,7 +104,7 @@ def formatArticles():
    
    final_articles += newsAPI_articles
    final_articles += newslookup_articles
-   with open('api_data/final_data/final_articles.json', 'w') as f:
+   with open('/var/www/html/cs373-idb/data/api_data/final_data/final_articles.json', 'w') as f:
       json.dump(final_articles, f)
    end = time.time()
    elapsedTime = str(end - start)
@@ -113,7 +113,7 @@ def formatArticles():
 
 ###################
 def pull_newsAPI():
-   with open('api_data/final_data/final_sources.json', 'r') as f:
+   with open('/var/www/html/cs373-idb/data/api_data/final_data/final_sources.json', 'r') as f:
       sources = json.load(f)
       
    apiKey = '836d24a3cd7c43bd9450a4496c2dbf41'
@@ -152,10 +152,10 @@ def pull_newsAPI():
 
 ######################   
 def pull_newslookup(article_id):
-   with open('api_data/newslookup_regions_id_map.json', 'r') as f:
+   with open('/var/www/html/cs373-idb/data/api_data/newslookup_regions_id_map.json', 'r') as f:
       region_map = json.load(f)
       
-   with open('api_data/month_map.json', 'r') as f:
+   with open('/var/www/html/cs373-idb/data/api_data/month_map.json', 'r') as f:
       month_map = json.load(f)
 
    client_id = '17122'
@@ -208,6 +208,7 @@ def pull_newslookup(article_id):
 ######################
 def printEmailHeader():
    print('Subject: getData.py Summary')
+   print()
    print('getData.py Execution Summary')
    print('----------------------------')
    print(time.strftime('%m/%d/%Y %H:%M:%S'))

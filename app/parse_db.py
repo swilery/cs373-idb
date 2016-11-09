@@ -7,7 +7,7 @@ from app import db, app_instance
 from models import Article, Source, Location
 
 def parse_sources():
-	with open("../data/api_data/final_data/final_sources.json") as f:
+	with open("/var/www/html/cs373-idb/data/api_data/final_data/final_sources.json") as f:
 		src_json = json.load(f);
 	
 	count = 0
@@ -26,7 +26,7 @@ def parse_sources():
 
 
 def parse_locations():
-	with open("../data/api_data/final_data/final_locations.json") as f:
+	with open("/var/www/html/cs373-idb/data/api_data/final_data/final_locations.json") as f:
 		loc_json = json.load(f);
 
 	count = 0
@@ -45,7 +45,7 @@ def parse_locations():
 
 
 def parse_articles():
-	with open('../data/api_data/final_data/final_articles.json', 'r') as f:
+	with open('/var/www/html/cs373-idb/data/api_data/final_data/final_articles.json', 'r') as f:
 		art_json = json.load(f);
 
 	count = 0
@@ -65,6 +65,7 @@ def parse_articles():
 
 # Drop all tables and recreate empty
 print('Subject: parse_db.py Summary')
+print()
 print('parse_db.py Execution Summary')
 print('----------------------------')
 print(time.strftime('%m/%d/%Y %H:%M:%S'))
