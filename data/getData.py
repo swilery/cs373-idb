@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.5
 
 """
 See api_data/final_data/format.txt for details on how
@@ -8,6 +8,7 @@ output json files are formatted
 import json
 import requests
 import datetime
+import time
 
 ####################
 def formatSources():
@@ -93,15 +94,22 @@ def formatLocations():
       
 ###################
 def formatArticles():
+   start = time.time()
    final_articles = [ ]
    
    newsAPI_articles, id_num = pull_newsAPI()
-   newslookup_articles = pull_newslookup(id_num)
+   numArticles1 = id_num-1
+   newslookup_articles, numArticles2 = pull_newslookup(id_num)
+   numArticles2 = numArticles2 - id_num
    
    final_articles += newsAPI_articles
    final_articles += newslookup_articles
    with open('api_data/final_data/final_articles.json', 'w') as f:
       json.dump(final_articles, f)
+   end = time.time()
+   elapsedTime = str(end - start)
+
+   return numArticles1, numArticles2, elapsedTime
 
 ###################
 def pull_newsAPI():
@@ -114,10 +122,10 @@ def pull_newsAPI():
 
    newsAPI_articles = [ ]
    article_id = 1
-   print("Pulling from News API:")
+   #print("Pulling from News API:")
    for source in sources:
       source_id_name = source['id_name']
-      print(source_id_name)
+      #print(source_id_name)
       response = requests.get(url_part1 + source_id_name + url_part2)
       response = response.json()
       if(response['status'] != "error"):
@@ -157,9 +165,9 @@ def pull_newslookup(article_id):
    url_part3 = '&secret='
    
    newslookup_articles = [ ]
-   print("Pulling from Newslookup:")
+   #print("Pulling from Newslookup:")
    for region in region_map.keys():
-      print(region_map[region])
+      #print(region_map[region])
       response = requests.get(url_part1 + region + url_part2 + client_id + url_part3 + secret)
       response = response.json()
       articles = response['items']
@@ -195,10 +203,25 @@ def pull_newslookup(article_id):
          newslookup_articles.append(dict(new_article))
          article_id += 1
          
-   return newslookup_articles
+   return newslookup_articles, article_id
+
+######################
+def printEmailHeader():
+   print('Subject: getData.py Summary')
+   print('getData.py Execution Summary')
+   print('----------------------------')
+   print(time.strftime('%m/%d/%Y %H:%M:%S'))
+
+def printEmailSummary(numArticles1, numArticles2, elapsedTime):
+   print('Runtime = ' + elapsedTime + ' sec')
+   print(str(numArticles1) + ' articles pulled from News API')
+   print(str(numArticles2) + ' articles pulled from Newslookup API')
+   print('getData Execution Success')
 
 ##########################
 if __name__ == '__main__':
    #formatSources()
    #formatLocations()
-   formatArticles()
+   printEmailHeader()
+   numArticles1, numArticles2, elapsedTime = formatArticles()
+   printEmailSummary(numArticles1, numArticles2, elapsedTime)
