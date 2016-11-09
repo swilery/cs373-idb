@@ -3,6 +3,7 @@ from loader import app_instance, db
 from flask import render_template, jsonify, make_response, abort, flash
 from models import Article, Source, Location
 from random import randint
+import requests
 
 # -----------------------
 # Web Application Routing
@@ -87,6 +88,19 @@ def source_page(sourceNum):
 # -----------
 # RESTful API
 # -----------
+
+@app_instance.route('/search')
+def search():
+    search_text = request.args.get('searchbar', '')
+    article_query = Article.query.search(search_text).limit(15)
+    source_query = Source.query.search(search_text).limit(15)
+    location_query = Location.query.search(search_text).limit(15)
+    results = {
+        'articles': [x.to_json() for x in article_query.all()],
+        'sources': [x.to_json() for x in source_query.all()],
+        'locations': [x.to_json() for x in location_query.all()]
+    }
+    return jsonify(results)
 
 # Returns all data in json format
 @app_instance.route('/api/all', methods=['GET'])

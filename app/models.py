@@ -41,7 +41,7 @@ class Article(db.Model):
     source_name = db.Column(db.Text)
     region = db.Column(db.String(25))
 
-    search_vector = db.Column(TSVectorType('title'))
+    search_vector = db.Column(TSVectorType('title', 'description'))
 
     def to_json(self, list_view=False):
         json_article = {
@@ -92,7 +92,7 @@ class Source(db.Model):
     region = db.Column(db.String(25))
     country = db.Column(db.String(25))
 
-    search_vector = db.Column(TSVectorType('name'))
+    search_vector = db.Column(TSVectorType('name', 'description'))
 
     def to_json(self, list_view=False):
         json_location = {
@@ -139,7 +139,7 @@ class Location(db.Model):
     name = db.Column(db.String(50))
     region = db.Column(db.String(25))
 
-    search_vector = db.Column(TSVectorType('name'))
+    search_vector = db.Column(TSVectorType('name', 'region', 'capital'))
 
     def to_json(self, list_view=False):
         json_location = {
