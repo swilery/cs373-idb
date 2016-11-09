@@ -3,7 +3,9 @@ from loader import app_instance, db
 from flask import render_template, jsonify, make_response, abort, flash
 from models import Article, Source, Location
 from random import randint
-import requests
+from sqlalchemy_searchable import parse_search_query
+from sqlalchemy_searchable import search
+# import requests
 
 # -----------------------
 # Web Application Routing
