@@ -64,10 +64,8 @@ def parse_articles():
 
 
 # Drop all tables and recreate empty
-print('Subject: parse_db.py Summary')
-print()
-print('parse_db.py Execution Summary')
-print('----------------------------')
+print('parse_db.py Summary')
+print('------------------------------')
 print(time.strftime('%m/%d/%Y %H:%M:%S'))
 
 start = time.time()

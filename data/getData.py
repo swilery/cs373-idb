@@ -207,10 +207,8 @@ def pull_newslookup(article_id):
 
 ######################
 def printEmailHeader():
-   print('Subject: getData.py Summary')
-   print()
-   print('getData.py Execution Summary')
-   print('----------------------------')
+   print('getData.py Summary')
+   print('------------------------------')
    print(time.strftime('%m/%d/%Y %H:%M:%S'))
 
 def printEmailSummary(numArticles1, numArticles2, elapsedTime):
