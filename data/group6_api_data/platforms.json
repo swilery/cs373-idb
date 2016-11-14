@@ -1,0 +1,202 @@
+{
+  "3DO": {
+    "company": "Matsushita Electric Corporation of America (Panasonic)", 
+    "id": 26, 
+    "name": "3DO", 
+    "release_date": "1993-08-31 00:00:00", 
+    "starting_price": "700.00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/10067-goldstar%203do.jpg"
+  }, 
+  "Amstrad CPC": {
+    "company": "Amstrad", 
+    "id": 11, 
+    "name": "Amstrad CPC", 
+    "release_date": "1984-06-21 00:00:00", 
+    "starting_price": "800.00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/10073-Amstrad_CPC464.jpg"
+  }, 
+  "Apple II": {
+    "company": "Apple Inc.", 
+    "id": 12, 
+    "name": "Apple II", 
+    "release_date": "1977-06-30 00:00:00", 
+    "starting_price": "1300.00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/10074-apple_ii_large.jpg"
+  }, 
+  "Atari 8-bit": {
+    "company": "Atari", 
+    "id": 24, 
+    "name": "Atari 8-bit", 
+    "release_date": "1979-11-30 00:00:00", 
+    "starting_price": "1000.00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/10170-Atari-800.jpg"
+  }, 
+  "Atari ST": {
+    "company": "Atari SA", 
+    "id": 13, 
+    "name": "Atari ST", 
+    "release_date": "1985-04-01 00:00:00", 
+    "starting_price": "1000.00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/220119-atari_1040stf.jpg"
+  }, 
+  "CD-i": {
+    "company": "Philips Interactive Media, Inc.", 
+    "id": 27, 
+    "name": "CD-i", 
+    "release_date": "1991-12-03 00:00:00", 
+    "starting_price": "700.00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/10173-cd-i.jpg"
+  }, 
+  "Commodore 64": {
+    "company": "Commodore", 
+    "id": 14, 
+    "name": "Commodore 64", 
+    "release_date": "1982-08-31 00:00:00", 
+    "starting_price": "595.00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/10289-c64.jpg"
+  }, 
+  "Game Boy": {
+    "company": "Nintendo", 
+    "id": 3, 
+    "name": "Game Boy", 
+    "release_date": "1989-04-21 00:00:00", 
+    "starting_price": "179.00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/1426210-logo.jpg"
+  }, 
+  "Game Boy Advance": {
+    "company": "Nintendo", 
+    "id": 4, 
+    "name": "Game Boy Advance", 
+    "release_date": "2001-03-21 00:00:00", 
+    "starting_price": "100.00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/2121789-gba.png"
+  }, 
+  "Game Gear": {
+    "company": "Sega", 
+    "id": 5, 
+    "name": "Game Gear", 
+    "release_date": "1990-10-28 00:00:00", 
+    "starting_price": "150.00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/1426271-logo.jpg"
+  }, 
+  "GameCube": {
+    "company": "Nintendo", 
+    "id": 23, 
+    "name": "GameCube", 
+    "release_date": "2001-09-14 00:00:00", 
+    "starting_price": "199.00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/1426256-logo.jpg"
+  }, 
+  "Genesis": {
+    "company": "Sega", 
+    "id": 6, 
+    "name": "Genesis", 
+    "release_date": "1988-10-29 00:00:00", 
+    "starting_price": "189.00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/10576-genesis.jpg"
+  }, 
+  "MSX": {
+    "company": "ASCII Corporation", 
+    "id": 15, 
+    "name": "MSX", 
+    "release_date": "1983-06-16 00:00:00", 
+    "starting_price": "0.00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/176106-msx_philips_vg8020.jpg"
+  }, 
+  "Mac": {
+    "company": "Apple Inc.", 
+    "id": 17, 
+    "name": "Mac", 
+    "release_date": "1984-01-31 00:00:00", 
+    "starting_price": "2495.00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/1500874-overview_gallery3_20090828.jpg"
+  }, 
+  "Neo Geo": {
+    "company": "SNK", 
+    "id": 25, 
+    "name": "Neo Geo", 
+    "release_date": "1990-01-31 00:00:00", 
+    "starting_price": "650.00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/613868-neo_20geo.jpg"
+  }, 
+  "Nintendo Entertainment System": {
+    "company": "Nintendo", 
+    "id": 21, 
+    "name": "Nintendo Entertainment System", 
+    "release_date": "1983-07-15 00:00:00", 
+    "starting_price": "199.00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/2419866-nes_console_set.png"
+  }, 
+  "PlayStation": {
+    "company": "Sony Interactive Entertainment", 
+    "id": 22, 
+    "name": "PlayStation", 
+    "release_date": "1994-12-03 00:00:00", 
+    "starting_price": "299.00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/1426393-logo.jpg"
+  }, 
+  "PlayStation 2": {
+    "company": "Sony Interactive Entertainment", 
+    "id": 19, 
+    "name": "PlayStation 2", 
+    "release_date": "2000-03-04 00:00:00", 
+    "starting_price": "299.00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/438868-ps2_full_large.jpg"
+  }, 
+  "PlayStation Portable": {
+    "company": "Sony Interactive Entertainment", 
+    "id": 18, 
+    "name": "PlayStation Portable", 
+    "release_date": "2005-03-24 00:00:00", 
+    "starting_price": "249.00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/2122792-pspmain.png"
+  }, 
+  "Sega Master System": {
+    "company": "Sega", 
+    "id": 8, 
+    "name": "Sega Master System", 
+    "release_date": "1985-10-20 00:00:00", 
+    "starting_price": "200.00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/176128-sega_master_system__6_.jpg"
+  }, 
+  "Super Nintendo Entertainment System": {
+    "company": "Nintendo", 
+    "id": 9, 
+    "name": "Super Nintendo Entertainment System", 
+    "release_date": "1990-11-21 00:00:00", 
+    "starting_price": "199.00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/2287891-snes_sfc.jpg"
+  }, 
+  "VIC-20": {
+    "company": "Commodore Electronics Ltd.", 
+    "id": 30, 
+    "name": "VIC-20", 
+    "release_date": "1980-05-31 00:00:00", 
+    "starting_price": "300.00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/176108-vic.jpg"
+  }, 
+  "Xbox": {
+    "company": "Microsoft Studios", 
+    "id": 32, 
+    "name": "Xbox", 
+    "release_date": "2001-11-01 00:00:00", 
+    "starting_price": "299.00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/359843-xbox.jpg"
+  }, 
+  "Xbox 360": {
+    "company": "Microsoft Studios", 
+    "id": 20, 
+    "name": "Xbox 360", 
+    "release_date": "2005-11-22 00:00:00", 
+    "starting_price": "399.00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/195092-xbox_360_console_02.jpg"
+  }, 
+  "ZX Spectrum": {
+    "company": "Sinclair Research Ltd.", 
+    "id": 16, 
+    "name": "ZX Spectrum", 
+    "release_date": "1982-04-20 00:00:00", 
+    "starting_price": "249.00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/176104-zxspectrum48k.jpg"
+  }
+}

@@ -1,0 +1,327 @@
+[
+  {
+    "aliases": "Hanzo Hasashi", 
+    "birthday": null, 
+    "deck": "Scorpion is a wraith from the Netherrealm who is consumed with a desire for revenge.", 
+    "first_appeared_in_game": [
+      15743, 
+      "Mortal Kombat"
+    ], 
+    "gender": 1, 
+    "id": 1, 
+    "name": "Scorpion", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/2639794-mortalkombatx_scorpion.png"
+  }, 
+  {
+    "aliases": "LK-520\r\nTundra\r\nCyber Sub-Zero\r\nKuai Liang", 
+    "birthday": null, 
+    "deck": "Kuai Liang, known as Tundra, became an assassin for the Lin Kuei after he and his brother were abducted by the clan. After the death of his brother Bi Han, Kuai Liang assumed the mantle of Sub-Zero to honor his memory.", 
+    "first_appeared_in_game": [
+      25042, 
+      "Mortal Kombat"
+    ], 
+    "gender": 1, 
+    "id": 2, 
+    "name": "Sub-Zero", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/2663932-cds.jpeg"
+  }, 
+  {
+    "aliases": "Clarence Callahan", 
+    "birthday": null, 
+    "deck": "Clarence \"Razor\" Callahan is the main antagonist of players in Need for Speed: Most Wanted.", 
+    "first_appeared_in_game": [
+      12976, 
+      "Need for Speed: Most Wanted"
+    ], 
+    "gender": 1, 
+    "id": 3, 
+    "name": "Razor Callahan", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/471099-42_razor.jpg"
+  }, 
+  {
+    "aliases": null, 
+    "birthday": null, 
+    "deck": "The titular character of the game \"No One Can Stop Mr. Domino.\" This anthropomorphic domino has nothing better to do than spend his days avoiding obstacles and toppling dominoes.", 
+    "first_appeared_in_game": [
+      13325, 
+      "No One Can Stop Mr. Domino"
+    ], 
+    "gender": 1, 
+    "id": 4, 
+    "name": "Mr. Domino", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/296752-mrdomino.jpg"
+  }, 
+  {
+    "aliases": "Princess Zelda\r\nSheik\r\nShiek\r\nTetra\r\nQueen Zelda\r\nHylia", 
+    "birthday": null, 
+    "deck": "Zelda is the titular figure of The Legend of Zelda. She is most often depicted as the princess of Hyrule.", 
+    "first_appeared_in_game": [
+      11949, 
+      "The Legend of Zelda"
+    ], 
+    "gender": 2, 
+    "id": 5, 
+    "name": "Zelda", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/2649670-hwz.jpg"
+  }, 
+  {
+    "aliases": "Evil Zangief\n", 
+    "birthday": "Jun 1, 1956", 
+    "deck": "Zangief is a wrestling character, popularized by the Street Fighter franchise.", 
+    "first_appeared_in_game": [
+      243, 
+      "Street Fighter II: The World Warrior"
+    ], 
+    "gender": 1, 
+    "id": 6, 
+    "name": "Zangief", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/2109758-zangief.png"
+  }, 
+  {
+    "aliases": null, 
+    "birthday": "Jan 31, 1980", 
+    "deck": "Yoda is one of the most powerful Jedi Masters to have ever lived. He is easily recognized by his short stature, green skin, pointy ears, and speech patterns.", 
+    "first_appeared_in_game": [
+      1314, 
+      "Star Wars: The Empire Strikes Back"
+    ], 
+    "gender": 1, 
+    "id": 7, 
+    "name": "Yoda", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/1211013-0yoda.jpg"
+  }, 
+  {
+    "aliases": null, 
+    "birthday": null, 
+    "deck": "Wrong Way is an enemy found in Q*bert.", 
+    "first_appeared_in_game": [
+      20782, 
+      "Q*Bert"
+    ], 
+    "gender": 3, 
+    "id": 8, 
+    "name": "Wrong Way", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/576684-ww.jpg"
+  }, 
+  {
+    "aliases": null, 
+    "birthday": null, 
+    "deck": "Wong Who is an enemy in Capcom's Final Fight.", 
+    "first_appeared_in_game": [
+      6722, 
+      "Final Fight"
+    ], 
+    "gender": 1, 
+    "id": 9, 
+    "name": "Wong Who", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/11405-wong-who.jpg"
+  }, 
+  {
+    "aliases": "Logan\nJames Howlett ", 
+    "birthday": "Jan 1, 1886", 
+    "deck": "Wolverine is a Marvel Comics character named James \"Logan\" Howlett. He is a mutant best known for his incredible regeneration ability, berserker rage, and the six retractable claws housed in his forearms. His whole entire skeleton and claws are made of the virtually indestructible metal Adamantium.", 
+    "first_appeared_in_game": [
+      7150, 
+      "X-Men: Madness in Murderworld"
+    ], 
+    "gender": 1, 
+    "id": 10, 
+    "name": "Wolverine", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/2064677-wolverine.png"
+  }, 
+  {
+    "aliases": null, 
+    "birthday": "Mar 28, 1950", 
+    "deck": null, 
+    "first_appeared_in_game": [
+      11400, 
+      "Fatal Fury 2"
+    ], 
+    "gender": 1, 
+    "id": 11, 
+    "name": "Wolfgang Krauser", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/2546704-3315017896-wolfg.jpg"
+  }, 
+  {
+    "aliases": null, 
+    "birthday": null, 
+    "deck": "\"White\" Mike Saunders is a big albino who has a bad run-in with Trane early in the game. Later on, he joins Trane's Still Free Crew because of his mutual relationship with Kry-1, another member.", 
+    "first_appeared_in_game": [
+      7131, 
+      "Marc Ecko's Getting Up: Contents Under Pressure"
+    ], 
+    "gender": 1, 
+    "id": 12, 
+    "name": "White Mike", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/9935-whitemike.jpg"
+  }, 
+  {
+    "aliases": null, 
+    "birthday": "May 12, 1968", 
+    "deck": "Tony Hawk is one of the world's most famous professional skateboarders. Like John Madden to Football, Tony Hawk's name is synonymous with video game skateboarding, thanks to his \"involvement\" with Activision and Neversoft to make  the seminal skateboarding franchise, \"Tony Hawk's Pro Skater\".", 
+    "first_appeared_in_game": [
+      7236, 
+      "Tony Hawk's Pro Skater"
+    ], 
+    "gender": 1, 
+    "id": 13, 
+    "name": "Tony Hawk", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/9871-tonyhawksezshakabra.jpg"
+  }, 
+  {
+    "aliases": null, 
+    "birthday": null, 
+    "deck": "Tommy \"The Harwood Butcher\" Vercetti is a former member of the Forelli family and founder of the Vercetii crime family in Vice City. He is the game's protagonist and is voiced by actor Ray Liotta.", 
+    "first_appeared_in_game": [
+      17036, 
+      "Grand Theft Auto: Vice City"
+    ], 
+    "gender": 1, 
+    "id": 14, 
+    "name": "Tommy Vercetti", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/2447712-0075136441-Stree.jpg"
+  }, 
+  {
+    "aliases": null, 
+    "birthday": null, 
+    "deck": "A Cherokee garage mechanic and former US soldier living on a Native American reservation in Oklahoma. Tommy refuses to accept his Native American history and ancestry and is desperate to get off his reservation.", 
+    "first_appeared_in_game": [
+      16372, 
+      "Prey"
+    ], 
+    "gender": 1, 
+    "id": 15, 
+    "name": "Tommy", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/9886-prey-tommy.jpg"
+  }, 
+  {
+    "aliases": null, 
+    "birthday": "Mar 23, 1976", 
+    "deck": "Tomko is a professional wrestler, formerly with TNA.", 
+    "first_appeared_in_game": [
+      20469, 
+      "TNA iMPACT!"
+    ], 
+    "gender": 1, 
+    "id": 16, 
+    "name": "Tomko", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/9788-tomko.jpg"
+  }, 
+  {
+    "aliases": null, 
+    "birthday": null, 
+    "deck": null, 
+    "first_appeared_in_game": [
+      19781, 
+      "Snow Bros. Nick & Tom"
+    ], 
+    "gender": 1, 
+    "id": 17, 
+    "name": "Tom", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/9787-snowbros.gif"
+  }, 
+  {
+    "aliases": null, 
+    "birthday": "Dec 30, 1975", 
+    "deck": "The star of the Tiger Woods PGA Tour series.", 
+    "first_appeared_in_game": [
+      22799, 
+      "PGA Tour 97"
+    ], 
+    "gender": 1, 
+    "id": 18, 
+    "name": "Tiger Woods", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/2114302-tw1.jpg"
+  }, 
+  {
+    "aliases": null, 
+    "birthday": null, 
+    "deck": "A playable character and member of the H.U.N.T. team in Rise of the Triad. Like several other characters, her name is a joke, a play on \"thigh barrette\", a decorative clip sometimes worn on thigh-high stockings.", 
+    "first_appeared_in_game": [
+      5403, 
+      "Rise of the Triad: Dark War"
+    ], 
+    "gender": 2, 
+    "id": 19, 
+    "name": "Thi Barrett", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/1379148-rott_char2.png"
+  }, 
+  {
+    "aliases": null, 
+    "birthday": null, 
+    "deck": "The fast-food chain's eerily-silent monarch is just one of many such mascots to crossover into the world of video games.", 
+    "first_appeared_in_game": [
+      8095, 
+      "Fight Night Round 3"
+    ], 
+    "gender": 1, 
+    "id": 20, 
+    "name": "The Burger King", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/9836-burger-king.jpg"
+  }, 
+  {
+    "aliases": null, 
+    "birthday": null, 
+    "deck": "This character played as a true \"heel\" in the game pro-wrestling for the NES.  He had a bite move that looked like he was eating his opponents head.  This move was illegal by wrestling rules.  ", 
+    "first_appeared_in_game": [
+      20707, 
+      "Pro Wrestling"
+    ], 
+    "gender": 1, 
+    "id": 21, 
+    "name": "The Amazon", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/10273-amazon.gif"
+  }, 
+  {
+    "aliases": null, 
+    "birthday": null, 
+    "deck": "The Aperture Science Weighted Companion Cube is your only friend in Portal, and has become an insanely popular \"character\" on the Internet. It's good for weighing down buttons, and it will never threaten to stab you, we promise.", 
+    "first_appeared_in_game": [
+      17729, 
+      "The Orange Box"
+    ], 
+    "gender": 0, 
+    "id": 22, 
+    "name": "Weighted Companion Cube", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/9800-wcc.gif"
+  }, 
+  {
+    "aliases": "Sgt. John \"Soap\" MacTavish\nCapt. John \"Soap\" MacTavish.", 
+    "birthday": "Aug 8, 1975", 
+    "deck": "John \"Soap\" MacTavish is the main protagonist of the S.A.S. missions in Call of Duty 4: Modern Warfare. He returns in Modern Warfare 2 leading Task Force 141.", 
+    "first_appeared_in_game": [
+      2133, 
+      "Call of Duty 4: Modern Warfare"
+    ], 
+    "gender": 1, 
+    "id": 23, 
+    "name": "John MacTavish", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/1083866-modernwarfare247_09_1024x768.jpg"
+  }, 
+  {
+    "aliases": "WarioMan\nWario-Man\nBaby Wario", 
+    "birthday": null, 
+    "deck": "Wario is Mario's \"evil\" cousin; a garlic-loving man with an obsession with treasure. Wario's name is a derivative of the word \"warui\" ('bad' in Japanese) &amp; \"Mario\".", 
+    "first_appeared_in_game": [
+      14425, 
+      "Super Mario Land 2: 6 Golden Coins"
+    ], 
+    "gender": 1, 
+    "id": 24, 
+    "name": "Wario", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/2111418-wario_mp9.jpg"
+  }, 
+  {
+    "aliases": null, 
+    "birthday": "Oct 25, 1541", 
+    "deck": "Voldo is a character in the Soul Calibur series. He is a fearsome and unpredictable fighter, despite his bizarre, often ridiculous appearance. At 67, Voldo is the oldest main character in the Soul series whose lifespan has not been magically enhanced somehow.", 
+    "first_appeared_in_game": [
+      6153, 
+      "Soul Blade"
+    ], 
+    "gender": 1, 
+    "id": 25, 
+    "name": "Voldo", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/1872520-soul_calibur_v_voldo_concept_render_scv.jpg"
+  }
+]

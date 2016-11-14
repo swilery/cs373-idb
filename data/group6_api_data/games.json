@@ -1,0 +1,202 @@
+[
+  {
+    "aliases": "Desert Strike Advance", 
+    "id": 1, 
+    "name": "Desert Strike: Return to the Gulf", 
+    "num platforms": 10, 
+    "release_date": "1992-02-29 00:00:00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/2370498-genesis_desertstrike_2__1_.jpg"
+  }, 
+  {
+    "aliases": null, 
+    "id": 2, 
+    "name": "Breakfree", 
+    "num platforms": 2, 
+    "release_date": "1995-12-31 00:00:00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/621001-1056454795_00.gif"
+  }, 
+  {
+    "aliases": null, 
+    "id": 3, 
+    "name": "Hyperballoid Deluxe: Survival Pack", 
+    "num platforms": 2, 
+    "release_date": "2004-12-20 00:00:00", 
+    "tiny_image": null
+  }, 
+  {
+    "aliases": null, 
+    "id": 4, 
+    "name": "The Chessmaster 2000", 
+    "num platforms": 9, 
+    "release_date": "1986-06-15 00:00:00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/706919-chessmaster_2000.jpg"
+  }, 
+  {
+    "aliases": null, 
+    "id": 5, 
+    "name": "Bass Avenger", 
+    "num platforms": 3, 
+    "release_date": "2000-09-28 00:00:00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/707238-bass_avenger.jpg"
+  }, 
+  {
+    "aliases": "SVR 2007", 
+    "id": 6, 
+    "name": "WWE SmackDown! vs. RAW 2007", 
+    "num platforms": 4, 
+    "release_date": "2006-11-14 00:00:00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/2139899-box_wwesdraw07.png"
+  }, 
+  {
+    "aliases": null, 
+    "id": 7, 
+    "name": "Camelot Warriors", 
+    "num platforms": 5, 
+    "release_date": null, 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/707280-camelot_warriors_spectrum.jpg"
+  }, 
+  {
+    "aliases": "Battle Formula", 
+    "id": 8, 
+    "name": "Super Spy Hunter", 
+    "num platforms": 2, 
+    "release_date": "1991-09-27 00:00:00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/2362280-nes_superspyhunter_eu.jpg"
+  }, 
+  {
+    "aliases": null, 
+    "id": 9, 
+    "name": "Fritz 9: Play Chess", 
+    "num platforms": 2, 
+    "release_date": "2005-12-15 00:00:00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/707365-fritz_9_play_chess.jpg"
+  }, 
+  {
+    "aliases": null, 
+    "id": 10, 
+    "name": "The Real Deal 2", 
+    "num platforms": 2, 
+    "release_date": "1999-12-31 00:00:00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/707495-the_real_deal_2.jpg"
+  }, 
+  {
+    "aliases": null, 
+    "id": 11, 
+    "name": "Gothmog's Lair", 
+    "num platforms": 2, 
+    "release_date": "1983-12-31 00:00:00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/707629-gothmog_s_lair.jpg"
+  }, 
+  {
+    "aliases": null, 
+    "id": 12, 
+    "name": "Blade & Sword", 
+    "num platforms": 2, 
+    "release_date": "2003-12-22 00:00:00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/707774-blade_and_sword.jpg"
+  }, 
+  {
+    "aliases": null, 
+    "id": 13, 
+    "name": "Premier Manager 98", 
+    "num platforms": 3, 
+    "release_date": "1998-07-31 00:00:00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/2743212-premier%20manager%2098%20playstation%20uk%20front.jpg"
+  }, 
+  {
+    "aliases": null, 
+    "id": 14, 
+    "name": "Mary-Kate and Ashley: Sweet 16: Licensed to Drive", 
+    "num platforms": 3, 
+    "release_date": "2002-11-20 00:00:00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/1242453-sweet.jpg"
+  }, 
+  {
+    "aliases": null, 
+    "id": 15, 
+    "name": "Kampfgruppe", 
+    "num platforms": 6, 
+    "release_date": "1985-12-31 00:00:00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/709028-kampfgruppe_2.jpg"
+  }, 
+  {
+    "aliases": null, 
+    "id": 16, 
+    "name": "EGA-Roids", 
+    "num platforms": 2, 
+    "release_date": "1986-12-31 00:00:00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/709420-egaroids_000.png"
+  }, 
+  {
+    "aliases": null, 
+    "id": 17, 
+    "name": "Sportfischen Professional", 
+    "num platforms": 2, 
+    "release_date": "2005-10-18 00:00:00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/709520-sportfischen_professional.jpg"
+  }, 
+  {
+    "aliases": null, 
+    "id": 18, 
+    "name": "Metal Slug X: Super Vehicle - 001", 
+    "num platforms": 7, 
+    "release_date": "1999-03-18 00:00:00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/969857-metal_slug_x_ng_us.jpg"
+  }, 
+  {
+    "aliases": null, 
+    "id": 19, 
+    "name": "Aisle", 
+    "num platforms": 12, 
+    "release_date": "1999-05-28 00:00:00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/709534-aisle_by_sam_barlow.jpg"
+  }, 
+  {
+    "aliases": null, 
+    "id": 20, 
+    "name": "Burntime", 
+    "num platforms": 3, 
+    "release_date": "1993-12-31 00:00:00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/723295-23343_boxshot_1.jpg"
+  }, 
+  {
+    "aliases": null, 
+    "id": 21, 
+    "name": "Land of Legends", 
+    "num platforms": 2, 
+    "release_date": "2005-09-25 00:00:00", 
+    "tiny_image": null
+  }, 
+  {
+    "aliases": null, 
+    "id": 22, 
+    "name": "The X-Files Game", 
+    "num platforms": 4, 
+    "release_date": "1998-05-31 00:00:00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/522345-xfiles_game_cover.jpg"
+  }, 
+  {
+    "aliases": "Dragon's Magic", 
+    "id": 23, 
+    "name": "Dragon's Lair", 
+    "num platforms": 29, 
+    "release_date": "1983-07-01 00:00:00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/213636-dragon_s_lair.jpg"
+  }, 
+  {
+    "aliases": null, 
+    "id": 24, 
+    "name": "Rocky Racers", 
+    "num platforms": 2, 
+    "release_date": null, 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/890529-kombat_kars_gameplay.jpg"
+  }, 
+  {
+    "aliases": null, 
+    "id": 26, 
+    "name": "Skramble", 
+    "num platforms": 4, 
+    "release_date": "1983-12-31 00:00:00", 
+    "tiny_image": "http://www.giantbomb.com/api/image/square_mini/1355067-temp.jpg"
+  }
+]
