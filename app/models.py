@@ -29,6 +29,7 @@ source_name = string, db.Text
 region = string, db.String(25)
 """
 class Article(db.Model):
+    query_class = ArticleQuery
     __tablename__ = 'articles'
     id_num = db.Column(db.String(25), primary_key=True)
     title = db.Column(db.Text)
@@ -78,6 +79,7 @@ region = string, db.String(25)
 country = string, db.String(25)
 """
 class Source(db.Model):
+    query_class = SourceQuery
     __tablename__ = 'sources'
     id_num = db.Column(db.String(25), primary_key=True)
     id_name = db.Column(db.Text)
@@ -128,6 +130,7 @@ name = string, db.String(25)
 region = string, db.String(25)
 """
 class Location(db.Model):
+    query_class = LocationQuery
     __tablename__ = 'locations'
     id_num = db.Column(db.String(25), primary_key=True)
     currencies = db.Column(db.Text)

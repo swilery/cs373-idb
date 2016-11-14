@@ -91,9 +91,9 @@ def source_page(sourceNum):
 # RESTful API
 # -----------
 
-@app_instance.route('/search')
-def search():
-    search_text = request.args.get('searchbar', '')
+@app_instance.route('/search/<search_text>')
+def search(search_text="Trump"):
+    #search_text = request.args.get('searchbar', '')
     article_query = Article.query.search(search_text).limit(15)
     source_query = Source.query.search(search_text).limit(15)
     location_query = Location.query.search(search_text).limit(15)
