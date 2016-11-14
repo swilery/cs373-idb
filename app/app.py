@@ -92,10 +92,21 @@ def source_page(sourceNum):
 @app_instance.route('/news_search', methods=['POST'])
 def news_search():
     search_text = request.form["searchbar"]
+    
     article_query = Article.query.search(search_text).all()
     source_query = Source.query.search(search_text).all()
     location_query = Location.query.search(search_text).all()
-    return render_template('search.html', articles=article_query, sources=source_query, locations=location_query)
+
+    if len(search_text.split(" ")) > 1:
+      search_text2 = search_text.replace(" ", " OR ")
+      search_text = search_text.replace(" ", " AND ")
+      article_query2 = Article.query.search(search_text2).all()
+      source_query2 = Source.query.search(search_text2).all()
+      location_query2 = Location.query.search(search_text2).all()
+      return render_template('search.html', articles=article_query, sources=source_query, locations=location_query, search_text=search_text, \
+        articles2=article_query2, sources2=source_query2, locations2=location_query2, search_text2=search_text2)
+
+    return render_template('search.html', articles=article_query, sources=source_query, locations=location_query, search_text=search_text)
 
 # Returns all data in json format
 @app_instance.route('/api/all', methods=['GET'])

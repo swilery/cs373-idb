@@ -73,24 +73,49 @@
           <tr>
             <th>Type</th>
             <th>Name</th>
+            <th>Matched Terms</th>
           </tr>
         </thead>
         {% for article in articles %}
         <tr>
           <td>Article</td>
           <td><a href="/article/{{article.id_num}}">{{article.title}}</a></td>
+          <td>{{ search_text }}</td>
+        </tr>
+        {% endfor %}
+        {% for article in articles2 %}
+        <tr>
+          <td>Article</td>
+          <td><a href="/article/{{article.id_num}}">{{article.title}}</a></td>
+          <td>{{ search_text2 }}</td>
         </tr>
         {% endfor %}
         {% for source in sources %}
         <tr>
           <td>Source</td>
           <td><a href="/source/{{source.id_num}}">{{source.id_name}}</a></td>
+          <td>{{ search_text }}</td>
+        </tr>
+        {% endfor %}
+        {% for source in sources2 %}
+        <tr>
+          <td>Source</td>
+          <td><a href="/source/{{source.id_num}}">{{source.id_name}}</a></td>
+          <td>{{ search_text2 }}</td>
         </tr>
         {% endfor %}
         {% for location in locations %}
         <tr>
           <td>Location</td>
           <td><a href="/location/{{location.id_num}}">{{location.name}}</a></td>
+          <td>{{ search_text }}</td>
+        </tr>
+        {% endfor %}
+        {% for location in locations2 %}
+        <tr>
+          <td>Location</td>
+          <td><a href="/location/{{location.id_num}}">{{location.name}}</a></td>
+          <td>{{ search_text2 }}</td>
         </tr>
         {% endfor %}
       </table>
