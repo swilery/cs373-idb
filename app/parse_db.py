@@ -72,6 +72,10 @@ start = time.time()
 
 # Re-initialize Database Schema
 db.drop_all()
+# Drop Search Mapper Functions
+db.engine.execute("drop function articles_search_vector_update()")
+db.engine.execute("drop function sources_search_vector_update()")
+db.engine.execute("drop function locations_search_vector_update()")
 db.configure_mappers()
 db.create_all()
 db.session.commit()
