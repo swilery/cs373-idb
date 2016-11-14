@@ -46,8 +46,8 @@
           <a class="nav-link" href={{ url_for('locations') }}>Locations</a>
         </li>
       </ul>
-      <form class="form-inline pull-xs-right" ng-submit="submitQuery()">
-        <input class="form-control" type="text" placeholder="Search" ng-model="query">
+      <form class="form-inline pull-xs-right" action="/said_search" method="post">
+        <input id="searchbar" name="searchbar" class="form-control" type="text" placeholder="Search" ng-model="query">
         <button class="btn btn-outline-success" type="submit" value="Search">Search</button>
       </form>
     </nav>
