@@ -70,8 +70,11 @@ print(time.strftime('%m/%d/%Y %H:%M:%S'))
 
 start = time.time()
 
+# Re-initialize Database Schema
 db.drop_all()
+db.configure_mappers()
 db.create_all()
+db.session.commit()
 
 numSources = parse_sources()
 numLocations = parse_locations()

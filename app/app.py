@@ -4,8 +4,6 @@ from flask import render_template, jsonify, make_response, abort, flash, request
 from models import Article, Source, Location
 from random import randint
 from sqlalchemy_searchable import make_searchable, parse_search_query, search
-#from sqlalchemy_searchable import search
-# import requests
 
 # -----------------------
 # Web Application Routing
@@ -91,23 +89,12 @@ def source_page(sourceNum):
 # RESTful API
 # -----------
 
-@app_instance.route('/said_search', methods=['POST'])
-def said_search():
-    #search_text = request.args.get('searchbar', '')
-    print(request.form["searchbar"])
+@app_instance.route('/news_search', methods=['POST'])
+def news_search():
     search_text = request.form["searchbar"]
-#    article_query = db.session.query(Article)
-#    article_query = search(article_query, search_text)
-    article_query = Article.query.limit(15).all()
-    print(list((x.title, x.description) for x in article_query))
-    source_query = Source.query.search(search_text).limit(15).all()
-    location_query = Location.query.search(search_text).limit(15).all()
-#    results = {
-#        'articles': [x.to_json() for x in article_query.all()],
-#        'sources': [x.to_json() for x in source_query.all()],
-#        'locations': [x.to_json() for x in location_query.all()]
-#    }
-#    return "results"
+    article_query = Article.query.search(search_text).all()
+    source_query = Source.query.search(search_text).all()
+    location_query = Location.query.search(search_text).all()
     return render_template('search.html', articles=article_query, sources=source_query, locations=location_query)
 
 # Returns all data in json format
