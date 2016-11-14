@@ -40,7 +40,6 @@ def about():
 @app_instance.route('/articles')
 #@app_instance.route('/articles/<int:page>')
 def articles():
-	#articles = db.session.query(Article).all()
 	numArticles = db.session.query(Article).count()
 	articles = Article.query.paginate(1, numArticles, False)
 	return render_template('articles.html', articles=articles)
@@ -81,6 +80,8 @@ def location_page(locationNum):
 def source_page(sourceNum):
     source = Source.query.filter_by(id_num=sourceNum).first()
     articles = Article.query.filter_by(source_name=source.name).all()
+    if source.country == "Great Britain":
+      source.country = "United Kingdom"
     location = Location.query.filter_by(name=source.country).first()
     return render_template('source_page.html', source=source, articles=articles, location=location)
     
