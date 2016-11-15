@@ -84,6 +84,10 @@ def source_page(sourceNum):
       source.country = "United Kingdom"
     location = Location.query.filter_by(name=source.country).first()
     return render_template('source_page.html', source=source, articles=articles, location=location)
+
+@app_instance.route('/vg_characters')
+def vg_page():
+  return render_template('vg_characters.html')
     
     
 # -----------
