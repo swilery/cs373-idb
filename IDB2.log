@@ -1,3 +1,100 @@
+commit 843a6526875af04cd51ff4f1bb67b9bb1c0f1b49
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Thu Nov 3 16:09:01 2016 -0500
+
+    Added link to data collection page in wiki to about.html
+
+commit 8d5c4e2c99d089ed598ac68a8fd45636d43ee901
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Thu Nov 3 15:58:08 2016 -0500
+
+    Final Commit, Updated IDB2.log
+
+commit 896c2be9fb962e3877294c830bff336c7933bcf8
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Thu Nov 3 15:52:10 2016 -0500
+
+    Updated articles & database
+
+commit a4b84a848d6e46af639f7e3b53ba59040f88fd45
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Thu Nov 3 15:03:01 2016 -0500
+
+    Articles table displays all articles
+
+commit eed386642906b788b94c44d8d557284d6a99301a
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Thu Nov 3 14:02:10 2016 -0500
+
+    Updated about page stats
+
+commit 6187319af2131e6c16f38971ab92aefa8536603b
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Thu Nov 3 13:50:57 2016 -0500
+
+    Fixed show and search table styling and alignment, removed search bars from table pages
+
+commit a96ac1ab0aaf4fbc788156a4e4214c54597317da
+Merge: 7a1d804 e7a653f
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Thu Nov 3 12:58:23 2016 -0500
+
+    Merge branch 'dev' of github.com:swilery/cs373-idb into dev
+
+commit 7a1d80447fc1492de91a7443dedd68fe54d025c3
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Thu Nov 3 12:58:07 2016 -0500
+
+    PAGINATION AND SORTING, WORK, YES I'M YELLING
+
+commit e7a653f74dbbd20e670baff4d53bc929ab2f030c
+Author: abderrahman said-alaoui <said11@cs.utexas.edu>
+Date:   Thu Nov 3 12:49:07 2016 -0500
+
+    implemented pagination for articles UNTESTED
+
+commit 6cf60a1215e4f8444c070b98aeffc7a2ccab3651
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Thu Nov 3 12:20:41 2016 -0500
+
+    Sorting for tables, not tested
+
+commit 31840dafc20e6ef6134920a3f18e3bbb24402b6c
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Thu Nov 3 11:40:58 2016 -0500
+
+    Updated about page stats: commits, issues, unit tests
+
+commit bfeb9fd5a4cad67d63e1f068b2a8848b83f8520b
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Wed Nov 2 13:47:49 2016 -0500
+
+    Adjusted div tags on singe article and single location pages so the table header was in the correct position
+
+commit 684715c3eb62837bc7a6be2492d44cc992776a25
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Wed Nov 2 13:02:56 2016 -0500
+
+    Can run unittests on about page
+
+commit 9b866381bb388f3253a0103ecc81c2673292d12f
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Wed Nov 2 11:38:56 2016 -0500
+
+    Updated apiary.apib
+
+commit babece7af88c4f098f0e493e0571f3ccd0ee5c6b
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Wed Nov 2 11:22:29 2016 -0500
+
+    Updated makefile
+
+commit 0c6a2474f3287f53255466b765f08798ad22c224
+Author: Ryan Fuller <rfuller250@yahoo.com>
+Date:   Wed Nov 2 11:21:08 2016 -0500
+
+    Created IDB2.log and Updated models.html
+
 commit 43a443d7973e258d0d1e8988b72748f4d575f18c
 Merge: a10e1f7 775c11b
 Author: Ryan Fuller <rfuller250@yahoo.com>
