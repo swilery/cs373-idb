@@ -1,3 +1,4 @@
+import requests
 import json
 from loader import app_instance, db
 from flask import render_template, jsonify, make_response, abort, flash, request
@@ -87,7 +88,20 @@ def source_page(sourceNum):
 
 @app_instance.route('/vg_characters')
 def vg_page():
-  return render_template('vg_characters.html')
+  gameNum = randint(1, 51961)
+  platformNum = randint(1, 148)
+  characterNum = randint(1, 33054)
+
+  game = requests.get("http://vgidb.me/api/games/" + str(gameNum))
+  game = game.json()
+
+  platform = requests.get("http://vgidb.me/api/platforms/" + str(platformNum))
+  platform = platform.json()
+
+  character = requests.get("http://vgidb.me/api/characters/" + str(characterNum))
+  character = character.json()
+
+  return render_template('vg_characters.html', game=game, platform=platform, character=character)
     
     
 # -----------
