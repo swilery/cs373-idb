@@ -1,8 +1,10 @@
+import requests
 import json
 from loader import app_instance, db
-from flask import render_template, jsonify, make_response, abort, flash
+from flask import render_template, jsonify, make_response, abort, flash, request
 from models import Article, Source, Location
 from random import randint
+from sqlalchemy_searchable import make_searchable, parse_search_query, search
 
 # -----------------------
 # Web Application Routing
@@ -39,7 +41,6 @@ def about():
 @app_instance.route('/articles')
 #@app_instance.route('/articles/<int:page>')
 def articles():
-	#articles = db.session.query(Article).all()
 	numArticles = db.session.query(Article).count()
 	articles = Article.query.paginate(1, numArticles, False)
 	return render_template('articles.html', articles=articles)
@@ -80,13 +81,60 @@ def location_page(locationNum):
 def source_page(sourceNum):
     source = Source.query.filter_by(id_num=sourceNum).first()
     articles = Article.query.filter_by(source_name=source.name).all()
+    if source.country == "Great Britain":
+      source.country = "United Kingdom"
     location = Location.query.filter_by(name=source.country).first()
     return render_template('source_page.html', source=source, articles=articles, location=location)
+
+@app_instance.route('/vg_characters')
+def vg_page():
+  gameNum = randint(1, 51961)
+  platformNum = randint(1, 148)
+  characterNum = randint(1, 33054)
+
+  game = requests.get("http://vgidb.me/api/games/" + str(gameNum))
+  while game.status_code != 200:
+    gameNum = randint(1, 51961)
+    game = requests.get("http://vgidb.me/api/games/" + str(gameNum))
+  game = game.json()
+
+  platform = requests.get("http://vgidb.me/api/platforms/" + str(platformNum))
+  while platform.status_code != 200:
+    platformNum = randint(1, 148)
+    platform = requests.get("http://vgidb.me/api/platforms/" + str(platformNum))
+  platform = platform.json()
+
+  character = requests.get("http://vgidb.me/api/characters/" + str(characterNum))
+  while character.status_code != 200:
+    characterNum = randint(1, 33054)
+    character = requests.get("http://vgidb.me/api/characters/" + str(characterNum))
+  character = character.json()
+
+  return render_template('vg_characters.html', game=game, platform=platform, character=character)
     
     
 # -----------
 # RESTful API
 # -----------
+
+@app_instance.route('/news_search', methods=['POST'])
+def news_search():
+    search_text = request.form["searchbar"]
+    
+    article_query = Article.query.search(search_text).all()
+    source_query = Source.query.search(search_text).all()
+    location_query = Location.query.search(search_text).all()
+
+    if len(search_text.split(" ")) > 1:
+      search_text2 = search_text.replace(" ", " OR ")
+      search_text = search_text.replace(" ", " AND ")
+      article_query2 = Article.query.search(search_text2).all()
+      source_query2 = Source.query.search(search_text2).all()
+      location_query2 = Location.query.search(search_text2).all()
+      return render_template('search.html', articles=article_query, sources=source_query, locations=location_query, search_text=search_text, \
+        articles2=article_query2, sources2=source_query2, locations2=location_query2, search_text2=search_text2)
+
+    return render_template('search.html', articles=article_query, sources=source_query, locations=location_query, search_text=search_text)
 
 # Returns all data in json format
 @app_instance.route('/api/all', methods=['GET'])

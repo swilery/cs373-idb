@@ -39,7 +39,7 @@
         <li class="nav-item">
           <a class="nav-link" href={{ url_for('about') }}>About</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href={{ url_for('articles') }}>Articles <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
@@ -49,9 +49,9 @@
           <a class="nav-link" href={{ url_for('locations') }}>Locations</a>
         </li>
       </ul>
-      <form class="form-inline pull-xs-right">
-        <input class="form-control" type="text" placeholder="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+      <form class="form-inline pull-xs-right" action="/news_search" method="post">
+        <input id="searchbar" name="searchbar" class="form-control" type="text" placeholder="Search" ng-model="query">
+        <button class="btn btn-outline-success" type="submit" value="Search">Search</button>
       </form>
     </nav>
 

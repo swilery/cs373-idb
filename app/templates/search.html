@@ -50,8 +50,8 @@
         <li class="nav-item">
           <a class="nav-link" href={{ url_for('about') }}>About</a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" href={{ url_for('articles') }}>Articles <span class="sr-only">(current)</span></a>
+        <li class="nav-item">
+          <a class="nav-link" href={{ url_for('articles') }}>Articles</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href={{ url_for('sources') }}>Sources</a>
@@ -70,28 +70,53 @@
       <table id="table" class="table table-hover table-striped">
         <thead>
           <tr>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Source</th>
-            <th>Publication Date</th>
-            <th>Category</th>
-            <th>Region</th>
+            <th>Type</th>
+            <th>Name</th>
+            <th>Matched Terms</th>
           </tr>
         </thead>
-        <tbody>
-        {% for article in articles.items %}
-          <tr>
-            <td><a href="{{ url_for('single', articleNum=article.id_num) }}">{{ article.title }}</a></td>
-            <td>{{ article.description }}</td>
-            <td>{{ article.source_name }}</td>
-            <td>{{ article.pubDate }}</td>
-            <td>{{ article.category }}</td>
-            <td>{{ article.region }}</td>
-          </tr>
+        {% for article in articles %}
+        <tr>
+          <td>Article</td>
+          <td><a href="/article/{{article.id_num}}">{{article.title}}</a></td>
+          <td>{{ search_text }}</td>
+        </tr>
         {% endfor %}
-<!--         {%if articles.has_prev%}<a href="{{url_for('articles', page=articles.prev_num)}}">&lt;&lt; Previous page</a>{%else%}&lt;&lt; Previous page{%endif%}
-        {%if articles.has_next%}<a href="{{url_for('articles', page=articles.next_num)}}">&lt;&lt; Next page</a>{%else%}&lt;&lt; Next page{%endif%} -->
-        </tbody>
+        {% for article in articles2 %}
+        <tr>
+          <td>Article</td>
+          <td><a href="/article/{{article.id_num}}">{{article.title}}</a></td>
+          <td>{{ search_text2 }}</td>
+        </tr>
+        {% endfor %}
+        {% for source in sources %}
+        <tr>
+          <td>Source</td>
+          <td><a href="/source/{{source.id_num}}">{{source.id_name}}</a></td>
+          <td>{{ search_text }}</td>
+        </tr>
+        {% endfor %}
+        {% for source in sources2 %}
+        <tr>
+          <td>Source</td>
+          <td><a href="/source/{{source.id_num}}">{{source.id_name}}</a></td>
+          <td>{{ search_text2 }}</td>
+        </tr>
+        {% endfor %}
+        {% for location in locations %}
+        <tr>
+          <td>Location</td>
+          <td><a href="/location/{{location.id_num}}">{{location.name}}</a></td>
+          <td>{{ search_text }}</td>
+        </tr>
+        {% endfor %}
+        {% for location in locations2 %}
+        <tr>
+          <td>Location</td>
+          <td><a href="/location/{{location.id_num}}">{{location.name}}</a></td>
+          <td>{{ search_text2 }}</td>
+        </tr>
+        {% endfor %}
       </table>
     </div>
   </body>

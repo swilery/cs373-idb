@@ -29,6 +29,7 @@ source_name = string, db.Text
 region = string, db.String(25)
 """
 class Article(db.Model):
+    query_class = ArticleQuery
     __tablename__ = 'articles'
     id_num = db.Column(db.String(25), primary_key=True)
     title = db.Column(db.Text)
@@ -41,7 +42,7 @@ class Article(db.Model):
     source_name = db.Column(db.Text)
     region = db.Column(db.String(25))
 
-    search_vector = db.Column(TSVectorType('title'))
+    search_vector = db.Column(TSVectorType('title', 'description'))
 
     def to_json(self, list_view=False):
         json_article = {
@@ -78,6 +79,7 @@ region = string, db.String(25)
 country = string, db.String(25)
 """
 class Source(db.Model):
+    query_class = SourceQuery
     __tablename__ = 'sources'
     id_num = db.Column(db.String(25), primary_key=True)
     id_name = db.Column(db.Text)
@@ -92,7 +94,7 @@ class Source(db.Model):
     region = db.Column(db.String(25))
     country = db.Column(db.String(25))
 
-    search_vector = db.Column(TSVectorType('name'))
+    search_vector = db.Column(TSVectorType('name', 'description'))
 
     def to_json(self, list_view=False):
         json_location = {
@@ -128,6 +130,7 @@ name = string, db.String(25)
 region = string, db.String(25)
 """
 class Location(db.Model):
+    query_class = LocationQuery
     __tablename__ = 'locations'
     id_num = db.Column(db.String(25), primary_key=True)
     currencies = db.Column(db.Text)
@@ -139,7 +142,7 @@ class Location(db.Model):
     name = db.Column(db.String(50))
     region = db.Column(db.String(25))
 
-    search_vector = db.Column(TSVectorType('name'))
+    search_vector = db.Column(TSVectorType('name', 'region', 'capital'))
 
     def to_json(self, list_view=False):
         json_location = {
@@ -158,3 +161,6 @@ class Location(db.Model):
 
     def __repr__(self):
         return '<Location %s>' % self.id_num
+
+#db.session.configure_mappers()
+#db.session.commit()
