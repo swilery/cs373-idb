@@ -93,12 +93,21 @@ def vg_page():
   characterNum = randint(1, 33054)
 
   game = requests.get("http://vgidb.me/api/games/" + str(gameNum))
+  while game.status_code != 200:
+    gameNum = randint(1, 51961)
+    game = requests.get("http://vgidb.me/api/games/" + str(gameNum))
   game = game.json()
 
   platform = requests.get("http://vgidb.me/api/platforms/" + str(platformNum))
+  while platform.status_code != 200:
+    platformNum = randint(1, 148)
+    platform = requests.get("http://vgidb.me/api/platforms/" + str(platformNum))
   platform = platform.json()
 
   character = requests.get("http://vgidb.me/api/characters/" + str(characterNum))
+  while character.status_code != 200:
+    characterNum = randint(1, 33054)
+    character = requests.get("http://vgidb.me/api/characters/" + str(characterNum))
   character = character.json()
 
   return render_template('vg_characters.html', game=game, platform=platform, character=character)
