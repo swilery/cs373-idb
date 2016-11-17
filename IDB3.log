@@ -1,3 +1,15 @@
+commit b2339e44450271f531ba3481b0d0f554fa85eb15
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Thu Nov 17 10:51:24 2016 -0600
+
+    Added idb3 log
+
+commit c1f336040ee4c94a08d2634cd40e5c8abbcbab29
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Thu Nov 17 10:44:21 2016 -0600
+
+    Updated makefile for log, added speakerdeck link
+
 commit 1e669ebc59232a3872832c2d81c33b5b0894c10f
 Author: Eric Kramer <erickramer42@gmail.com>
 Date:   Thu Nov 17 08:59:22 2016 -0600
