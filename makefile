@@ -2,7 +2,7 @@ FILES :=                              \
 	makefile							\
 	.gitignore							\
 	models.html							\
-	IDB2.log 							\
+	IDB3.log 							\
 	UML.pdf								\
 	apiary.apib							\
 	.travis.yml							\
@@ -41,7 +41,7 @@ models.html:
 	#rm models.py && rm loader.py
 
 log:
-	git log > IDB2.log
+	git log > IDB3.log
 
 # TestIDB.tmp: app/tests.py
 # 	-pylint app/models.py
