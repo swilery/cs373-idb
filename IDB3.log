@@ -1,3 +1,15 @@
+commit 3f3cd2184369900f918f43ff6a42ddc2b5c9a16f
+Author: Santiago Munevar <santiago-munevar@Johns-MacBook-Pro.local>
+Date:   Thu Nov 17 16:16:00 2016 -0600
+
+    Cleaned up presentation
+
+commit bf54aa175b7c0ca6ed119528e4f89b821465ada5
+Author: Eric Kramer <erickramer42@gmail.com>
+Date:   Thu Nov 17 11:06:58 2016 -0600
+
+    Updated stats on about page and log file
+
 commit b2339e44450271f531ba3481b0d0f554fa85eb15
 Author: Eric Kramer <erickramer42@gmail.com>
 Date:   Thu Nov 17 10:51:24 2016 -0600
